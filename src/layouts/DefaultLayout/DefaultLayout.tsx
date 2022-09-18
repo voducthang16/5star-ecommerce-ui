@@ -10,8 +10,8 @@ function DefaultLayout({ Children }: DefaultLayoutProps) {
             <p>
                 <Header />
             </p>
-            <main className="mt-16">
-                <p>CHILDREN</p>
+            <main>
+                <Children />
             </main>
         </div>
     );
