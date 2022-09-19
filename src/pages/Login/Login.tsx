@@ -26,7 +26,7 @@ const Login = () => {
 
     return (
         <div className="flex justify-center font-plusJakartaSans">
-            <div className="hidden md:inline-block w-full max-h-screen bg-[#0e366d] md:flex justify-center items-center">
+            <div className="hidden w-full max-h-screen bg-[#0e366d] md:flex justify-center items-center">
                 <div className="md:px-[32px]">
                     <img
                         className="w-[448px] rounded-[5px] md:w-full"

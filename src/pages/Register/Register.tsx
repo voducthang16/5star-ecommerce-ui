@@ -13,7 +13,7 @@ function Register() {
 
     return (
         <div className="flex justify-center font-plusJakartaSans">
-            <div className="hidden md:inline-block w-full max-h-screen bg-[#0e366d] md:flex justify-center items-center">
+            <div className="hidden w-full bg-[#0e366d] md:flex justify-center items-center">
                 <div className="md:px-[32px]">
                     <img
                         className="w-[448px] rounded-[5px] md:w-full"
@@ -22,7 +22,7 @@ function Register() {
                     />
                 </div>
             </div>
-            <div className="bg-[#2f65b9] md:bg-transparent md:w-full md:h-full h-screen">
+            <div className="bg-[#2f65b9] md:bg-transparent md:w-full md:h-full h-screen lg:my-[64px]">
                 <div className="md:py-[32px] md:px-[16px] px-[14px] py-[28px] h-screen flex items-center">
                     <div className="md:px-[32px] px-[14px] bg-[#fff] rounded-[8px] my-[16px]  py-[14px]">
                         <div className="lg:mb-[36px] md:mb-[32px] mb-[28px]">
@@ -127,7 +127,7 @@ function Register() {
                         </form>
 
                         <div className="flex md:justify-between justify-center">
-                            <p className="lg:text-[14px] text-[14px]">Bạn đã có có tài khoản?</p>
+                            <p className="lg:text-[16px] text-[14px]">Bạn đã có có tài khoản?</p>
                             <a
                                 className="ml-[8px] lg:text-[16px] text-[14px] text-[#2f65b9] decoration-none hover:text-[#1d4a94]"
                                 href=""
