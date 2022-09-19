@@ -9,6 +9,9 @@ module.exports = {
                 input: '#F5F8FA', //ebf0f6
                 icon: '#050505',
             },
+            fontFamily: {
+                plusJakartaSans: ['Plus Jakarta Sans'],
+            },
         },
     },
     plugins: [],
