@@ -1,5 +1,6 @@
-const images = {
+const images: any = {
     noImage: require('~/assets/images/no-image.png'),
+    LoadingGif: require('./loading-gif.gif'),
     banner_1: require('~/assets/images/banner_1.jpg'),
     banner_2: require('~/assets/images/banner_2.jpg'),
     banner_3: require('~/assets/images/banner_3.jpg'),
