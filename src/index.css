@@ -10,3 +10,27 @@
 .input-form {
     @apply shadow-md rounded-lg focus:ring-2 focus:ring-offset-0 focus:ring-primary focus:ring-opacity-50 focus:shadow-none;
 }
+
+.input-search {
+    @apply block w-full py-3 px-4 text-base outline-none bg-slate-50 shadow-none;
+}
+
+.sticky {
+    @apply fixed top-0 left-0 right-0 z-10 animate-navbarShow;
+}
+
+.sticky-mt-36 {
+    @apply mt-36;
+}
+
+.sticky-mt-20 {
+    @apply mt-20;
+}
+
+.navbar {
+    @apply hidden;
+}
+
+.show-navbar {
+    @apply animate-navbarShow block;
+}

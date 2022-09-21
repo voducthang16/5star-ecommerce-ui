@@ -7,9 +7,7 @@ interface DefaultLayoutProps {
 function DefaultLayout({ Children }: DefaultLayoutProps) {
     return (
         <div>
-            <p>
-                <Header />
-            </p>
+            <Header />
             <main>
                 <Children />
             </main>
