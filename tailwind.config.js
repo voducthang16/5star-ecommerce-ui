@@ -39,10 +39,11 @@ module.exports = {
             },
             animation: {
                 navbarShow: 'appear 0.3s',
-            fontFamily: {
-                plusJakartaSans: ['Plus Jakarta Sans'],
+                fontFamily: {
+                    plusJakartaSans: ['Plus Jakarta Sans'],
+                },
             },
         },
+        plugins: [],
     },
-    plugins: [],
 };
