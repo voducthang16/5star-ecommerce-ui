@@ -13,6 +13,7 @@ const privateRoutes: Routes[] = [
     {
         path: '/',
         Component: Register,
+        layout: null,
     },
 ];
 
@@ -24,6 +25,11 @@ const publicRoutes: Routes[] = [
     {
         path: '/login',
         Component: Login,
+        layout: null,
+    },
+    {
+        path: '/register',
+        Component: Register,
         layout: null,
     },
     {
