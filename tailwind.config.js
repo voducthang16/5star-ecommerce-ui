@@ -44,6 +44,6 @@ module.exports = {
                 plusJakartaSans: ['Plus Jakarta Sans'],
             },
         },
-        plugins: [],
     },
+    plugins: [],
 };
