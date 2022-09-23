@@ -50,10 +50,7 @@ function Header() {
                                     <li onClick={handleShowNavbarMobile} className="icon-header-wrapper lg:hidden">
                                         <IoReorderThreeSharp className="text-2xl" />
                                     </li>
-                                    <li
-                                        onClick={handleShowNavbar}
-                                        className="hidden lg:block icon-header-wrapper xl:three-sharp"
-                                    >
+                                    <li onClick={handleShowNavbar} className="hidden icon-header-wrapper three-sharp">
                                         <IoReorderThreeSharp className="text-2xl" />
                                     </li>
                                     <li className="hidden lg:block icon-header-wrapper">

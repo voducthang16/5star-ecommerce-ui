@@ -46,3 +46,10 @@
 .icon-header-wrapper {
     @apply relative p-2 hover:bg-slate-100 hover:transition-all hover:rounded-full hover:cursor-pointer;
 }
+
+/* End Header */
+
+/* Scroll To Top */
+.scroll-to-top.active {
+    @apply opacity-100 visible;
+}
