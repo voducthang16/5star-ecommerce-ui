@@ -1,13 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Countdown from 'react-countdown';
-import { Pagination, Navigation, EffectFade } from 'swiper';
-import { GiaSoc, DealFlashIcon, HomNay, Vector } from '~/components/Icons';
-import images from '~/assets/images';
-import Image from '~/components/Image';
+import { EffectFade, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import images from '~/assets/images';
+import { DealFlashIcon, GiaSoc, HomNay, Vector } from '~/components/Icons';
+import Image from '~/components/Image';
 import './Home.scss';
 function Home() {
     const day = '2022-09-19T12:00:00';
