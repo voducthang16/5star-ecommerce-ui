@@ -1,5 +1,6 @@
 import Header from '~/layouts/components/Header';
 import Footer from '~/layouts/components/Footer';
+import Navigator from '~/layouts/components/Navigator';
 
 interface DefaultLayoutProps {
     Children: React.ComponentType;
@@ -7,13 +8,14 @@ interface DefaultLayoutProps {
 
 function DefaultLayout({ Children }: DefaultLayoutProps) {
     return (
-        <div>
+        <>
             <Header />
             <main>
                 <Children />
             </main>
             <Footer />
-        </div>
+            <Navigator />
+        </>
     );
 }
 

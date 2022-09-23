@@ -14,7 +14,7 @@ function Home() {
     const CompleteCountdown = () => <span>You are good to go!</span>;
     return (
         <div className="home mt-4">
-            <div className="max-w-screen-2xl 2xl:m-auto xl:max-w-screen-xl xl:m-auto">
+            <div className="container">
                 <div className="grid grid-rows-3 grid-cols-12 gap-4">
                     <div className="col-span-9 bg-white h-64">
                         <div>
