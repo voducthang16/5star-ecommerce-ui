@@ -11,9 +11,93 @@ import Image from '~/components/Image';
 import './Home.scss';
 function Home() {
     const day = '2022-09-19T12:00:00';
+    const configSlide = [
+        {
+            logo: `${images.hero1}`,
+            title: 'important of coffee',
+        },
+        {
+            logo: `${images.hero2}`,
+            title: 'the home of coffee',
+        },
+        {
+            logo: `${images.hero3}`,
+            title: 'brewed to perfection',
+        },
+    ];
     const CompleteCountdown = () => <span>You are good to go!</span>;
     return (
-        <div className="home mt-4">
+        <div className="home">
+            <div className="mb-20 bg-[#e3ffe6]">
+                <Swiper
+                    spaceBetween={30}
+                    effect={'fade'}
+                    autoplay={{
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        dynamicBullets: true,
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[EffectFade, Navigation, Pagination]}
+                    className="container"
+                >
+                    {configSlide.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <div>
+                                <div className="relative pt-12 lg:py-44">
+                                    <div className="pb-8 lg:pb-0">
+                                        <span className="desc-active block text-base md:text-xl text-slate-700 font-medium">
+                                            In this season, find the best 🔥
+                                        </span>
+                                        <h2 className="title-active mt-6 font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl !leading-[114%] text-slate-900">
+                                            {slide.title}
+                                        </h2>
+                                        <a
+                                            className="relative h-auto inline-flex items-center justify-center 
+                                            rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-6 
+                                            sm:py-5 sm:px-9 disabled:bg-opacity-90 bg-slate-900 hover:bg-slate-800 
+                                            text-slate-50 dark:text-slate-800 shadow-xl focus:outline-none focus:ring-2 
+                                            focus:ring-offset-2 focus:ring-primary-6000 mt-10 link-active"
+                                            rel="noopener noreferrer"
+                                            href="/"
+                                        >
+                                            <span>Explore now</span>
+                                            <span>
+                                                <svg className="w-5 h-5 ml-2.5" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                                        stroke="currentColor"
+                                                        stroke-width="1.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                    <path
+                                                        d="M22 22L20 20"
+                                                        stroke="currentColor"
+                                                        stroke-width="1.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div className="lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
+                                        <Image
+                                            className="w-full h-full object-contain object-right-bottom img-active"
+                                            src={slide.logo}
+                                            alt="Slide"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
             <div className="container">
                 <div className="grid grid-rows-3 grid-cols-12 gap-4">
                     <div className="col-span-9 bg-white h-64">

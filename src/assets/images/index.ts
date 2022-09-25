@@ -12,6 +12,9 @@ const images: any = {
     step3: require('~/assets/images/step3.png'),
     step4: require('~/assets/images/step4.png'),
     cards: require('~/assets/images/cards.png'),
+    hero1: require('~/assets/images/hero1.png'),
+    hero2: require('~/assets/images/hero2.png'),
+    hero3: require('~/assets/images/hero3.png'),
 };
 
 export default images;

@@ -32,7 +32,7 @@
 }
 
 .sticky .three-sharp {
-    @apply !block;
+    @apply lg:block;
 }
 
 .sticky-mt-36 {

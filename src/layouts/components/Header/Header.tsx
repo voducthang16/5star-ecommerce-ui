@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { LogoIcon } from '~/components/Icons';
+import { LogoIcon, FourSquaresIcon } from '~/components/Icons';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { IoReorderThreeSharp } from 'react-icons/io5';
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
@@ -89,8 +89,9 @@ function Header() {
                     </div>
                     <div className="hidden lg:block navbar container h-16">
                         <div className="grid grid-cols-8 gap-4 h-16">
-                            <div className="col-span-2 flex items-center">
-                                <h4 className="text-xs">Departments</h4>
+                            <div className="col-span-2 flex items-center space-x-4">
+                                <FourSquaresIcon width={16} height={16} />
+                                <h4 className="text-base">Departments</h4>
                             </div>
                             <div className="col-span-4 flex items-center">
                                 <ul className="flex text-base space-x-8">
