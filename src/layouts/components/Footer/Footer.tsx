@@ -6,7 +6,7 @@ import images from '~/assets/images';
 import Image from '~/components/Image';
 function Footer() {
     return (
-        <footer className="footer-wrapper">
+        <footer className="footer-wrapper pb-20 lg:pb-0">
             <div className="border-t border-b border-slate-200 py-10">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -103,7 +103,7 @@ function Footer() {
             </div>
             <div className="py-10">
                 <div className="container">
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-4">
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-x-4 md:gap-y-10">
                         <div className="col-span-1">
                             <div className="flex lg:items-center justify-between md:items-start space-x-2">
                                 <div className="flex-1 flex justify-center">
