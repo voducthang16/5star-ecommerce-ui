@@ -16,6 +16,7 @@ const images: any = {
     hero2: require('~/assets/images/hero2.png'),
     hero3: require('~/assets/images/hero3.png'),
     b_banner: require('~/assets/images/b_banner.jpg'),
+    banner_sm01: require('~/assets/images/banner_sm01.png'),
 };
 
 export default images;

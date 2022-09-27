@@ -7,7 +7,7 @@ import Image from '~/components/Image';
 function Footer() {
     return (
         <footer className="footer-wrapper pb-20 lg:pb-0">
-            <div className="border-t border-b border-slate-200 py-10">
+            <div className="border-t border-b border-slate-200 py-10 lg:py-20">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="col-span-1">
@@ -101,83 +101,81 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="py-10">
-                <div className="container">
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-x-4 md:gap-y-10">
-                        <div className="col-span-1">
-                            <div className="flex lg:items-center justify-between md:items-start space-x-2">
-                                <div className="flex-1 flex justify-center">
-                                    <RocketIcon width={40} height={40} className={'fill-pink-700'} />
-                                </div>
-                                <div className="space-y-2">
-                                    <h5 className="text-base font-semibold">Fast and free delivery</h5>
-                                    <h6 className="text-xs font-normal">Free delivery for all orders over $200</h6>
-                                </div>
+            <div className="container">
+                <div className="py-10 lg:py-20 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-x-4 md:gap-y-10 lg:gap-y-20">
+                    <div className="col-span-1">
+                        <div className="flex lg:items-center justify-between md:items-start space-x-2">
+                            <div className="flex-1 flex justify-center">
+                                <RocketIcon width={40} height={40} className={'fill-pink-700'} />
+                            </div>
+                            <div className="space-y-2">
+                                <h5 className="text-base font-semibold">Fast and free delivery</h5>
+                                <h6 className="text-xs font-normal">Free delivery for all orders over $200</h6>
                             </div>
                         </div>
-                        <div className="col-span-1">
-                            <div className="flex lg:items-center justify-between md:items-start space-x-2">
-                                <div className="flex-1 flex justify-center">
-                                    <RefundIcon width={40} height={40} className={'fill-pink-700'} />
-                                </div>
-                                <div className="space-y-2">
-                                    <h5 className="text-base font-semibold">Money back guarantee</h5>
-                                    <h6 className="text-xs font-normal">We return money within 30 days</h6>
-                                </div>
+                    </div>
+                    <div className="col-span-1">
+                        <div className="flex lg:items-center justify-between md:items-start space-x-2">
+                            <div className="flex-1 flex justify-center">
+                                <RefundIcon width={40} height={40} className={'fill-pink-700'} />
+                            </div>
+                            <div className="space-y-2">
+                                <h5 className="text-base font-semibold">Money back guarantee</h5>
+                                <h6 className="text-xs font-normal">We return money within 30 days</h6>
                             </div>
                         </div>
-                        <div className="col-span-1">
-                            <div className="flex lg:items-center justify-between md:items-start space-x-2">
-                                <div className="flex-1 flex justify-center">
-                                    <CallCenterIcon width={40} height={40} className={'fill-pink-700'} />
-                                </div>
-                                <div className="space-y-2">
-                                    <h5 className="text-base font-semibold">24/7 customer support</h5>
-                                    <h6 className="text-xs font-normal">Friendly 24/7 customer support</h6>
-                                </div>
+                    </div>
+                    <div className="col-span-1">
+                        <div className="flex lg:items-center justify-between md:items-start space-x-2">
+                            <div className="flex-1 flex justify-center">
+                                <CallCenterIcon width={40} height={40} className={'fill-pink-700'} />
+                            </div>
+                            <div className="space-y-2">
+                                <h5 className="text-base font-semibold">24/7 customer support</h5>
+                                <h6 className="text-xs font-normal">Friendly 24/7 customer support</h6>
                             </div>
                         </div>
-                        <div className="col-span-1">
-                            <div className="flex lg:items-center justify-between md:items-start space-x-2">
-                                <div className="flex-1 flex justify-center">
-                                    <CreditCardIcon width={40} height={40} className={'fill-pink-700'} />
-                                </div>
-                                <div className="space-y-2">
-                                    <h5 className="text-base font-semibold">Secure online payment</h5>
-                                    <h6 className="text-xs font-normal">We possess SSL / Secure certificate</h6>
-                                </div>
+                    </div>
+                    <div className="col-span-1">
+                        <div className="flex lg:items-center justify-between md:items-start space-x-2">
+                            <div className="flex-1 flex justify-center">
+                                <CreditCardIcon width={40} height={40} className={'fill-pink-700'} />
+                            </div>
+                            <div className="space-y-2">
+                                <h5 className="text-base font-semibold">Secure online payment</h5>
+                                <h6 className="text-xs font-normal">We possess SSL / Secure certificate</h6>
                             </div>
                         </div>
-                        <div className="col-span-2 md:col-span-4 border-t border-slate-200 pt-6">
-                            <div className="flex flex-col md:flex-row justify-between space-y-4">
-                                <div className="w-full">
-                                    <LogoIcon className="mx-auto md:m-0" />
-                                    <ul className="flex flex-wrap justify-center md:justify-start mt-6 text-sm text-gray-600 space-x-4 leading-6">
-                                        <li>Outlets</li>
-                                        <li>Affiliates</li>
-                                        <li>Support</li>
-                                        <li>Privacy</li>
-                                        <li>Terms of use</li>
-                                    </ul>
-                                    <p className="mt-8 text-center md:text-start text-xs text-gray-600">
-                                        © All rights reserved. Made by 5Star Team
-                                    </p>
-                                </div>
-                                <div className="flex flex-col md:items-end items-center space-y-4">
-                                    <div className="flex space-x-4">
-                                        <div className="p-2 rounded-lg bg-slate-400 hover:bg-slate-700 transition-all cursor-pointer">
-                                            <ImFacebook className="fill-white text-xl" />
-                                        </div>
-                                        <div className="p-2 rounded-lg bg-slate-400 hover:bg-slate-700 transition-all cursor-pointer">
-                                            <BsInstagram className="fill-white text-xl" />
-                                        </div>
-                                        <div className="p-2 rounded-lg bg-slate-400 hover:bg-slate-700 transition-all cursor-pointer">
-                                            <BsTwitter className="fill-white text-xl" />
-                                        </div>
+                    </div>
+                    <div className="col-span-2 md:col-span-4 border-t border-slate-200 pt-10 lg:pt-20">
+                        <div className="flex flex-col md:flex-row justify-between space-y-4">
+                            <div className="w-full">
+                                <LogoIcon className="mx-auto md:m-0" />
+                                <ul className="flex flex-wrap justify-center md:justify-start mt-6 text-sm text-gray-600 space-x-4 leading-6">
+                                    <li>Outlets</li>
+                                    <li>Affiliates</li>
+                                    <li>Support</li>
+                                    <li>Privacy</li>
+                                    <li>Terms of use</li>
+                                </ul>
+                                <p className="mt-8 text-center md:text-start text-xs text-gray-600">
+                                    © All rights reserved. Made by 5Star Team
+                                </p>
+                            </div>
+                            <div className="flex flex-col md:items-end items-center space-y-4">
+                                <div className="flex space-x-4">
+                                    <div className="p-2 rounded-lg bg-slate-400 hover:bg-slate-700 transition-all cursor-pointer">
+                                        <ImFacebook className="fill-white text-xl" />
                                     </div>
-                                    <div className="w-3/5">
-                                        <Image src={images.cards} alt="cards" />
+                                    <div className="p-2 rounded-lg bg-slate-400 hover:bg-slate-700 transition-all cursor-pointer">
+                                        <BsInstagram className="fill-white text-xl" />
                                     </div>
+                                    <div className="p-2 rounded-lg bg-slate-400 hover:bg-slate-700 transition-all cursor-pointer">
+                                        <BsTwitter className="fill-white text-xl" />
+                                    </div>
+                                </div>
+                                <div className="w-3/5">
+                                    <Image src={images.cards} alt="cards" />
                                 </div>
                             </div>
                         </div>
