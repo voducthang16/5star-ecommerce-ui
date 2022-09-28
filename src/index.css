@@ -23,7 +23,7 @@
 /* Header */
 
 .sticky {
-    @apply fixed top-0 left-0 right-0 z-10 animate-navbarShow;
+    @apply fixed top-0 left-0 right-0 z-[9999] animate-navbarShow;
 }
 
 .sticky .navbar,
