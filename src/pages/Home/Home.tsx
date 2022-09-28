@@ -11,6 +11,7 @@ import Image from '~/components/Image';
 import images from '~/assets/images';
 import './Home.scss';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import Product from '~/layouts/components/Product';
 function Home() {
     const day = '2023-09-19T12:00:00';
     const configSlide = [
@@ -168,6 +169,55 @@ function Home() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+            </section>
+            {/* List Product */}
+            <section className="container">
+                <div className="py-10 lg:py-20 border-t border-slate-200/">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+                        {[
+                            {
+                                id: 'product_1',
+                                color: ['#a78bfa', '#facc15', '#2c3b54'],
+                                images: [
+                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+                                ],
+                            },
+                            {
+                                id: 'product_2',
+                                color: ['#fb923c', '#38bdf8', '#4ade80'],
+                                images: [
+                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+                                ],
+                            },
+                            {
+                                id: 'product_3',
+                                color: ['#fb923c', '#38bdf8', '#4ade80'],
+                                images: [
+                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+                                ],
+                            },
+                            {
+                                id: 'product_4',
+                                color: ['#fb923c', '#38bdf8', '#4ade80'],
+                                images: [
+                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+                                ],
+                            },
+                        ].map((item, index) => (
+                            <div key={index} className="col-span-1">
+                                <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
             {/* Sale */}
