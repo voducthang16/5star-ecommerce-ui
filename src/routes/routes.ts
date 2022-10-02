@@ -1,5 +1,6 @@
 // Different Layout
 import NotFound from '~/layouts/NotFound';
+import About from '~/pages/About';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import Register from '~/pages/Register';
@@ -21,6 +22,10 @@ const publicRoutes: Routes[] = [
     {
         path: '/',
         Component: Home,
+    },
+    {
+        path: '/about',
+        Component: About,
     },
     {
         path: '/login',

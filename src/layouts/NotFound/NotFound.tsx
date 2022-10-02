@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function NotFound() {
     return (
         <div className="pt-[20px] pb-[64px] px-[16px] md:mx-[160px] lg:mx-[264px] lg:pt-[20px] lg:pb-[80px] lg:px-[40px]">
@@ -11,12 +13,12 @@ function NotFound() {
                     The page you were looking for doesn't exist.
                 </h4>
                 <div className="mt-[8px] pt-[32px]">
-                    <a
+                    <Link
+                        to="/"
                         className="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  disabled:bg-opacity-90 bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 text-slate-50 dark:text-slate-800 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 capitalize"
-                        href="#"
                     >
                         Return home page
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
