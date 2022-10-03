@@ -1,9 +1,11 @@
 // Different Layout
 import NotFound from '~/layouts/NotFound';
 import About from '~/pages/About';
+import Contact from '~/pages/Contact';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import Register from '~/pages/Register';
+
 interface Routes {
     path: string;
     Component: React.ComponentType;
@@ -35,6 +37,11 @@ const publicRoutes: Routes[] = [
     {
         path: '/register',
         Component: Register,
+        layout: null,
+    },
+    {
+        path: '/contact',
+        Component: Contact,
         layout: null,
     },
     {
