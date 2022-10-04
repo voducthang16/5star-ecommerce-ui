@@ -6,10 +6,7 @@ import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import Register from '~/pages/Register';
 
-<<<<<<< HEAD
 import ProductDetail from '~/pages/ProductDetail';
-=======
->>>>>>> 127be7ef3e5baaa0b5bf47e0be14b44b320645c9
 interface Routes {
     path: string;
     Component: React.ComponentType;
@@ -32,6 +29,8 @@ const publicRoutes: Routes[] = [
     {
         path: '/product/:slug',
         Component: ProductDetail,
+    },
+    {
         path: '/about',
         Component: About,
     },
