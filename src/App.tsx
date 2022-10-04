@@ -1,11 +1,21 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { DefaultLayout } from '~/layouts/';
 import { privateRoutes, publicRoutes } from '~/routes';
 import './App.css';
 import PrivateRoutes from './components/PrivateRoutes';
+import { ChakraProvider } from '@chakra-ui/react';
 
 interface FragmentLayoutProps {
     Children: React.ComponentType;
+}
+
+function useScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 }
 
 function FragmentLayout({ Children }: FragmentLayoutProps) {
@@ -14,7 +24,8 @@ function FragmentLayout({ Children }: FragmentLayoutProps) {
 
 function App() {
     return (
-        <Router>
+        <>
+            {useScrollToTop()}
             <Routes>
                 {publicRoutes.map((route, index) => {
                     const Page = route.Component;
@@ -41,7 +52,7 @@ function App() {
                     })}
                 </Route>
             </Routes>
-        </Router>
+        </>
     );
 }
 

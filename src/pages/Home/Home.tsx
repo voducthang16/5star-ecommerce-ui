@@ -28,6 +28,44 @@ function Home() {
             title: 'brewed to perfection',
         },
     ];
+    const productFakeData = [
+        {
+            id: 'product_1',
+            color: ['#a78bfa', '#facc15', '#2c3b54'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_2',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_3',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+    ];
     const CompleteCountdown = () => <span>You are good to go!</span>;
     const [slidesPerView, setSlidesPerView] = useState(3);
     useEffect(() => {
@@ -99,16 +137,16 @@ function Home() {
                                                             <path
                                                                 d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
                                                                 stroke="currentColor"
-                                                                stroke-width="1.5"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
+                                                                strokeWidth="1.5"
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
                                                             ></path>
                                                             <path
                                                                 d="M22 22L20 20"
                                                                 stroke="currentColor"
-                                                                stroke-width="1.5"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
+                                                                strokeWidth="1.5"
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
                                                             ></path>
                                                         </svg>
                                                     </span>
@@ -175,44 +213,7 @@ function Home() {
             <section className="container">
                 <div className="py-10 lg:py-20 border-t border-slate-200/">
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-                        {[
-                            {
-                                id: 'product_1',
-                                color: ['#a78bfa', '#facc15', '#2c3b54'],
-                                images: [
-                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-                                ],
-                            },
-                            {
-                                id: 'product_2',
-                                color: ['#fb923c', '#38bdf8', '#4ade80'],
-                                images: [
-                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-                                ],
-                            },
-                            {
-                                id: 'product_3',
-                                color: ['#fb923c', '#38bdf8', '#4ade80'],
-                                images: [
-                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-                                ],
-                            },
-                            {
-                                id: 'product_4',
-                                color: ['#fb923c', '#38bdf8', '#4ade80'],
-                                images: [
-                                    'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                                    'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-                                ],
-                            },
-                        ].map((item, index) => (
+                        {productFakeData.map((item, index) => (
                             <div key={index} className="col-span-1">
                                 <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
                             </div>
