@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Countdown from 'react-countdown';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 import { EffectFade, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { DealFlashIcon, GiaSoc, HomNay, Vector } from '~/components/Icons';
-import Image from '~/components/Image';
 import images from '~/assets/images';
-import './Home.scss';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { Vector } from '~/components/Icons';
+import Image from '~/components/Image';
 import Product from '~/layouts/components/Product';
+import './Home.scss';
 function Home() {
     const day = '2023-09-19T12:00:00';
     const configSlide = [
