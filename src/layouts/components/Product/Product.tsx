@@ -2,7 +2,8 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { StartIcon, StarHalfIcon, StartEmptyIcon, HeartIcon, HeartEmptyIcon, ViewIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import './Product.scss';
-
+import { Link } from 'react-router-dom';
+import Rate from '../Rate';
 interface ProductProps {
     idProduct?: string;
     color?: any;
@@ -35,24 +36,23 @@ function Product({ idProduct, color, images }: ProductProps) {
                         <HeartEmptyIcon width={16} height={16} />
                     </div>
                     <div className="relative mx-auto w-[200px] max-w-[200px] h-[200px] max-h-[200px] rounded-3xl">
-                        {images.map((item: any) => (
-                            <Image className="images absolute inset-0 w-full object-contain" src={item} alt="Product" />
+                        {images.map((item: any, index: any) => (
+                            <Image
+                                key={index}
+                                className="images absolute inset-0 w-full object-contain"
+                                src={item}
+                                alt="Product"
+                            />
                         ))}
                     </div>
                     <div className="mt-4">
                         <span className="block mb-2 text-sm font-medium text-[#7d879c]">Sportswear</span>
-                        <a className="block text-base font-semibold text-[#373f50]" href="/">
+                        <Link className="block text-base font-semibold text-[#373f50]" to="/product/details">
                             Cotton Lace Blouse
-                        </a>
+                        </Link>
                         <div className="mt-4 flex justify-between items-center">
                             <span className="text-sm">1000.000VND</span>
-                            <div className="flex space-x-1">
-                                <StartIcon width={14} height={14} className={'fill-[#fea569]'} />
-                                <StartIcon width={14} height={14} className={'fill-[#fea569]'} />
-                                <StartIcon width={14} height={14} className={'fill-[#fea569]'} />
-                                <StarHalfIcon width={14} height={14} className={'fill-[#fea569]'} />
-                                <StartEmptyIcon width={14} height={14} className={'fill-[#aeb4be]'} />
-                            </div>
+                            <Rate className="flex space-x-1" average={3.7} />
                         </div>
                     </div>
                 </div>

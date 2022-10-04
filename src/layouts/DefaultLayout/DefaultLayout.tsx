@@ -9,14 +9,19 @@ interface DefaultLayoutProps {
 
 function DefaultLayout({ Children }: DefaultLayoutProps) {
     const scrollToTop = () => {
+        const scrollToTop = document.querySelector('.scroll-to-top');
+        const html = document.getElementsByTagName('html')[0];
+        scrollToTop!.addEventListener('click', () => {
+            html!.classList.add('scroll-smooth');
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 100);
+            setTimeout(() => {
+                html!.classList.remove('scroll-smooth');
+            }, 200);
+        });
         document.addEventListener('scroll', () => {
-            const scrollToTop = document.querySelector('.scroll-to-top');
             scrollToTop!.classList.toggle('active', window.scrollY > 300);
-            scrollToTop!.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                });
-            });
         });
     };
     useEffect(() => {

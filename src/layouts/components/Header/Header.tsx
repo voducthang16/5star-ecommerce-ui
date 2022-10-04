@@ -4,6 +4,7 @@ import { IoMdNotificationsOutline } from 'react-icons/io';
 import { IoReorderThreeSharp } from 'react-icons/io5';
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
 function Header() {
     const handleScroll = () => {
         const windowWidth = window.innerWidth;
@@ -17,6 +18,15 @@ function Header() {
                     home!.classList.toggle('sticky-mt-20', window.scrollY > 200);
                 } else {
                     home!.classList.toggle('sticky-mt-36', window.scrollY > 200);
+                }
+            }
+
+            if (document.querySelector('.product-detail')) {
+                const productDetail = document.querySelector('.product-detail');
+                if (windowWidth < 1024) {
+                    productDetail!.classList.toggle('sticky-mt-20', window.scrollY > 200);
+                } else {
+                    productDetail!.classList.toggle('sticky-mt-36', window.scrollY > 200);
                 }
             }
         });
@@ -40,7 +50,9 @@ function Header() {
                     <div className="container h-20">
                         <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 h-20">
                             <div className="col-span-1 lg:col-span-2 flex items-center">
-                                <LogoIcon />
+                                <Link to={'/'}>
+                                    <LogoIcon />
+                                </Link>
                             </div>
                             <div className="hidden lg:col-span-4 lg:flex lg:items-center">
                                 <Search />

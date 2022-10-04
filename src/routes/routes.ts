@@ -3,6 +3,8 @@ import NotFound from '~/layouts/NotFound';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import Register from '~/pages/Register';
+
+import ProductDetail from '~/pages/ProductDetail';
 interface Routes {
     path: string;
     Component: React.ComponentType;
@@ -21,6 +23,10 @@ const publicRoutes: Routes[] = [
     {
         path: '/',
         Component: Home,
+    },
+    {
+        path: '/product/:slug',
+        Component: ProductDetail,
     },
     {
         path: '/login',
