@@ -212,7 +212,7 @@ function About() {
                         </span>
                         <ul className="space-y-4 mt-10">
                             <li className="flex items-center space-x-4">
-                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-purple-800 bg-purple-100  relative">
+                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-purple-800 bg-purple-100">
                                     01
                                 </span>
                                 <span className="text-[16px] font-medium text-neutral-700 dark:text-neutral-300">
@@ -220,7 +220,7 @@ function About() {
                                 </span>
                             </li>
                             <li className="flex items-center space-x-4">
-                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-blue-800 bg-blue-100  relative">
+                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-blue-800 bg-blue-100">
                                     02
                                 </span>
                                 <span className="text-[16px] font-medium text-neutral-700 dark:text-neutral-300">
@@ -228,7 +228,7 @@ function About() {
                                 </span>
                             </li>
                             <li className="flex items-center space-x-4">
-                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100  relative">
+                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100">
                                     03
                                 </span>
                                 <span className="text-[16px] font-medium text-neutral-700 dark:text-neutral-300">
@@ -239,7 +239,7 @@ function About() {
                         <form className="mt-10 relative max-w-sm">
                             <input
                                 type="email"
-                                className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 disabled:bg-neutral-200 dark:disabled:bg-neutral-800 rounded-full text-sm font-normal h-11 px-4 py-3 bg-[#f8f8f8] "
+                                className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 disabled:bg-neutral-200 dark:disabled:bg-neutral-800 rounded-full text-sm font-normal h-11 px-4 py-3 bg-[#f8f8f8] "
                                 aria-required="true"
                                 placeholder="Enter your email"
                             />
