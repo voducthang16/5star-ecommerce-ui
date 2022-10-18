@@ -1,145 +1,234 @@
-import { FaEnvelope, FaLock, FaUserPlus } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-
-const initForm = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
+import { Button, FormControl, Input, InputGroup, InputLeftElement, InputRightElement } from '@chakra-ui/react';
+import { ErrorMessage, Field, Form, Formik, FormikProps } from 'formik';
+import { useState } from 'react';
+import { BiUserCircle } from 'react-icons/bi';
+import { FiUserCheck } from 'react-icons/fi';
+import { HiEye, HiEyeOff } from 'react-icons/hi';
+import { RiLockPasswordFill, RiLockPasswordLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+import images from '~/assets/images';
+import Image from '~/components/Image';
+import InputFieldIcon from '~/layouts/components/CustomField/InputFieldIcon';
+import './Register.scss';
+type ValuesForm = {
+    username: string;
+    password: string;
+    rememberPassword: boolean;
 };
 
-function Register() {
-    const Navigate = useNavigate();
+const initLoginForm = {
+    username: '',
+    password: '',
+    rememberPassword: false,
+};
+
+const Register = () => {
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleSubmitLogin = (values: ValuesForm) => {
+        console.log(values);
+    };
+
+    const HandleTogglePassword = () => {
+        setShowPassword(!showPassword);
+    };
 
     return (
-        <div className="flex justify-center font-plusJakartaSans">
-            <div className="hidden w-full bg-[#0e366d] md:flex justify-center items-center">
-                <div className="md:px-[32px]">
-                    <img
-                        className="w-[448px] rounded-[5px] md:w-full"
-                        src="https://wordpress.iqonic.design/product/wp/socialv/wp-content/uploads/2022/06/image-2-scaled.jpg"
-                        alt=""
-                    />
+        <div className="flex justify-center h-screen overflow-x-hidden">
+            <div className="backgroud hidden w-full max-h-screen bg-primary md:flex justify-center items-center">
+                <div className="shape-animations">
+                    <div className="shape-1 w-[200px] h-[200px] lg:w-[400px] lg:h-[400px]"></div>
+                </div>
+                <div className="md:px-[32px] z-10 relative">
+                    <Image src={images.vector_register} alt="" className="w-[80%] m-auto" />
                 </div>
             </div>
-            <div className="bg-[#2f65b9] md:bg-transparent md:w-full md:h-full h-screen lg:my-[64px]">
-                <div className="md:py-[32px] md:px-[16px] px-[14px] py-[28px] h-screen flex items-center">
-                    <div className="md:px-[32px] px-[14px] bg-[#fff] rounded-[8px] my-[16px]  py-[14px]">
-                        <div className="lg:mb-[36px] md:mb-[32px] mb-[28px]">
-                            <div className="py-[6px] mb-[16px] flex justify-center items-center">
+            <div className="login-form bg-primary md:bg-[#f8f8f8] md:w-full w-full h-full">
+                <div className="form m-auto h-full flex items-center justify-center flex-col w-full">
+                    <div className="card login p-4 md:bg-transparent lg:w-2/4 w-3/4">
+                        <div className="login-top m-autoflex flex-col items-center my-4">
+                            <div className="logo my-5 flex items-center justify-center">
                                 <img
-                                    className="md:h-[38px] h-[30px]"
-                                    src="https://wordpress.iqonic.design/product/wp/socialv/wp-content/themes/socialv-theme/assets/images/logo-mini.svg"
+                                    src="https://themes.pixelstrap.com/fastkart/assets/images/logo/1.png"
                                     alt=""
+                                    width="200px"
                                 />
-                                <h4 className="ml-[8.6px] md:text-[30px] text-[21px] font-medium">SocialV</h4>
                             </div>
-                            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-center text-[#6f7f92] font-medium">
-                                Welcome to socialV, a platform to connect with the social world
-                            </p>
+                            <div className="login-text my-5 m-auto">
+                                <h1 className="title font-bold text-3xl text-center my-5">Đăng ký</h1>
+                                <p className="text-primary font-semibold text-center text-lg">
+                                    Hãy đăng ký và thưởng thức
+                                </p>
+                            </div>
                         </div>
-
-                        <form action="">
-                            <div className="mb-[16px]">
-                                <label
-                                    className="font-medium block mb-[14px] md:text-[18px] text-[14px] text-[#07142e]"
-                                    htmlFor=""
-                                >
-                                    Tên tài khoản
-                                </label>
-                                <i className="absolute py-[6px] px-[16px] mt-[10px] z-10 md:text-[18px] text-[14px] text-[#85888a]">
-                                    <FaUserPlus />
-                                </i>
-                                <input
-                                    className="relative md:text-[18px] text-[14px] text-[#85888a] w-full md:py-[15px] py-[14px] px-[44px] border-solid bg-[#f8f9fa] outline-none focus:text-[#07142e]"
-                                    type="text"
-                                    placeholder="Tên tài khoản"
-                                />
-                            </div>
-                            <div className="mb-[16px]">
-                                <label
-                                    className="font-medium block mb-[14px] md:text-[18px] text-[14px] text-[#07142e]"
-                                    htmlFor=""
-                                >
-                                    Email*
-                                </label>
-                                <i className="absolute py-[6px] px-[16px] mt-[10px] md:text-[18px] text-[14px] text-[#85888a] z-10">
-                                    <FaEnvelope />
-                                </i>
-                                <input
-                                    className="relative md:text-[18px] text-[14px] text-[#85888a] w-full md:py-[15px] py-[14px] px-[44px] border-solid bg-[#f8f9fa] outline-none focus:text-[#07142e]"
-                                    type="email"
-                                    placeholder="Email"
-                                />
-                            </div>
-                            <div className="mb-[16px]">
-                                <label
-                                    className="font-medium block mb-[14px] md:text-[18px] text-[14px] text-[#07142e]"
-                                    htmlFor=""
-                                >
-                                    Mật khẩu*
-                                </label>
-                                <i className="absolute py-[6px] px-[16px] mt-[10px] md:text-[18px] text-[14px] text-[#85888a] z-10">
-                                    <FaLock />
-                                </i>
-                                <input
-                                    className="relative md:text-[18px] text-[14px] text-[#85888a] w-full md:py-[15px] py-[14px] px-[44px] border-solid bg-[#f8f9fa] outline-none focus:text-[#07142e]"
-                                    type="pasword"
-                                    placeholder="Mật khẩu"
-                                />
-                            </div>
-                            <div className="mb-[16px]">
-                                <label
-                                    className="font-medium block mb-[14px] md:text-[18px] text-[14px] text-[#07142e]"
-                                    htmlFor=""
-                                >
-                                    Xác nhận mật khẩu*
-                                </label>
-                                <i className="absolute py-[6px] px-[16px] mt-[10px] md:text-[18px] text-[14px] text-[#85888a] z-10">
-                                    <FaLock />
-                                </i>
-                                <input
-                                    className="relative md:text-[18px] text-[14px] text-[#85888a] w-full md:py-[15px] py-[14px] px-[44px] border-solid bg-[#f8f9fa] outline-none focus:text-[#07142e]"
-                                    type="pasword"
-                                    placeholder="Xác nhận mật khẩu"
-                                />
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <div className="">
-                                    <label className="text-[16px]" htmlFor="">
-                                        <input
-                                            className="mr-[10px] md:h-[18px] md:w-[18px] w-[14px] h-[14px] cursor-pointer"
-                                            type="checkbox"
+                        <Formik
+                            initialValues={initLoginForm}
+                            onSubmit={(values: ValuesForm) => handleSubmitLogin(values)}
+                        >
+                            {(formik: FormikProps<ValuesForm>) => (
+                                <Form className=" max-w-[400px] m-auto">
+                                    <div className="form-group">
+                                        <InputFieldIcon
+                                            type="text"
+                                            name="username"
+                                            size="md"
+                                            icon={<FiUserCheck />}
+                                            borderRadius="10px"
+                                            paddingY={7}
+                                            placeholder="Tên đăng nhập.."
                                         />
-                                        Nhớ mật khẩu
-                                    </label>
-                                </div>
-                                <a
-                                    className="text-[#2f65b9] md:text-[16px] text-[13px] italic hover:text-[#1d4a94]"
-                                    href=""
-                                >
-                                    Quên mật khẩu?
-                                </a>
-                            </div>
-                            <button className="w-full my-[24px] mx-0 md:py-[16px] py-[14px] px-[28px] md:text-[16px] text-[12px] uppercase text-white font-medium bg-[#2f65b9] border-none rounded-[6px] cursor-pointer hover:bg-[#2a5aa6]">
-                                Đăng ký
-                            </button>
-                        </form>
+                                    </div>
+                                    <div className="form-group my-3">
+                                        <InputFieldIcon
+                                            type="text"
+                                            name="fullname"
+                                            size="md"
+                                            icon={<BiUserCircle />}
+                                            borderRadius="10px"
+                                            paddingY={7}
+                                            placeholder="Họ tên đầy đủ.."
+                                        />
+                                    </div>
+                                    <div className="form-group my-3 password">
+                                        <FormControl>
+                                            <Field name="password">
+                                                {(props: any) => {
+                                                    const { field, meta } = props;
+                                                    return (
+                                                        <>
+                                                            <InputGroup>
+                                                                <InputLeftElement
+                                                                    pointerEvents="none"
+                                                                    height="100%"
+                                                                    left="5px"
+                                                                    fontWeight="bold"
+                                                                    fontSize="20px"
+                                                                    color="#636e72"
+                                                                    children={<RiLockPasswordLine />}
+                                                                />
+                                                                <Input
+                                                                    {...field}
+                                                                    type={showPassword ? 'text' : 'password'}
+                                                                    name="password"
+                                                                    borderRadius="10px"
+                                                                    paddingY={7}
+                                                                    placeholder="Nhập mật khẩu.."
+                                                                    borderRight="2px solid var(--primary)"
+                                                                    className={`${
+                                                                        meta.touched && meta.error && 'is-invalid'
+                                                                    }`}
+                                                                />
+                                                                <InputRightElement
+                                                                    height="100%"
+                                                                    right="10px"
+                                                                    fontWeight="bold"
+                                                                    fontSize="20px"
+                                                                >
+                                                                    <Button
+                                                                        h="1.75rem"
+                                                                        size="sm"
+                                                                        fontSize="lg"
+                                                                        onClick={HandleTogglePassword}
+                                                                    >
+                                                                        {showPassword ? <HiEyeOff /> : <HiEye />}
+                                                                    </Button>
+                                                                </InputRightElement>
+                                                            </InputGroup>
 
-                        <div className="flex md:justify-between justify-center">
-                            <p className="lg:text-[16px] text-[14px]">Bạn đã có có tài khoản?</p>
-                            <a
-                                className="ml-[8px] lg:text-[16px] text-[14px] text-[#2f65b9] decoration-none hover:text-[#1d4a94]"
-                                href=""
-                            >
-                                Đăng nhập ngay
-                            </a>
-                        </div>
+                                                            <ErrorMessage
+                                                                component="div"
+                                                                name={field.name}
+                                                                className="error w-full text-left"
+                                                            />
+                                                        </>
+                                                    );
+                                                }}
+                                            </Field>
+                                        </FormControl>
+                                    </div>
+                                    <div className="form-group my-3 password">
+                                        <FormControl>
+                                            <Field name="password">
+                                                {(props: any) => {
+                                                    const { field, meta } = props;
+                                                    return (
+                                                        <>
+                                                            <InputGroup>
+                                                                <InputLeftElement
+                                                                    pointerEvents="none"
+                                                                    height="100%"
+                                                                    left="5px"
+                                                                    fontWeight="bold"
+                                                                    fontSize="20px"
+                                                                    color="#636e72"
+                                                                    children={<RiLockPasswordFill />}
+                                                                />
+                                                                <Input
+                                                                    {...field}
+                                                                    type={showPassword ? 'text' : 'password'}
+                                                                    name="password"
+                                                                    borderRadius="10px"
+                                                                    paddingY={7}
+                                                                    placeholder="Xác nhận nmật khẩu.."
+                                                                    borderRight="2px solid var(--primary)"
+                                                                    className={`${
+                                                                        meta.touched && meta.error && 'is-invalid'
+                                                                    }`}
+                                                                />
+                                                                <InputRightElement
+                                                                    height="100%"
+                                                                    right="10px"
+                                                                    fontWeight="bold"
+                                                                    fontSize="20px"
+                                                                >
+                                                                    <Button
+                                                                        h="1.75rem"
+                                                                        size="sm"
+                                                                        fontSize="lg"
+                                                                        onClick={HandleTogglePassword}
+                                                                    >
+                                                                        {showPassword ? <HiEyeOff /> : <HiEye />}
+                                                                    </Button>
+                                                                </InputRightElement>
+                                                            </InputGroup>
+
+                                                            <ErrorMessage
+                                                                component="div"
+                                                                name={field.name}
+                                                                className="error w-full text-left"
+                                                            />
+                                                        </>
+                                                    );
+                                                }}
+                                            </Field>
+                                        </FormControl>
+                                    </div>
+                                    <div className="forgot-box flex justify-end">
+                                        <div className="forgot text-primary text-base font-semibold">
+                                            <Link to="">Quên mật khẩu ?</Link>
+                                        </div>
+                                    </div>
+                                    <div className="button-action w-full mt-5">
+                                        <Button type="submit" colorScheme="twitter" className="w-full py-6">
+                                            Đăng nhập
+                                        </Button>
+                                    </div>
+                                    <div className="sign-up mt-3 text-right">
+                                        <p className="text-base">
+                                            Nếu bạn đã có tài khoản ? <br />
+                                            <Link to="/login" className="text-primary font-semibold underline ml-2">
+                                                Hãy đăng nhập
+                                            </Link>
+                                        </p>
+                                    </div>
+                                </Form>
+                            )}
+                        </Formik>
                     </div>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Register;
