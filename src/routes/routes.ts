@@ -4,22 +4,16 @@ import About from '~/pages/About';
 import Contact from '~/pages/Contact';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
-import Register from '~/pages/Register';
 
 import ProductDetail from '~/pages/ProductDetail';
+import Register from '~/pages/Register';
 interface Routes {
     path: string;
     Component: React.ComponentType;
     layout?: null | any;
 }
 
-const privateRoutes: Routes[] = [
-    {
-        path: '/',
-        Component: Register,
-        layout: null,
-    },
-];
+const privateRoutes: Routes[] = [];
 
 const publicRoutes: Routes[] = [
     {
@@ -39,6 +33,7 @@ const publicRoutes: Routes[] = [
         Component: Login,
         layout: null,
     },
+
     {
         path: '/register',
         Component: Register,

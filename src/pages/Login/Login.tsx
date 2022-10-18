@@ -19,6 +19,7 @@ import images from '~/assets/images';
 
 import Image from '~/components/Image';
 import InputFieldIcon from '~/layouts/components/CustomField/InputFieldIcon';
+import './Login.scss';
 type ValuesForm = {
     username: string;
     password: string;
@@ -39,20 +40,20 @@ const Login = () => {
     };
 
     const HandleTogglePassword = () => {
-        console.log('click');
-
         setShowPassword(!showPassword);
     };
-    console.log(showPassword);
 
     return (
-        <div className="flex justify-center h-screen">
+        <div className="flex justify-center h-screen overflow-x-hidden">
             <div className="backgroud hidden w-full max-h-screen bg-primary md:flex justify-center items-center">
-                <div className="md:px-[32px]">
-                    <Image src={images.vector_login} alt="" />
+                <div className="shape-animations">
+                    <div className="shape-1 w-[200px] h-[200px] lg:w-[400px] lg:h-[400px]"></div>
+                </div>
+                <div className="md:px-[32px] z-10 relative">
+                    <Image src={images.vector_login} alt="" className="w-[80%] m-auto" />
                 </div>
             </div>
-            <div className="login-form bg-primary md:bg-[#f8f8f8] md:w-full w-full md:h-full">
+            <div className="login-form bg-primary md:bg-[#f8f8f8] md:w-full w-full h-full">
                 <div className="form m-auto h-full flex items-center justify-center flex-col w-full">
                     <div className="card login p-4 md:bg-transparent lg:w-2/4 w-3/4">
                         <div className="login-top m-autoflex flex-col items-center my-4">
@@ -178,7 +179,7 @@ const Login = () => {
                                     <div className="sign-up mt-3 text-right">
                                         <p className="text-base">
                                             Nếu bạn chưa có tài khoản ? <br />
-                                            <Link to="" className="text-primary font-semibold underline ml-2">
+                                            <Link to="/register" className="text-primary font-semibold underline ml-2">
                                                 Hãy đăng ký
                                             </Link>
                                         </p>
