@@ -6,7 +6,9 @@ import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 
 import ProductDetail from '~/pages/ProductDetail';
+import Category from '~/pages/Categories';
 import Register from '~/pages/Register';
+
 interface Routes {
     path: string;
     Component: React.ComponentType;
@@ -19,6 +21,14 @@ const publicRoutes: Routes[] = [
     {
         path: '/',
         Component: Home,
+    },
+    {
+        path: '/category/',
+        Component: Category,
+    },
+    {
+        path: '/category/:slug',
+        Component: Category,
     },
     {
         path: '/product/:slug',
@@ -42,7 +52,6 @@ const publicRoutes: Routes[] = [
     {
         path: '/contact',
         Component: Contact,
-        layout: null,
     },
     {
         path: '*',

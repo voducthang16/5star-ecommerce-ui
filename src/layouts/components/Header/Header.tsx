@@ -12,6 +12,7 @@ function Header() {
             const header = document.querySelector('.header');
             header!.classList.toggle('sticky', window.scrollY > 200);
 
+            // Home
             if (document.querySelector('.home')) {
                 const home = document.querySelector('.home');
                 if (windowWidth < 1024) {
@@ -21,12 +22,23 @@ function Header() {
                 }
             }
 
+            // Product Detail
             if (document.querySelector('.product-detail')) {
                 const productDetail = document.querySelector('.product-detail');
                 if (windowWidth < 1024) {
                     productDetail!.classList.toggle('sticky-mt-20', window.scrollY > 200);
                 } else {
                     productDetail!.classList.toggle('sticky-mt-36', window.scrollY > 200);
+                }
+            }
+
+            // Category
+            if (document.querySelector('.category-page')) {
+                const category = document.querySelector('.category-page');
+                if (windowWidth < 1024) {
+                    category!.classList.toggle('sticky-mt-20', window.scrollY > 200);
+                } else {
+                    category!.classList.toggle('sticky-mt-36', window.scrollY > 200);
                 }
             }
         });
@@ -108,14 +120,29 @@ function Header() {
                             <div className="col-span-4 flex items-center">
                                 <ul className="flex text-base space-x-8">
                                     <li>
-                                        <a className="hover:text-pink-800 transition-all" href="/">
+                                        <Link className="hover:text-[#009ef7] transition-all" to="/">
                                             Home
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="hover:text-pink-800 transition-all" href="/">
+                                        <Link className="hover:text-[#fe696a] transition-all" to="/product/detail">
+                                            Product Detail
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="hover:text-[#0097a7] transition-all" to="/category">
+                                            Category
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="hover:text-[#0097a7] transition-all" to="/about">
                                             About
-                                        </a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="hover:text-[#0097a7] transition-all" to="/contact">
+                                            Contact
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
