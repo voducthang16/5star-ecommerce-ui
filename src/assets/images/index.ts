@@ -18,6 +18,7 @@ const images: any = {
     b_banner: require('~/assets/images/b_banner.jpg'),
     banner_sm01: require('~/assets/images/banner_sm01.png'),
     vector_login: require('~/assets/images/vector-login.png'),
+    vector_register: require('~/assets/images/vector-signup.png'),
 };
 
 export default images;
