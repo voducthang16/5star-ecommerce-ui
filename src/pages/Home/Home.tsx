@@ -25,7 +25,7 @@ function Home() {
         },
         {
             logo: `${images.hero3}`,
-            title: 'brewed to perfection',
+            title: 'Ưu đãi lớn',
         },
     ];
     const productFakeData = [
@@ -88,9 +88,9 @@ function Home() {
                                     <div key={index} className="flex items-center bg-[#ffcca2] px-4 pt-4 rounded-lg">
                                         <Image className="w-2/5" src={images.banner_sm01} alt={'Small Banner'} />
                                         <div>
-                                            <h4 className="text-lg">Next Gen Video with 360 Cam</h4>
+                                            <h4 className="text-lg">Với nhiều sản phẩm hấp dẫn</h4>
                                             <a className="inline-flex items-center text-base text-pink-400" href="/">
-                                                Xem them <AiOutlineArrowRight className="ml-2" />
+                                                Xem thêm <AiOutlineArrowRight className="ml-2" />
                                             </a>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@ function Home() {
                                         <div className="relative pt-12 lg:py-44">
                                             <div className="pb-8 lg:pb-0">
                                                 <span className="desc-active block text-base md:text-xl text-slate-700 font-medium">
-                                                    In this season, find the best 🔥
+                                                    Trong mùa hè này, chúng tôi đang có 🔥
                                                 </span>
                                                 <h2 className="title-active mt-6 font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl !leading-[114%] text-slate-900">
                                                     {slide.title}
@@ -131,7 +131,7 @@ function Home() {
                                                     rel="noopener noreferrer"
                                                     href="/"
                                                 >
-                                                    <span>Explore now</span>
+                                                    <span>Mua ngay</span>
                                                     <span>
                                                         <svg className="w-5 h-5 ml-2.5" viewBox="0 0 24 24" fill="none">
                                                             <path
@@ -152,9 +152,9 @@ function Home() {
                                                     </span>
                                                 </a>
                                             </div>
-                                            <div className="lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
+                                            <div className="lg:absolute lg:top-0 lg:bottom-0  lg:-right-36 lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
                                                 <Image
-                                                    className="w-full h-full object-contain object-right-bottom img-active"
+                                                    className="w-full h-full object-contain object-right-top img-active"
                                                     src={slide.logo}
                                                     alt="Slide"
                                                 />
@@ -184,13 +184,13 @@ function Home() {
                                     <div className="h-full p-6 flex justify-between bg-[#fefce8]">
                                         <div>
                                             <span className="block mb-2 text-sm text-slate-700">
-                                                Explore new arrivals
+                                                Khám phá những sản phẩm mới
                                             </span>
                                             <h2 className="text-xl md:text-2xl text-slate-900 font-semibold">
-                                                Shop the latest from top brands
+                                                Mua sắm từ các thương hiệu hàng đầu
                                             </h2>
                                             <button className="relative z-20 px-6 py-3 mt-4 bg-white text-sm font-medium rounded-full shadow-lg hover:bg-gray-100">
-                                                Show Me All
+                                                Xem tất cả
                                             </button>
                                         </div>
                                         <div className="min-w-[45%] flex items-center justify-center">
@@ -230,12 +230,12 @@ function Home() {
                                 <div className="h-full flex flex-col justify-center">
                                     <div>
                                         <h6 className="inline-block text-sm px-2 py-1 bg-[#f34770] text-white rounded-md">
-                                            Limit offer
+                                            Ưu đãi giới hạn
                                         </h6>
                                     </div>
-                                    <h4 className="text-2xl mt-2 font-medium">All News</h4>
-                                    <h3 className="text-3xl mt-2 font-semibold">Last Gen iPad Pro</h3>
-                                    <p className="text-xl mt-1 mb-3 font-light">at discounted price. Hurry up!</p>
+                                    <h4 className="text-2xl mt-2 font-medium">Tất cả</h4>
+                                    <h3 className="text-3xl mt-2 font-semibold">sản phẩm mới nhất</h3>
+                                    <p className="text-xl mt-1 mb-3 font-light">đang giảm giá. Nhanh tay nào!</p>
                                     <Countdown date={day} />
                                     <div className="mt-6">
                                         <a href="/" className="py-3 px-6 bg-[#4e54c8] text-white text-lg rounded-lg">
@@ -268,11 +268,11 @@ function Home() {
                             </div>
                             <div className="text-center mt-auto space-y-5">
                                 <span className="inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100">
-                                    Step 1
+                                    Bước 1
                                 </span>
-                                <h3 className="text-base font-semibold">Filter &amp; Discover</h3>
+                                <h3 className="text-base font-semibold">Lọc &amp; Khám phá</h3>
                                 <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                    Smart filtering and suggestions make it easy to find
+                                    Tính năng lọc và đề xuất thông minh giúp bạn dễ dàng tìm thấy
                                 </span>
                             </div>
                         </div>
@@ -282,11 +282,11 @@ function Home() {
                             </div>
                             <div className="text-center mt-auto space-y-5">
                                 <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-indigo-800 bg-indigo-100">
-                                    Step 2
+                                    Bước 2
                                 </span>
-                                <h3 className="text-base font-semibold">Add to bag</h3>
+                                <h3 className="text-base font-semibold">Thêm vào giỏ hàng</h3>
                                 <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                    Easily select the correct items and add them to the cart
+                                    Dễ dàng chọn đúng mặt hàng và thêm chúng vào giỏ hàng
                                 </span>
                             </div>
                         </div>
@@ -297,11 +297,11 @@ function Home() {
                             <div>
                                 <div className="text-center mt-auto space-y-5">
                                     <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-yellow-800 bg-yellow-100  relative">
-                                        Step 3
+                                        Bước 3
                                     </span>
-                                    <h3 className="text-base font-semibold">Fast shipping</h3>
+                                    <h3 className="text-base font-semibold">Chuyển phát nhanh</h3>
                                     <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                        The carrier will confirm and ship quickly to you
+                                        Bên vận chuyển sẽ xác nhận và giao hàng nhanh chóng cho bạn
                                     </span>
                                 </div>
                             </div>
@@ -313,11 +313,11 @@ function Home() {
                             <div>
                                 <div className="text-center mt-auto space-y-5">
                                     <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-purple-800 bg-purple-100  relative">
-                                        Step 4
+                                        Bước 4
                                     </span>
-                                    <h3 className="text-base font-semibold">Enjoy the product</h3>
+                                    <h3 className="text-base font-semibold">Tận hưởng sản phẩm</h3>
                                     <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                        Have fun and enjoy your 5-star quality products
+                                        Chúc các bạn vui vẻ và tận hưởng những sản phẩm chất lượng 5 sao
                                     </span>
                                 </div>
                             </div>
@@ -329,7 +329,7 @@ function Home() {
             <section className="container py-10 lg:py-24">
                 <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6">
                     <div className="col-span-1">
-                        <h3 className="mb-4 text-base font-medium">Bestsellers</h3>
+                        <h3 className="mb-4 text-base font-medium">Bán chạy nhất</h3>
                         <div className="space-y-2">
                             {[1, 2, 3, 4].map((item, index) => (
                                 <div key={index} className="pb-2 flex items-center space-x-4 border-b border-slate-200">
@@ -341,7 +341,7 @@ function Home() {
                                         />
                                     </div>
                                     <div className="flex flex-col justify-center space-y-2">
-                                        <h5 className="text-sm font-semibold text-gray-700">Name Product</h5>
+                                        <h5 className="text-sm font-semibold text-gray-700">Giày Nike</h5>
                                         <span className="text-xs font-medium text-blue-700/90">1000.000VND</span>
                                     </div>
                                 </div>
@@ -349,11 +349,11 @@ function Home() {
                         </div>
                         <span className="block text-lg text-gray-800">...</span>
                         <a className="inline-flex items-center text-base text-pink-400" href="/">
-                            Xem them <AiOutlineArrowRight className="ml-2" />
+                            Xem thêm <AiOutlineArrowRight className="ml-2" />
                         </a>
                     </div>
                     <div className="col-span-1">
-                        <h3 className="mb-4 text-base font-medium">New arrivals</h3>
+                        <h3 className="mb-4 text-base font-medium">Hàng mới</h3>
                         <div className="space-y-2">
                             {[1, 2, 3, 4].map((item, index) => (
                                 <div key={index} className="pb-2 flex items-center space-x-4 border-b border-slate-200">
@@ -365,7 +365,7 @@ function Home() {
                                         />
                                     </div>
                                     <div className="flex flex-col justify-center space-y-2">
-                                        <h5 className="text-sm font-semibold text-gray-700">Name Product</h5>
+                                        <h5 className="text-sm font-semibold text-gray-700">Giày Adidas</h5>
                                         <span className="text-xs font-medium text-blue-700/90">1000.000VND</span>
                                     </div>
                                 </div>
@@ -373,7 +373,7 @@ function Home() {
                         </div>
                         <span className="block text-lg text-gray-800">...</span>
                         <a className="inline-flex items-center text-base text-pink-400" href="/">
-                            Xem them <AiOutlineArrowRight className="ml-2" />
+                            Xem thêm <AiOutlineArrowRight className="ml-2" />
                         </a>
                     </div>
                     <div className="hidden lg:block lg:col-span-1">

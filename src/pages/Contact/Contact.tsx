@@ -7,12 +7,10 @@ function Contact() {
                 <div className="w-full md:flex md:mx-[-6px]">
                     <div className="p-[20px] md:w-[calc(100%/2)] mb-[30px] text-center border-solid border-[1px] border-[rgba(0,0,0,.085)] md:mx-[6px]">
                         <BsGeoAlt className="mx-auto mb-[24px] text-[#FE6963]" />
-                        <h2 className="mb-[8px] text-[17px] font-medium">Main store address</h2>
-                        <p className="mb-[16px] text-[14px] text-[#7d879c]">
-                            396 Lillian Blvd, Holbrook, NY 11741, USA
-                        </p>
+                        <h2 className="mb-[8px] text-[17px] font-medium">Địa chỉ cửa hàng chính</h2>
+                        <p className="mb-[16px] text-[14px] text-[#7d879c]">123 Phạm Văn Đồng, Thủ Đức, Hồ Chí Minh</p>
                         <div className="flex justify-center items-center">
-                            <p className="text-[14px] text-[#fe696a]">Click to see map</p>
+                            <p className="text-[14px] text-[#fe696a]">Bấm để xem bản đồ</p>
                             <BsChevronRight className="ml-[6px] w-[18px] h-[18px] text-[#FE6963]" />
                             <i></i>
                         </div>
@@ -20,35 +18,35 @@ function Contact() {
 
                     <div className="p-[20px] md:w-[calc(100%/2)] mb-[30px] text-center border-solid border-[1px] border-[rgba(0,0,0,.085)] md:mx-[6px]">
                         <BsClock className="mx-auto mb-[24px] text-[#FE6963]" />
-                        <h2 className="mb-[8px] text-[17px] font-medium">Working hours</h2>
+                        <h2 className="mb-[8px] text-[17px] font-medium">Giờ làm việc</h2>
                         <ul>
-                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Mon - Fri: 10AM - 7PM</li>
-                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Sta: 11AM - 5PM</li>
+                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Thứ hai - Thứ 6: 10AM - 10PM</li>
+                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Thứ 7: 11AM - 5PM</li>
                         </ul>
                     </div>
 
                     <div className="p-[20px] md:w-[calc(100%/2)] mb-[30px] text-center border-solid border-[1px] border-[rgba(0,0,0,.085)] md:mx-[6px]">
                         <BsTelephone className="mx-auto mb-[24px] text-[#FE6963]" />
-                        <h2 className="mb-[8px] text-[17px] font-medium">Phone numbers</h2>
+                        <h2 className="mb-[8px] text-[17px] font-medium">Số điện thoại</h2>
                         <ul>
-                            <li className="mb-[6px] text-[14px] text-[#7d879c]">For customers: +1 (080) 44 357 260</li>
-                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Tech support: +1 00 33 169 7720</li>
+                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Hỗ trợ: 098964553135</li>
+                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Kỹ thuật: 09616256486</li>
                         </ul>
                     </div>
 
                     <div className="p-[20px] md:w-[calc(100%/2)] mb-[30px] text-center border-solid border-[1px] border-[rgba(0,0,0,.085)] md:mx-[6px]">
                         <BsEnvelope className="mx-auto mb-[24px] text-[#FE6963]" />
-                        <h2 className="mb-[8px] text-[17px] font-medium">Email addresses</h2>
+                        <h2 className="mb-[8px] text-[17px] font-medium">Địa chỉ email</h2>
                         <ul>
-                            <li className="mb-[6px] text-[14px] text-[#7d879c]">For customers: customer@example.com</li>
-                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Tech support: support@example.com</li>
+                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Hỗ trợ: customer@example.com</li>
+                            <li className="mb-[6px] text-[14px] text-[#7d879c]">Kỹ thuật: support@example.com</li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="md:mx-[-15px] py-[15px] pt-[24px] md:mt-[24px] md:mb-[48px]">
                     <h2 className="mb-[16px] text-[24px] md:text-[28px] font-medium text-center">
-                        Partner outlet stores
+                        Cửa hàng đại lý đối tác
                     </h2>
                     <div className="md:flex">
                         <div className="pt-[24px] md:px-[15px]">
@@ -58,26 +56,26 @@ function Contact() {
                                 alt=""
                             />
                             <div className="p-[20px] pb-[0] shadow-slate-800">
-                                <h6 className="mb-[12px] text-[18px] font-medium">Orlando, USA</h6>
+                                <h6 className="mb-[12px] text-[18px] font-medium">Phú Nhuận, Hồ Chí Minh</h6>
                                 <ul>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef]">
                                         <BsGeoAlt className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Find us</span>
-                                            <p>514 S. Magnolia St. Orlando, FL 32806, USA</p>
+                                            <span>Tìm chúng tôi ở</span>
+                                            <p>312 Nguyễn Kiệm</p>
                                         </div>
                                     </li>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef]">
                                         <BsTelephone className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Call us</span>
-                                            <p>+1 (786) 322 560 40</p>
+                                            <span>Số điện thoại</span>
+                                            <p>0998153153</p>
                                         </div>
                                     </li>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef ]">
                                         <BsTelephone className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Write us</span>
+                                            <span>Liên hệ</span>
                                             <p>orlando@example.com</p>
                                         </div>
                                     </li>
@@ -92,26 +90,26 @@ function Contact() {
                                 alt=""
                             />
                             <div className="p-[20px] pb-[0] shadow-slate-800">
-                                <h6 className="mb-[12px] text-[18px] font-medium">Orlando, USA</h6>
+                                <h6 className="mb-[12px] text-[18px] font-medium">Phú Nhuận, Hồ Chí Minh</h6>
                                 <ul>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef]">
                                         <BsGeoAlt className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Find us</span>
-                                            <p>514 S. Magnolia St. Orlando, FL 32806, USA</p>
+                                            <span>Tìm chúng tôi ở</span>
+                                            <p>312 Nguyễn Kiệm</p>
                                         </div>
                                     </li>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef]">
                                         <BsTelephone className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Call us</span>
-                                            <p>+1 (786) 322 560 40</p>
+                                            <span>Số điện thoại</span>
+                                            <p>0998153153</p>
                                         </div>
                                     </li>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef ]">
                                         <BsTelephone className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Write us</span>
+                                            <span>Liên hệ</span>
                                             <p>orlando@example.com</p>
                                         </div>
                                     </li>
@@ -126,26 +124,26 @@ function Contact() {
                                 alt=""
                             />
                             <div className="p-[20px]  shadow-slate-800">
-                                <h6 className="mb-[12px] text-[18px] font-medium">Orlando, USA</h6>
+                                <h6 className="mb-[12px] text-[18px] font-medium">Phú Nhuận, Hồ Chí Minh</h6>
                                 <ul>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef]">
                                         <BsGeoAlt className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Find us</span>
-                                            <p>514 S. Magnolia St. Orlando, FL 32806, USA</p>
+                                            <span>Tìm chúng tôi ở</span>
+                                            <p>312 Nguyễn Kiệm</p>
                                         </div>
                                     </li>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef]">
                                         <BsTelephone className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Call us</span>
-                                            <p>+1 (786) 322 560 40</p>
+                                            <span>Số điện thoại</span>
+                                            <p>0998153153</p>
                                         </div>
                                     </li>
                                     <li className="mb-[12px] pb-[16px] flex text-[14px] border-b border-solid border-[#e3e9ef ]">
                                         <BsTelephone className="text-[#FE6963] text-[20px]" />
                                         <div className="pl-[16px]">
-                                            <span>Write us</span>
+                                            <span>Liên hệ</span>
                                             <p>orlando@example.com</p>
                                         </div>
                                     </li>
@@ -171,7 +169,7 @@ function Contact() {
                 </section>
 
                 <section className="px-[15px] pt-[48px] lg:pt-[15px] lg:w-[50%] lg:px-[24px] lg:py-[48px] lg:border-solid lg:border-[1px] lg:border-[rgba(0,0,0,.085)]">
-                    <h2 className="mb-[24px] text-[24px] font-medium">Drop us a line</h2>
+                    <h2 className="mb-[24px] text-[24px] font-medium">Đóng góp ý kiến</h2>
                     <div>
                         <div className="md:flex justify-between">
                             <div className="md:w-[50%]">

@@ -46,9 +46,9 @@ function Product({ idProduct, color, images }: ProductProps) {
                         ))}
                     </div>
                     <div className="mt-4">
-                        <span className="block mb-2 text-sm font-medium text-[#7d879c]">Sportswear</span>
+                        <span className="block mb-2 text-sm font-medium text-[#7d879c]">Thể thao</span>
                         <Link className="block text-base font-semibold text-[#373f50]" to="/product/details">
-                            Cotton Lace Blouse
+                            Quần Short
                         </Link>
                         <div className="mt-4 flex justify-between items-center">
                             <span className="text-sm">1000.000VND</span>

@@ -84,7 +84,7 @@ function ProductDetail() {
         <Loading />
     ) : (
         <div className="product-detail">
-            <Breadcrumb name={'Product Name'} />
+            <Breadcrumb name={'Sản phẩm'} />
             <section className="container pb-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-4 shadow-2xl lg:p-4 rounded-2xl">
                     <div className="col-span-1 lg:col-span-7">
@@ -129,9 +129,9 @@ function ProductDetail() {
                             </Swiper>
                         </div>
                     </div>
-                    <div className="col-span-1 lg:col-span-5 lg:space-y-4">
-                        <div>
-                            <h3 className="text-2xl font-bold">Product Name</h3>
+                    <div className="col-span-1 lg:col-span-5">
+                        <div className="lg:space-y-4">
+                            <h3 className="text-2xl font-bold">Sản phẩm</h3>
                             <h4 className="text-base font-normal flex items-center space-x-2">
                                 <PackageIcon width={16} height={16} className="mr-2" />
                                 Tình trạng:<span className="inline-block text-[#29b474]">Còn hàng</span>
@@ -185,7 +185,7 @@ function ProductDetail() {
                                     <span>
                                         <AiOutlineMinus />
                                     </span>
-                                    <input className="w-full border border-slate-200 p-1" type="number" />
+                                    <input className="w-full border border-slate-200 p-1" type="number" value={1} />
                                     <span>
                                         <AiOutlinePlus />
                                     </span>
@@ -216,7 +216,7 @@ function ProductDetail() {
                                 <h2>
                                     <AccordionButton>
                                         <Box flex="1" textAlign="left">
-                                            Section 1 title
+                                            Thông số
                                         </Box>
                                         <AccordionIcon />
                                     </AccordionButton>
@@ -232,7 +232,7 @@ function ProductDetail() {
                                 <h2>
                                     <AccordionButton>
                                         <Box flex="1" textAlign="left">
-                                            Section 2 title
+                                            Mô tả
                                         </Box>
                                         <AccordionIcon />
                                     </AccordionButton>
@@ -250,7 +250,7 @@ function ProductDetail() {
             <section className="container py-20">
                 <div className="flex justify-between pb-20 border-b border-slate-200">
                     <div className="w-2/5">
-                        <h6 className="text-2xl text-gray-800 font-bold mb-4">70 Reviews</h6>
+                        <h6 className="text-2xl text-gray-800 font-bold mb-4">70 Đánh giá</h6>
                         <div className="flex text-base items-center space-x-2">
                             <Rate className="flex space-x-1" average={4.5} />
                             <span>4.5</span>
@@ -286,10 +286,10 @@ function ProductDetail() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <span className="text-sm text-gray-600">Username</span>
+                            <span className="text-sm text-gray-600">Tên người dùng</span>
                             <Rate className="flex space-x-1" average={3} />
-                            <div className="text-base">June 28, 2012</div>
-                            <p className="text-base">Feedback</p>
+                            <div className="text-base">10.10.2022</div>
+                            <p className="text-base">Phản hồi</p>
                         </div>
                     </div>
                     <div className="flex space-x-4 border-slate-200 border-b py-4 last:border-b-0">
@@ -300,10 +300,10 @@ function ProductDetail() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <span className="text-sm text-gray-600">Username</span>
+                            <span className="text-sm text-gray-600">Tên người dùng</span>
                             <Rate className="flex space-x-1" average={4} />
 
-                            <div className="text-base">June 28, 2012</div>
+                            <div className="text-base">10.10.2022</div>
                             <p className="text-base">Feedback</p>
                         </div>
                     </div>
