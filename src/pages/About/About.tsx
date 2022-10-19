@@ -60,20 +60,19 @@ function About() {
                     </div>
                     <div className="mt-[16px] lg:px-[24px]">
                         <div>
-                            <h4 className="mb-[8px] text-[16px] capitalize text-[#222]">About us</h4>
+                            <h4 className="mb-[8px] text-[16px] capitalize text-[#222]">Về chúng tôi</h4>
                             <h2 className="mb-[12px] text-[28px] capitalize font-semibold text-[#222222]]">
-                                We make Organic Food In Market
+                                Chúng tôi tạo ra những sản phẩm độc đáo
                             </h2>
                         </div>
                         <div>
                             <p className="text-[14px] text-justify leading-6 text-[#4a5568]">
-                                Just a few seconds to measure your body temperature. Up to 5 users! The battery lasts up
-                                to 2 years. There are many variations of passages of Lorem Ipsum available.We started in
-                                2019 and haven't stopped smashing it since. A global brand that doesn't sleep, we are
-                                24/7 and always bringing something new with over 100 new products dropping on the
-                                monhtly, bringing you the latest looks for less.
+                                5star là lựa chọn hàng đầu dành cho các tín đồ thời trang Streetwear sành điệu. Sứ mệnh
+                                của 5star là trao quyền cho thế hệ trẻ toàn thế giới tự do thể hiện phong cách thông qua
+                                thời trang, thương hiệu vượt qua ranh giới của thời trang streetwear bằng cách không
+                                ngừng sáng tạo các trang phục với các bộ sưu tập độc đáo.
                             </p>
-                            <ul className="mt-[32px]">
+                            {/* <ul className="mt-[32px]">
                                 <li className="mb-[16px]">
                                     <div className="flex">
                                         <div className="">
@@ -83,7 +82,6 @@ function About() {
                                                 alt=""
                                             />
                                         </div>
-
                                         <div className="">
                                             <h5 className="text-[15px] text-[#222222]">Free delivery for all orders</h5>
                                         </div>
@@ -137,7 +135,7 @@ function About() {
                                         </div>
                                     </div>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
@@ -145,8 +143,8 @@ function About() {
 
             <div className="py-[32px] px-[28px] bg-[#f8f8f8]">
                 <div className="text-center">
-                    <h4 className="mb-[8px] text-[16px] text-[#0da487]">What We Do</h4>
-                    <h2 className="mb-[28px] text-[23px]">We are Trusted by Clients</h2>
+                    <h4 className="mb-[8px] text-[16px] text-[#0da487]">Chúng tôi làm gì</h4>
+                    <h2 className="mb-[28px] text-[23px]">Chúng tôi được khách hàng tin cậy</h2>
                 </div>
                 <div className="px-[14px] mb-[30px]">
                     <Slider className="" {...settings}>
@@ -157,10 +155,10 @@ function About() {
                                     src="https://themes.pixelstrap.com/fastkart/assets/svg/3/user.svg"
                                     alt=""
                                 />
-                                <h4 className="text-[22px]">Happy Customers</h4>
+                                <h4 className="text-[22px]">Khách hàng hạnh phúc</h4>
                                 <p className="text-[14px] leading-[1.7]">
-                                    My goal for this coffee shop is to be able to get a coffee and get on with my day.
-                                    It's a Thursday morning and I am rushing between meetings.
+                                    Mục tiêu của chúng tôi là mang đến trải nghiệm tốt nhất cho người tiêu dùng và làm
+                                    họ hạnh phúc
                                 </p>
                             </div>
                         </div>
@@ -171,10 +169,10 @@ function About() {
                                     src="https://themes.pixelstrap.com/fastkart/assets/svg/3/buy.svg"
                                     alt=""
                                 />
-                                <h4 className="text-[22px]">Products Sales</h4>
+                                <h4 className="text-[22px]">Biểu tượng thời trang thời đại mới</h4>
                                 <p className="text-[14px] leading-[1.7]">
-                                    Some coffee shops have a seating area, while some just have a spot to order and then
-                                    go somewhere else to sit down. The coffee shop that I am going to.
+                                    Tại 5star, mỗi sản phẩm đều mang theo sự cá tính và sành điệu, đại diện cho hình ảnh
+                                    giới trẻ hiện đại - biểu tượng cho sự dẫn đầu phong cách thời đại mới.
                                 </p>
                             </div>
                         </div>
@@ -185,10 +183,11 @@ function About() {
                                     src="https://themes.pixelstrap.com/fastkart/assets/svg/3/work.svg"
                                     alt=""
                                 />
-                                <h4 className="text-[22px]">Business Years</h4>
+                                <h4 className="text-[22px]">Chất lượng trải nghiệm vượt trội</h4>
                                 <p className="text-[14px] leading-[1.7]">
-                                    My goal for this coffee shop is to be able to get a coffee and get on with my day.
-                                    It's a Thursday morning and I am rushing between meetings.
+                                    Chúng tôi không ngừng nỗ lực, tập trung vào chất lượng sản phẩm và trải nghiệm mua
+                                    sắm vượt trội nhất chưa từng có trước đây, các cửa hàng vật lý của chúng tôi, tối ưu
+                                    hóa trải nghiệm, giúp người dùng mua sắm một sản phẩm cao cấp thật sự.
                                 </p>
                             </div>
                         </div>
@@ -206,9 +205,9 @@ function About() {
                         />
                     </div>
                     <div className="lg:w-[50%] max-w-lg relative">
-                        <h2 className="font-semibold text-4xl md:text-5xl">Don't miss out on special offers</h2>
+                        <h2 className="font-semibold text-4xl md:text-5xl">Đừng bỏ lỡ những ưu đãi đặc biệt</h2>
                         <span className="text-[16px] block mt-5 text-neutral-500 dark:text-neutral-400">
-                            Register to receive news about the latest, savings combos, discount codes...
+                            Đăng ký nhận tin mới nhất, combo tiết kiệm, mã giảm giá ...
                         </span>
                         <ul className="space-y-4 mt-10">
                             <li className="flex items-center space-x-4">
@@ -216,7 +215,7 @@ function About() {
                                     01
                                 </span>
                                 <span className="text-[16px] font-medium text-neutral-700 dark:text-neutral-300">
-                                    Savings combos
+                                    Combo tiết kiệm
                                 </span>
                             </li>
                             <li className="flex items-center space-x-4">
@@ -232,7 +231,7 @@ function About() {
                                     03
                                 </span>
                                 <span className="text-[16px] font-medium text-neutral-700 dark:text-neutral-300">
-                                    Premium magazines
+                                    Tạp chí cao cấp
                                 </span>
                             </li>
                         </ul>
@@ -241,7 +240,7 @@ function About() {
                                 type="email"
                                 className="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 disabled:bg-neutral-200 dark:disabled:bg-neutral-800 rounded-full text-sm font-normal h-11 px-4 py-3 bg-[#f8f8f8] "
                                 aria-required="true"
-                                placeholder="Enter your email"
+                                placeholder="Nhập email"
                             />
                             <button
                                 className="flex items-center justify-center rounded-full !leading-none          disabled:bg-opacity-70 bg-slate-900 hover:bg-slate-800 

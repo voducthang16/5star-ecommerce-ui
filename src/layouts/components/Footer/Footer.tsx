@@ -11,72 +11,72 @@ function Footer() {
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="col-span-1">
-                            <h4 className="text-lg font-bold mb-8">Shop Departments</h4>
+                            <h4 className="text-lg font-bold mb-8">Loại</h4>
                             <ul className="text-base font-normal space-y-4">
                                 <li>
-                                    <a href="/">Sneakers & Athletic</a>
+                                    <a href="/">Giày thể thao</a>
                                 </li>
                                 <li>
-                                    <a href="/">Athletic Apparel</a>
+                                    <a href="/">Trang phục thể thao</a>
                                 </li>
                                 <li>
                                     <a href="/">Sandals</a>
                                 </li>
                                 <li>
-                                    <a href="/">Jeans</a>
+                                    <a href="/">Quần jean</a>
                                 </li>
                                 <li>
-                                    <a href="/">Shorts</a>
+                                    <a href="/">Quần short</a>
                                 </li>
                                 <li>
-                                    <a href="/">T-Shirts</a>
+                                    <a href="/">Áo phông</a>
                                 </li>
                                 <li>
-                                    <a href="/">Swimwear</a>
+                                    <a href="/">Đồ bơi</a>
                                 </li>
                                 <li>
-                                    <a href="/">Accessories</a>
+                                    <a href="/">Phụ kiện</a>
                                 </li>
                                 <li>
-                                    <a href="/">Watches</a>
+                                    <a href="/">Đồng hồ</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-span-1 space-y-8">
                             <div>
-                                <h4 className="text-lg font-bold mb-8">Explore</h4>
+                                <h4 className="text-lg font-bold mb-8">Khám phá</h4>
                                 <ul className="text-base font-normal space-y-4">
                                     <li>
-                                        <a href="/">Design systems</a>
+                                        <a href="/">Hệ thống thiết kế</a>
                                     </li>
                                     <li>
-                                        <a href="/">Pricing</a>
+                                        <a href="/">Bảng giá</a>
                                     </li>
                                     <li>
-                                        <a href="/">Security</a>
+                                        <a href="/">Bảo mật</a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 className="text-lg font-bold mb-8">About us</h4>
+                                <h4 className="text-lg font-bold mb-8">Về chúng tôi</h4>
                                 <ul className="text-base font-normal space-y-4">
                                     <li>
-                                        <a href="/">About company</a>
+                                        <a href="/">Giới thiệu công ty</a>
                                     </li>
                                     <li>
-                                        <a href="/">Our team</a>
+                                        <a href="/">Đội ngũ</a>
                                     </li>
                                     <li>
-                                        <a href="/">Careers</a>
+                                        <a href="/">Nghề nghiệp</a>
                                     </li>
                                     <li>
-                                        <a href="/">News</a>
+                                        <a href="/">Tin tức</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-span-1">
-                            <h4 className="text-lg font-bold mb-8">Stay in touch</h4>
+                            <h4 className="text-lg font-bold mb-8">Giữ liên lạc</h4>
                             <div className="relative flex md:flex-col md:items-start lg:items-center lg:flex-row">
                                 <div
                                     className="absolute top-1/2 -translate-y-1/2 left-4  p-1 md:top-6 md:left-4
@@ -87,15 +87,15 @@ function Footer() {
                                 <input
                                     className="!pl-14 input input-search rounded-l-lg md:rounded-lg"
                                     type="text"
-                                    placeholder="Enter your email"
+                                    placeholder="Nhập email của bạn"
                                 />
                                 <h6 className="text-base py-3 px-4 rounded-r-lg md:rounded-lg md:mt-4 lg:mt-0 bg-slate-200">
-                                    Subscribe
+                                    OK
                                 </h6>
                             </div>
                             <p className="text-slate-600 text-xs mt-4">
-                                Subscribe to our newsletter to receive early discount offers, updates and new products
-                                info.
+                                Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi giảm giá sớm, cập nhật và các sản
+                                phẩm mới thông tin.
                             </p>
                         </div>
                     </div>
@@ -109,8 +109,10 @@ function Footer() {
                                 <RocketIcon width={40} height={40} className={'fill-pink-700'} />
                             </div>
                             <div className="space-y-2">
-                                <h5 className="text-base font-semibold">Fast and free delivery</h5>
-                                <h6 className="text-xs font-normal">Free delivery for all orders over $200</h6>
+                                <h5 className="text-base font-semibold">Giao hàng nhanh chóng và miễn phí</h5>
+                                <h6 className="text-xs font-normal">
+                                    Giao hàng miễn phí cho tất cả các đơn đặt hàng trên 200.000VND
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -120,8 +122,8 @@ function Footer() {
                                 <RefundIcon width={40} height={40} className={'fill-pink-700'} />
                             </div>
                             <div className="space-y-2">
-                                <h5 className="text-base font-semibold">Money back guarantee</h5>
-                                <h6 className="text-xs font-normal">We return money within 30 days</h6>
+                                <h5 className="text-base font-semibold">Đảm bảo hoàn tiền</h5>
+                                <h6 className="text-xs font-normal">Chúng tôi hoàn trả lại tiền trong vòng 30 ngày</h6>
                             </div>
                         </div>
                     </div>
@@ -131,8 +133,8 @@ function Footer() {
                                 <CallCenterIcon width={40} height={40} className={'fill-pink-700'} />
                             </div>
                             <div className="space-y-2">
-                                <h5 className="text-base font-semibold">24/7 customer support</h5>
-                                <h6 className="text-xs font-normal">Friendly 24/7 customer support</h6>
+                                <h5 className="text-base font-semibold">Hỗ trợ khách hàng 24/7</h5>
+                                <h6 className="text-xs font-normal">Hỗ trợ khách hàng 24/7 thân thiện</h6>
                             </div>
                         </div>
                     </div>
@@ -142,8 +144,8 @@ function Footer() {
                                 <CreditCardIcon width={40} height={40} className={'fill-pink-700'} />
                             </div>
                             <div className="space-y-2">
-                                <h5 className="text-base font-semibold">Secure online payment</h5>
-                                <h6 className="text-xs font-normal">We possess SSL / Secure certificate</h6>
+                                <h5 className="text-base font-semibold">Thanh toán trực tuyến an toàn</h5>
+                                <h6 className="text-xs font-normal">Chúng tôi có chứng chỉ SSL / Secure</h6>
                             </div>
                         </div>
                     </div>
@@ -152,14 +154,14 @@ function Footer() {
                             <div className="w-full">
                                 <LogoIcon className="mx-auto md:m-0" />
                                 <ul className="flex flex-wrap justify-center md:justify-start mt-6 text-sm text-gray-600 space-x-4 leading-6">
-                                    <li>Outlets</li>
-                                    <li>Affiliates</li>
-                                    <li>Support</li>
-                                    <li>Privacy</li>
-                                    <li>Terms of use</li>
+                                    <li>Cửa hàng</li>
+                                    <li>Tiếp thị liên kết</li>
+                                    <li>Hỗ trợ</li>
+                                    <li>Bảo mật</li>
+                                    <li>Điều khoản sử dụng</li>
                                 </ul>
                                 <p className="mt-8 text-center md:text-start text-xs text-gray-600">
-                                    © All rights reserved. Made by 5Star Team
+                                    © Đã đăng ký Bản quyền. Thực hiện bởi 5Star Team
                                 </p>
                             </div>
                             <div className="flex flex-col md:items-end items-center space-y-4">
