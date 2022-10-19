@@ -375,6 +375,7 @@ function Category() {
                                 <option value="1">Giá</option>
                                 <option value="1">abc</option>
                                 <option value="1">abc</option>
+                                <option value="1">abc</option>
                             </select>
                         </div>
                         <div>
