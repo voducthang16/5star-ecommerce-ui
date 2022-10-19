@@ -6,7 +6,7 @@ import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 
 import ProductDetail from '~/pages/ProductDetail';
-import Category from '~/pages/Categories';
+import Category from '~/pages/Category';
 import Register from '~/pages/Register';
 
 interface Routes {
