@@ -59,7 +59,7 @@ function Product({ idProduct, color, images }: ProductProps) {
                 <div
                     className="hidden absolute p-4 top-full -left-[1px] -right-[1px]
                     group-hover:shadow-xl group-hover:block transition-shadow rounded-b-2xl
-                    bg-white border border-t-0 border-slate-200 space-y-2"
+                    bg-white border border-t-0 border-slate-200 space-y-2 z-20"
                 >
                     {/* size */}
                     <div className="flex justify-around items-center text-sm">
