@@ -46,13 +46,13 @@ function Category() {
     ];
     return (
         <div className="category-page">
-            <Breadcrumb name={slug ? `${slug}` : 'All'} share={false} />
+            <Breadcrumb name={slug ? `${slug}` : 'Tất cả'} share={false} />
             <div className="container pb-20">
                 <div className="grid grid-cols-12 gap-5">
                     <div className="col-span-3">
                         <div className="bg-white shadow-lg space-y-4">
                             <div className="pb-4 border-b border-slate-200">
-                                <h6 className="text-lg font-semibold">Categories</h6>
+                                <h6 className="text-lg font-semibold">Danh mục</h6>
                                 <Accordion allowToggle>
                                     <AccordionItem borderTop={0}>
                                         <AccordionButton
@@ -65,7 +65,7 @@ function Category() {
                                         >
                                             <ShoesIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Shoes
+                                                Giày
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -106,7 +106,7 @@ function Category() {
                                         >
                                             <ClothingIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Clothing
+                                                Quần áo
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -147,7 +147,7 @@ function Category() {
                                         >
                                             <BagIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Bag
+                                                Túi xách
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -188,7 +188,7 @@ function Category() {
                                         >
                                             <SunglassesIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Sunglasses
+                                                Kính mát
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -229,7 +229,7 @@ function Category() {
                                         >
                                             <WatchIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Watches
+                                                Đồng hồ
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -270,7 +270,7 @@ function Category() {
                                         >
                                             <AccessoriesIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Accessories
+                                                Phụ kiện
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -303,17 +303,17 @@ function Category() {
                                 </Accordion>
                             </div>
                             <div className="pb-4 border-b border-slate-200">
-                                <h6 className="text-lg font-semibold">Price</h6>
+                                <h6 className="text-lg font-semibold">Giá</h6>
                                 <div className="flex">
-                                    <input type="text" className="input flex-1" placeholder="min" />
-                                    <input type="text" className="input flex-1" placeholder="max" />
+                                    <input type="text" className="input flex-1" placeholder="Từ" />
+                                    <input type="text" className="input flex-1" placeholder="Đến" />
                                 </div>
                                 <button className="bg-pink-300 text-center text-base w-full py-3 text-white rounded-lg">
-                                    Apply
+                                    Áp dụng
                                 </button>
                             </div>
                             <div className="pb-4 border-b border-slate-200">
-                                <h6 className="text-lg font-semibold">Brand</h6>
+                                <h6 className="text-lg font-semibold">Thương hiệu</h6>
                                 <div className="space-y-2 max-h-[64px] overflow-y-auto px-2">
                                     <div className="w-full flex items-center space-x-2 text-base">
                                         <input type="checkbox" name="adidas" id="adidas" />
@@ -363,16 +363,16 @@ function Category() {
                                 </div>
                             </div>
                             <div className="pb-4">
-                                <h6 className="text-lg font-semibold">Color</h6>
+                                <h6 className="text-lg font-semibold">Màu</h6>
                             </div>
                         </div>
                     </div>
                     <div className="col-span-9">
                         {/* top right */}
                         <div className="text-base mb-4">
-                            <span>Sort by: </span>
+                            <span>Sắp xếp theo: </span>
                             <select name="" id="">
-                                <option value="1">abc</option>
+                                <option value="1">Giá</option>
                                 <option value="1">abc</option>
                                 <option value="1">abc</option>
                             </select>

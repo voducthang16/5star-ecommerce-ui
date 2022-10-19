@@ -115,33 +115,33 @@ function Header() {
                         <div className="grid grid-cols-8 gap-4 h-16">
                             <div className="col-span-2 flex items-center space-x-4">
                                 <FourSquaresIcon width={16} height={16} />
-                                <h4 className="text-base">Departments</h4>
+                                <h4 className="text-base">Loại</h4>
                             </div>
                             <div className="col-span-4 flex items-center">
                                 <ul className="flex text-base space-x-8">
                                     <li>
                                         <Link className="hover:text-[#009ef7] transition-all" to="/">
-                                            Home
+                                            Trang chủ
                                         </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Link className="hover:text-[#fe696a] transition-all" to="/product/detail">
                                             Product Detail
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Link className="hover:text-[#0097a7] transition-all" to="/category">
-                                            Category
+                                            Danh mục
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="hover:text-[#0097a7] transition-all" to="/about">
-                                            About
+                                            Giới thiệu
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="hover:text-[#0097a7] transition-all" to="/contact">
-                                            Contact
+                                            Liên lạc
                                         </Link>
                                     </li>
                                 </ul>
