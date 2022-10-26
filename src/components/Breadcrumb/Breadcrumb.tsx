@@ -1,8 +1,8 @@
-import { TbChevronsRight } from 'react-icons/tb';
-import { Link } from 'react-router-dom';
-import { ImFacebook } from 'react-icons/im';
 import { BsInstagram, BsTwitter } from 'react-icons/bs';
-import { boolean } from 'yup';
+import { HiOutlineHome } from 'react-icons/hi';
+import { ImFacebook } from 'react-icons/im';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 interface BreadcrumbProps {
     name?: string;
     share?: boolean;
@@ -10,20 +10,25 @@ interface BreadcrumbProps {
 
 const Breadcrumb = ({ name, share = true }: BreadcrumbProps) => {
     return (
-        <div className="breadcrumb my-4">
+        <div className="breadcrumb my-4 bg-[#f8f8f8] py-6">
             <div className="container">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                    <div className="flex items-center text-lg">
-                        <h5 className="text-primary font-medium">Trang chủ</h5>
-                        <h5 className="flex items-center">
-                            <span className="text-gray-400 mx-1">
-                                <TbChevronsRight />
+                    <div className="flex items-center text-base ">
+                        <h5 className="text-primary font-medium mr-2 flex items-center hover-text">
+                            <span className="icon text-lg mr-1">
+                                <HiOutlineHome />
+                            </span>
+                            Trang chủ
+                        </h5>
+                        <h5 className="flex items-center mr-2 hover-text">
+                            <span className="text-gray-400 mx-1 text-sm">
+                                <MdOutlineKeyboardArrowRight />
                             </span>
                             <Link to="">Danh mục</Link>
                         </h5>
-                        <h5 className="flex items-center">
-                            <span className="text-gray-400 mx-1">
-                                <TbChevronsRight />
+                        <h5 className="flex items-center hover-text">
+                            <span className="text-gray-400 mx-1 text-sm">
+                                <MdOutlineKeyboardArrowRight />
                             </span>
                             <Link to="">{name}</Link>
                         </h5>

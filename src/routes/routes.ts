@@ -8,6 +8,7 @@ import Login from '~/pages/Login';
 import ProductDetail from '~/pages/ProductDetail';
 import Category from '~/pages/Category';
 import Register from '~/pages/Register';
+import MyAccount from '~/pages/MyAccount';
 
 interface Routes {
     path: string;
@@ -33,6 +34,10 @@ const publicRoutes: Routes[] = [
     {
         path: '/product/:slug',
         Component: ProductDetail,
+    },
+    {
+        path: '/my-account',
+        Component: MyAccount,
     },
     {
         path: '/about',
