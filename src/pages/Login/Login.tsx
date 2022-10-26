@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 
 import Image from '~/components/Image';
+import Logo from '~/components/Logo';
 import InputFieldIcon from '~/layouts/components/CustomField/InputFieldIcon';
 import './Login.scss';
 type ValuesForm = {
@@ -58,11 +59,7 @@ const Login = () => {
                     <div className="card login p-4 md:bg-transparent lg:w-2/4 w-3/4">
                         <div className="login-top m-autoflex flex-col items-center my-4">
                             <div className="logo my-5 flex items-center justify-center">
-                                <img
-                                    src="https://themes.pixelstrap.com/fastkart/assets/images/logo/1.png"
-                                    alt=""
-                                    width="200px"
-                                />
+                                <Logo />
                             </div>
                             <div className="login-text my-5 m-auto">
                                 <h1 className="title font-bold text-3xl text-center my-5">Đăng nhập</h1>

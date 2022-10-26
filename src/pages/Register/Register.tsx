@@ -8,6 +8,7 @@ import { RiLockPasswordFill, RiLockPasswordLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 import Image from '~/components/Image';
+import Logo from '~/components/Logo';
 import InputFieldIcon from '~/layouts/components/CustomField/InputFieldIcon';
 import './Register.scss';
 type ValuesForm = {
@@ -48,11 +49,7 @@ const Register = () => {
                     <div className="card login p-4 md:bg-transparent lg:w-2/4 w-3/4">
                         <div className="login-top m-autoflex flex-col items-center my-4">
                             <div className="logo my-5 flex items-center justify-center">
-                                <img
-                                    src="https://themes.pixelstrap.com/fastkart/assets/images/logo/1.png"
-                                    alt=""
-                                    width="200px"
-                                />
+                                <Logo />
                             </div>
                             <div className="login-text my-5 m-auto">
                                 <h1 className="title font-bold text-3xl text-center my-5">Đăng ký</h1>
@@ -210,7 +207,7 @@ const Register = () => {
                                     </div>
                                     <div className="button-action w-full mt-5">
                                         <Button type="submit" colorScheme="twitter" className="w-full py-6">
-                                            Đăng nhập
+                                            Đăng ký
                                         </Button>
                                     </div>
                                     <div className="sign-up mt-3 text-right">
