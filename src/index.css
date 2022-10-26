@@ -63,3 +63,9 @@
 .scroll-to-top.active {
     @apply opacity-100 visible;
 }
+
+/* HOVER */
+
+.hover-text {
+    @apply hover:text-primary transition-all duration-200 cursor-pointer;
+}
