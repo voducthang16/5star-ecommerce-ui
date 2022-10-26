@@ -65,6 +65,42 @@ function Home() {
                 'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
             ],
         },
+        {
+            id: 'product_5',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_5',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_5',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_5',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
     ];
     const CompleteCountdown = () => <span>You are good to go!</span>;
     const [slidesPerView, setSlidesPerView] = useState(3);

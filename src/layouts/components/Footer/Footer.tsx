@@ -1,9 +1,10 @@
 import { AiOutlineMail } from 'react-icons/ai';
-import { ImFacebook } from 'react-icons/im';
 import { BsInstagram, BsTwitter } from 'react-icons/bs';
-import { CallCenterIcon, CreditCardIcon, RefundIcon, RocketIcon, LogoIcon } from '~/components/Icons';
+import { ImFacebook } from 'react-icons/im';
 import images from '~/assets/images';
+import { CallCenterIcon, CreditCardIcon, RefundIcon, RocketIcon } from '~/components/Icons';
 import Image from '~/components/Image';
+import Logo from '~/components/Logo';
 function Footer() {
     return (
         <footer className="footer-wrapper pb-20 lg:pb-0">
@@ -152,7 +153,9 @@ function Footer() {
                     <div className="col-span-2 md:col-span-4 border-t border-slate-200 pt-10 lg:pt-20">
                         <div className="flex flex-col md:flex-row justify-between space-y-4">
                             <div className="w-full">
-                                <LogoIcon className="mx-auto md:m-0" />
+                                <div className="logo w-[40%]">
+                                    <Logo />
+                                </div>
                                 <ul className="flex flex-wrap justify-center md:justify-start mt-6 text-sm text-gray-600 space-x-4 leading-6">
                                     <li>Cửa hàng</li>
                                     <li>Tiếp thị liên kết</li>

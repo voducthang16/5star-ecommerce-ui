@@ -1,4 +1,5 @@
 const images: any = {
+    logoBlack: require('~/assets/images/Logo5Star.png'),
     noImage: require('~/assets/images/no-image.png'),
     LoadingGif: require('./loading-gif.gif'),
     step1: require('~/assets/images/step1.png'),

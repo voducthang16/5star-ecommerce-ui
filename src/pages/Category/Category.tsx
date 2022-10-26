@@ -43,6 +43,78 @@ function Category() {
                 'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
             ],
         },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
+        {
+            id: 'product_4',
+            color: ['#fb923c', '#38bdf8', '#4ade80'],
+            images: [
+                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
+                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            ],
+        },
     ];
     return (
         <div className="category-page">
@@ -50,10 +122,10 @@ function Category() {
             <div className="container pb-20">
                 <div className="grid grid-cols-12 gap-5">
                     <div className="col-span-3">
-                        <div className="bg-white shadow-lg space-y-4">
+                        <div className="shadow-lg space-y-4">
                             <div className="pb-4 border-b border-slate-200">
-                                <h6 className="text-lg font-semibold">Danh mục</h6>
-                                <Accordion allowToggle>
+                                <h6 className="text-lg font-semibold mb-5">Danh mục</h6>
+                                <Accordion allowToggle p={5} className="shadow-sm rounded-md border-t">
                                     <AccordionItem borderTop={0}>
                                         <AccordionButton
                                             _hover={{
@@ -302,7 +374,7 @@ function Category() {
                                     </AccordionItem>
                                 </Accordion>
                             </div>
-                            <div className="pb-4 border-b border-slate-200">
+                            <div className="pb-4 border-b border-slate-200 p-3">
                                 <h6 className="text-lg font-semibold">Giá</h6>
                                 <div className="flex">
                                     <input type="text" className="input flex-1" placeholder="Từ" />
@@ -312,7 +384,7 @@ function Category() {
                                     Áp dụng
                                 </button>
                             </div>
-                            <div className="pb-4 border-b border-slate-200">
+                            <div className="pb-4 border-b border-slate-200 p-3">
                                 <h6 className="text-lg font-semibold">Thương hiệu</h6>
                                 <div className="space-y-2 max-h-[64px] overflow-y-auto px-2">
                                     <div className="w-full flex items-center space-x-2 text-base">
@@ -337,7 +409,7 @@ function Category() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="pb-4 border-b border-slate-200">
+                            <div className="pb-4 border-b border-slate-200 p-3">
                                 <h6 className="text-lg font-semibold">Size</h6>
                                 <div className="space-y-2 max-h-[64px] overflow-y-auto px-2">
                                     <div className="w-full flex items-center space-x-2 text-base">
@@ -362,7 +434,7 @@ function Category() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="pb-4">
+                            <div className="pb-4 px-3">
                                 <h6 className="text-lg font-semibold">Màu</h6>
                             </div>
                         </div>

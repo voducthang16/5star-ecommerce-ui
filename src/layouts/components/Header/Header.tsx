@@ -5,6 +5,7 @@ import { IoReorderThreeSharp } from 'react-icons/io5';
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
+import Logo from '~/components/Logo';
 function Header() {
     const handleScroll = () => {
         const windowWidth = window.innerWidth;
@@ -63,7 +64,7 @@ function Header() {
                         <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 h-20">
                             <div className="col-span-1 lg:col-span-2 flex items-center">
                                 <Link to={'/'}>
-                                    <LogoIcon />
+                                    <Logo />
                                 </Link>
                             </div>
                             <div className="hidden lg:col-span-4 lg:flex lg:items-center">
