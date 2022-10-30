@@ -9,7 +9,7 @@ import ProductDetail from '~/pages/ProductDetail';
 import Category from '~/pages/Category';
 import Register from '~/pages/Register';
 import MyAccount from '~/pages/MyAccount';
-
+import Cart from '~/pages/Cart';
 interface Routes {
     path: string;
     Component: React.ComponentType;
@@ -48,7 +48,6 @@ const publicRoutes: Routes[] = [
         Component: Login,
         layout: null,
     },
-
     {
         path: '/register',
         Component: Register,
@@ -57,6 +56,10 @@ const publicRoutes: Routes[] = [
     {
         path: '/contact',
         Component: Contact,
+    },
+    {
+        path: '/cart',
+        Component: Cart,
     },
     {
         path: '*',
