@@ -14,6 +14,8 @@ const images: any = {
     banner_sm01: require('~/assets/images/banner_sm01.png'),
     vector_login: require('~/assets/images/vector-login.png'),
     vector_register: require('~/assets/images/vector-signup.png'),
+    spepay: require('~/assets/images/spepay.png'),
+    momo: require('~/assets/images/momo.png'),
 };
 
 export default images;
