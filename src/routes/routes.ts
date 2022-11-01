@@ -5,14 +5,14 @@ import Contact from '~/pages/Contact';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 
-import ProductDetail from '~/pages/ProductDetail';
-import Category from '~/pages/Category';
-import Register from '~/pages/Register';
-import MyAccount from '~/pages/MyAccount';
 import Cart from '~/pages/Cart';
+import Category from '~/pages/Category';
+import MyAccount from '~/pages/MyAccount';
+import ProductDetail from '~/pages/ProductDetail';
+import Register from '~/pages/Register';
 interface Routes {
     path: string;
-    Component: React.ComponentType;
+    Component: React.ComponentType | any;
     layout?: null | any;
 }
 
@@ -35,10 +35,25 @@ const publicRoutes: Routes[] = [
         path: '/product/:slug',
         Component: ProductDetail,
     },
+
+    // MY ACCOUNT
     {
         path: '/my-account',
         Component: MyAccount,
     },
+    {
+        path: '/my-account/info',
+        Component: MyAccount,
+    },
+    {
+        path: '/my-account/order',
+        Component: MyAccount,
+    },
+    {
+        path: '/my-account/wish-list',
+        Component: MyAccount,
+    },
+    //
     {
         path: '/about',
         Component: About,
