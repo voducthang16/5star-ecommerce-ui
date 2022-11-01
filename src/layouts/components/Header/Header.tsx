@@ -42,6 +42,16 @@ function Header() {
                     category!.classList.toggle('sticky-mt-36', window.scrollY > 200);
                 }
             }
+
+            // Cart
+            if (document.querySelector('.cart-page')) {
+                const cart = document.querySelector('.cart-page');
+                if (windowWidth < 1024) {
+                    cart!.classList.toggle('sticky-mt-20', window.scrollY > 200);
+                } else {
+                    cart!.classList.toggle('sticky-mt-36', window.scrollY > 200);
+                }
+            }
         });
     };
     useEffect(() => {
@@ -58,7 +68,7 @@ function Header() {
     };
     return (
         <header>
-            <div className="header-wrapper">
+            <div className="header-wrapper relative z-[9999]">
                 <div className="header bg-white border-b border-slate-200 shadow max-h-36">
                     <div className="container h-20">
                         <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 h-20">
@@ -100,13 +110,15 @@ function Header() {
                                         <AiOutlineUser className="text-2xl" />
                                     </li>
                                     <li className="hidden lg:block icon-header-wrapper">
-                                        <AiOutlineShoppingCart className="text-2xl" />
-                                        <span
-                                            style={{ fontSize: '10px' }}
-                                            className="absolute -top-1 -right-1 bg-cyan-500 text-white h-4 w-4 block text-center rounded-full"
-                                        >
-                                            5
-                                        </span>
+                                        <Link to={'/cart'}>
+                                            <AiOutlineShoppingCart className="text-2xl" />
+                                            <span
+                                                style={{ fontSize: '10px' }}
+                                                className="absolute -top-1 -right-1 bg-cyan-500 text-white h-4 w-4 block text-center rounded-full"
+                                            >
+                                                5
+                                            </span>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
