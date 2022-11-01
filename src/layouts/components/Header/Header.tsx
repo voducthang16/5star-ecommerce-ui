@@ -68,7 +68,7 @@ function Header() {
     };
     return (
         <header>
-            <div className="header-wrapper">
+            <div className="header-wrapper relative z-[9999]">
                 <div className="header bg-white border-b border-slate-200 shadow max-h-36">
                     <div className="container h-20">
                         <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 h-20">
