@@ -127,7 +127,7 @@ function Category() {
         },
     ];
     return (
-        <div className="category-page">
+        <div className="category-page overflow-hidden">
             <Breadcrumb name={slug ? `${slug}` : 'Tất cả'} share={false} />
             <div className="container pb-20">
                 <div className="grid grid-cols-12 gap-5">

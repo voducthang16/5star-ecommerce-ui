@@ -14,8 +14,8 @@ const Breadcrumb = ({ name, share = true }: BreadcrumbProps) => {
     return (
         <div className="breadcrumb my-4 bg-[#f8f8f8] py-6">
             <div className="container">
-                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                    <div className="flex items-center text-base ">
+                <div className="grid grid-cols-12 gap-4 md:gap-0">
+                    <div className="col-span-12 md:col-span-6 flex items-center text-base ">
                         <h5 className="text-primary font-medium mr-2 flex items-center hover-text">
                             <span className="icon text-lg mr-1">
                                 <HiOutlineHome />
@@ -26,7 +26,7 @@ const Breadcrumb = ({ name, share = true }: BreadcrumbProps) => {
                             <span className="text-gray-400 mx-1 text-sm">
                                 <MdOutlineKeyboardArrowRight />
                             </span>
-                            <Link to="">Danh mục</Link>
+                            <Link to="/category">Danh mục</Link>
                         </h5>
                         <h5 className="flex items-center hover-text">
                             <span className="text-gray-400 mx-1 text-sm">
@@ -36,7 +36,7 @@ const Breadcrumb = ({ name, share = true }: BreadcrumbProps) => {
                         </h5>
                     </div>
                     {share ? (
-                        <div className="flex items-center space-x-4 text-sm">
+                        <div className="col-span-12 md:col-span-6 flex items-center md:justify-end space-x-2 md:space-x-4 text-sm">
                             <span className="text-gray-700/80">Chia sẻ:</span>
                             <span
                                 className="flex items-center space-x-1 px-2 py-0.5 cursor-pointer
