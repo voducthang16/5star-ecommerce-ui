@@ -30,7 +30,7 @@ function DefaultLayout({ Children }: DefaultLayoutProps) {
     return (
         <>
             <button
-                className="scroll-to-top fixed right-4 bottom-4 z-20 
+                className="scroll-to-top fixed right-4 bottom-24 lg:bottom-4 z-[22]
                 min-w-[40px] min-h-[40px] bg-[#fe696a] opacity-0 invisible shadow rounded-lg 
                 flex items-center justify-center transition-all"
             >

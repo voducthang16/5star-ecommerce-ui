@@ -8,7 +8,7 @@ import Logo from '~/components/Logo';
 import './Footer.scss';
 function Footer() {
     return (
-        <footer className="footer-wrapper pb-20 lg:pb-0 text-white">
+        <footer className="footer-wrapper overflow-hidden pb-20 lg:pb-0 text-white">
             <div className="border-t border-b border-[#3a3d53] py-10 lg:py-20">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
