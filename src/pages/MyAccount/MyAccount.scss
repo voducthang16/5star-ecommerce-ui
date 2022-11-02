@@ -1,0 +1,17 @@
+.tab-col-item {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    border-radius: 10px !important;
+    border: 1px solid #ececec;
+    padding: 14px 30px !important;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    transition: all 0.2s ease-out;
+}
+
+.tab-col-item:hover {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: #fff;
+}

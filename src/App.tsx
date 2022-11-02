@@ -4,7 +4,6 @@ import { DefaultLayout } from '~/layouts/';
 import { privateRoutes, publicRoutes } from '~/routes';
 import './App.css';
 import PrivateRoutes from './components/PrivateRoutes';
-import { ChakraProvider } from '@chakra-ui/react';
 
 interface FragmentLayoutProps {
     Children: React.ComponentType;

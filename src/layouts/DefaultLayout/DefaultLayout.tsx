@@ -24,9 +24,11 @@ function DefaultLayout({ Children }: DefaultLayoutProps) {
             scrollToTop!.classList.toggle('active', window.scrollY > 300);
         });
     };
+
     useEffect(() => {
         scrollToTop();
     }, []);
+
     return (
         <>
             <button
