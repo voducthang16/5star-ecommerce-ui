@@ -31,7 +31,7 @@ function Navigator() {
         });
     };
     return (
-        <div className="navigator-wrapper lg:hidden fixed z-50 left-0 right-0 bottom-0 bg-white border-t border-slate-200 shadow">
+        <div className="navigator-wrapper overflow-hidden lg:hidden fixed z-50 left-0 right-0 bottom-0 bg-white border-t border-slate-200 shadow">
             <div className="container">
                 <div className="h-20 flex items-center justify-around">
                     {path === '/category' ? (

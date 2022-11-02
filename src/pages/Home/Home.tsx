@@ -113,7 +113,7 @@ function Home() {
         }
     }, []);
     return (
-        <div className="home">
+        <div className="home overflow-hidden">
             {/* Big Slide */}
             <section className="bg-[#e3ffe6]">
                 <div className="container">

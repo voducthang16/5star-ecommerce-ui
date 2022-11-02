@@ -83,11 +83,11 @@ function ProductDetail() {
     return loading ? (
         <Loading />
     ) : (
-        <div className="product-detail">
+        <div className="product-detail overflow-hidden">
             <Breadcrumb name={'Sản phẩm'} />
-            <section className="container pb-20">
-                <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-4 shadow-2xl lg:p-4 rounded-2xl">
-                    <div className="col-span-1 lg:col-span-7">
+            <section className="container pb-10 lg:pb-20">
+                <div className="grid grid-cols-12 lg:gap-4 shadow-2xl lg:p-4 rounded-2xl">
+                    <div className="col-span-12 lg:col-span-7">
                         <div className="swiper-progressbar">
                             <div style={{ height: `${filled}%` }} className={`progressbar`}></div>
                             <Swiper
@@ -105,7 +105,7 @@ function ProductDetail() {
                             >
                                 <SwiperSlide>
                                     <Image
-                                        className="lg:mx-auto object-contain h-full"
+                                        className="md:mx-auto object-contain h-full"
                                         src={
                                             'https://chisnghiax.com/ciseco/static/media/detail1.f45e3a4d9bfeafd2f70b.jpg'
                                         }
@@ -114,14 +114,14 @@ function ProductDetail() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Image
-                                        className="lg:mx-auto object-contain"
+                                        className="md:mx-auto object-contain"
                                         src={'https://cartzilla.createx.studio/img/shop/catalog/02.jpg'}
                                         alt={'Product'}
                                     />
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Image
-                                        className="lg:mx-auto object-contain"
+                                        className="md:mx-auto object-contain"
                                         src={'https://cartzilla.createx.studio/img/shop/catalog/03.jpg'}
                                         alt={'Product'}
                                     />
@@ -129,8 +129,8 @@ function ProductDetail() {
                             </Swiper>
                         </div>
                     </div>
-                    <div className="col-span-1 lg:col-span-5">
-                        <div className="lg:space-y-4">
+                    <div className="col-span-12 lg:col-span-5">
+                        <div className="space-y-4 mt-4 lg:mt-0 px-2 lg:px-0">
                             <h3 className="text-2xl font-bold">Sản phẩm</h3>
                             <h4 className="text-base font-normal flex items-center space-x-2">
                                 <PackageIcon width={16} height={16} className="mr-2" />
@@ -207,77 +207,79 @@ function ProductDetail() {
                     </div>
                 </div>
             </section>
-            <section className="border-t border-b border-slate-200 py-20">
+            <section className="border-t border-b border-slate-200 py-10 lg:py-20">
                 <div className="container">
-                    <div className="mx-20">
-                        <h5 className="text-2xl mb-4 font-bold text-gray-900">Chi tiết sản phẩm</h5>
+                    <div className="mx-4 lg:mx-20">
+                        <h5 className="text-4xl mb-4 font-bold text-gray-900">Chi tiết sản phẩm</h5>
                         <Accordion defaultIndex={[0]} allowMultiple>
                             <AccordionItem>
                                 <h2>
                                     <AccordionButton>
-                                        <Box flex="1" textAlign="left">
-                                            Thông số
-                                        </Box>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                </h2>
-                                <AccordionPanel pb={4}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </AccordionPanel>
-                            </AccordionItem>
-
-                            <AccordionItem>
-                                <h2>
-                                    <AccordionButton>
-                                        <Box flex="1" textAlign="left">
+                                        <Box flex="1" textAlign="left" className="text-2xl font-semibold">
                                             Mô tả
                                         </Box>
                                         <AccordionIcon />
                                     </AccordionButton>
                                 </h2>
-                                <AccordionPanel pb={4}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                <AccordionPanel pb={4} className="text-base">
+                                    Giới thiệu đến bạn chiếc áo polo nam chiếc áo sẽ giúp cho các chàng trai trở nên
+                                    lịch lãm, sang trọng và trẻ trung hơn. Với collection này thì Coolmate sẽ mang cho
+                                    bạn một mẫu áo polo nam với nhưng họa tiết đơn giản nhưng rất trẻ trung và dễ mix đồ
+                                </AccordionPanel>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <h2>
+                                    <AccordionButton>
+                                        <Box flex="1" textAlign="left" className="text-2xl font-semibold">
+                                            Thông số sản phẩm
+                                        </Box>
+                                        <AccordionIcon />
+                                    </AccordionButton>
+                                </h2>
+                                <AccordionPanel pb={4} className="text-base">
+                                    <p>- Chất liệu: 97% Cotton USA + 3% Spandex </p>
+                                    <p>
+                                        - Với chất liệu Cotton USA chất lượng cao, mang lại sự mềm mại và thấm hút mồ
+                                        hôi tốt
+                                    </p>
+                                    <p>- Co giãn 4 chiều mang lại sự thoải mái khi mặc</p>
                                 </AccordionPanel>
                             </AccordionItem>
                         </Accordion>
                     </div>
                 </div>
             </section>
-            <section className="container py-20">
-                <div className="flex justify-between pb-20 border-b border-slate-200">
-                    <div className="w-2/5">
+            <section className="container pb-10 lg:pb-20">
+                <div className="grid grid-cols-12 gap-5 py-10 lg:py-20 border-b border-slate-200">
+                    <div className="col-span-12 lg:col-span-4">
                         <h6 className="text-2xl text-gray-800 font-bold mb-4">70 Đánh giá</h6>
                         <div className="flex text-base items-center space-x-2">
                             <Rate className="flex space-x-1" average={4.5} />
                             <span>4.5</span>
                         </div>
                     </div>
-                    <div className="flex-1 flex items-center justify-around text-base">
-                        <div className="w-20 py-2 font-semibold text-center rounded-lg border border-slate-500">
+                    <div className="col-span-12 lg:col-span-8 flex flex-wrap items-center justify-between text-base">
+                        <div className="w-24 py-2 my-2 font-semibold text-center rounded-lg border border-slate-500">
                             Tất cả
                         </div>
-                        <div className="w-20 py-2 font-semibold text-center rounded-lg border border-slate-500">
+                        <div className="w-24 py-2 my-2 font-semibold text-center rounded-lg border border-slate-500">
                             5 Sao
                         </div>
-                        <div className="w-20 py-2 font-semibold text-center rounded-lg border border-slate-500">
+                        <div className="w-24 py-2 my-2 font-semibold text-center rounded-lg border border-slate-500">
                             4 Sao
                         </div>
-                        <div className="w-20 py-2 font-semibold text-center rounded-lg border border-slate-500">
+                        <div className="w-24 py-2 my-2 font-semibold text-center rounded-lg border border-slate-500">
                             3 Sao
                         </div>
-                        <div className="w-20 py-2 font-semibold text-center rounded-lg border border-slate-500">
+                        <div className="w-24 py-2 my-2 font-semibold text-center rounded-lg border border-slate-500">
                             2 Sao
                         </div>
-                        <div className="w-20 py-2 font-semibold text-center rounded-lg border border-slate-500">
+                        <div className="w-24 py-2 my-2 font-semibold text-center rounded-lg border border-slate-500">
                             1 Sao
                         </div>
                     </div>
                 </div>
-                <div className="mt-20">
+                <div className="mt-10 lg:mt-20">
                     <div className="flex space-x-4 border-slate-200 border-b py-4">
                         <div className="w-20 h-20">
                             <Image
@@ -285,7 +287,7 @@ function ProductDetail() {
                                 src="https://cartzilla.createx.studio/img/shop/reviews/01.jpg"
                             />
                         </div>
-                        <div className="space-y-2">
+                        <div className="flex flex-col justify-between space-y-2">
                             <span className="text-sm text-gray-600">Tên người dùng</span>
                             <Rate className="flex space-x-1" average={3} />
                             <div className="text-base">10.10.2022</div>
@@ -299,7 +301,7 @@ function ProductDetail() {
                                 src="https://cartzilla.createx.studio/img/shop/reviews/01.jpg"
                             />
                         </div>
-                        <div className="space-y-2">
+                        <div className="flex flex-col justify-between space-y-2">
                             <span className="text-sm text-gray-600">Tên người dùng</span>
                             <Rate className="flex space-x-1" average={4} />
 
