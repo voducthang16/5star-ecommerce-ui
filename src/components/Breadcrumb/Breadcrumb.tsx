@@ -3,6 +3,8 @@ import { HiOutlineHome } from 'react-icons/hi';
 import { ImFacebook } from 'react-icons/im';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import './Breadcrumb.scss';
+
 interface BreadcrumbProps {
     name?: string;
     share?: boolean;
