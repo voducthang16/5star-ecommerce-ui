@@ -1,9 +1,19 @@
 import { useParams } from 'react-router-dom';
 import Breadcrumb from '~/components/Breadcrumb';
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
-import { AccessoriesIcon, BagIcon, ClothingIcon, ShoesIcon, SunglassesIcon, WatchIcon } from '~/components/Icons';
+import {
+    AccessoriesIcon,
+    BagIcon,
+    ClothingIcon,
+    JeansIcon,
+    ShirtIcon,
+    ShoesIcon,
+    SunglassesIcon,
+    WatchIcon,
+} from '~/components/Icons';
 import './Category.scss';
 import Product from '~/layouts/components/Product';
+import { IoMdClose } from 'react-icons/io';
 function Category() {
     const { slug } = useParams();
     const productFakeData = [
@@ -117,15 +127,126 @@ function Category() {
         },
     ];
     return (
-        <div className="category-page">
+        <div className="category-page overflow-hidden">
             <Breadcrumb name={slug ? `${slug}` : 'Tất cả'} share={false} />
             <div className="container pb-20">
                 <div className="grid grid-cols-12 gap-5">
-                    <div className="col-span-3">
-                        <div className="shadow-lg space-y-4">
-                            <div className="pb-4 border-b border-slate-200">
-                                <h6 className="text-lg font-semibold mb-5">Danh mục</h6>
-                                <Accordion allowToggle p={5} className="shadow-sm rounded-md border-t">
+                    <div
+                        className="filters-wrapper hidden
+                        lg:static lg:block lg:col-span-3 bg-white
+                        lg:rounded-xl overflow-y-auto lg:overflow-y-hidden
+                        "
+                    >
+                        <div className="lg:px-2 lg:shadow-inner">
+                            <div className="filter-title lg:hidden px-6 py-2 border-b border-slate-200 flex justify-between items-center text-2xl">
+                                <h4>Filters</h4>
+                                <div className="cursor-pointer hide-filters">
+                                    <IoMdClose />
+                                </div>
+                            </div>
+                            <div className="pb-4 px-6 border-b border-slate-200">
+                                <h6 className="text-lg font-semibold pt-4">Danh mục</h6>
+                                <Accordion allowToggle px={5}>
+                                    <AccordionItem borderTop={0}>
+                                        <AccordionButton
+                                            _hover={{
+                                                background: 'white',
+                                                color: 'teal.500',
+                                            }}
+                                            px={0}
+                                            py={1}
+                                        >
+                                            <ShirtIcon className="mr-2" width={48} height={48} />
+                                            <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
+                                                Áo
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Xem Tất Cả</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>T-Shirt</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Sơ Mi</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Thể Thao</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Khoác</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Polo</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                    <AccordionItem borderTop={0}>
+                                        <AccordionButton
+                                            _hover={{
+                                                background: 'white',
+                                                color: 'teal.500',
+                                            }}
+                                            px={0}
+                                            py={1}
+                                        >
+                                            <JeansIcon className="mr-2" width={48} height={48} />
+                                            <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
+                                                Quần
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Xem Tất Cả</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Shorts</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Jeans</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Thể Thao</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
+                                            <p className="flex justify-between text-gray-500">
+                                                <span>Tây</span>
+                                                <span>20</span>
+                                            </p>
+                                        </AccordionPanel>
+                                    </AccordionItem>
                                     <AccordionItem borderTop={0}>
                                         <AccordionButton
                                             _hover={{
@@ -141,71 +262,35 @@ function Category() {
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
-
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
                                             <p className="flex justify-between text-gray-400">
-                                                <span>View All</span>
-                                                <span>1234</span>
+                                                <span>Xem Tất Cả</span>
+                                                <span>20</span>
                                             </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Pumps & High Heels
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sandals
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sneakers
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Boots
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Smart Shoes
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Athletic Shoes
-                                        </AccordionPanel>
-                                    </AccordionItem>
-                                    <AccordionItem borderTop={0}>
-                                        <AccordionButton
-                                            _hover={{
-                                                background: 'white',
-                                                color: 'teal.500',
-                                            }}
-                                            px={0}
-                                            py={1}
-                                        >
-                                            <ClothingIcon className="mr-2" width={48} height={48} />
-                                            <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Quần áo
-                                            </Box>
-                                            <AccordionIcon />
-                                        </AccordionButton>
-
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
                                             <p className="flex justify-between text-gray-400">
-                                                <span>View All</span>
-                                                <span>1234</span>
+                                                <span> Thể thao</span>
+                                                <span>20</span>
                                             </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Pumps & High Heels
+                                            <p className="flex justify-between text-gray-400">
+                                                <span> Scandals</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sandals
+                                            <p className="flex justify-between text-gray-400">
+                                                <span> Sneakers</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sneakers
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Boots
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Smart Shoes
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Athletic Shoes
+                                            <p className="flex justify-between text-gray-400">
+                                                <span> Dép</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                     </AccordionItem>
                                     <AccordionItem borderTop={0}>
@@ -219,75 +304,40 @@ function Category() {
                                         >
                                             <BagIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Túi xách
+                                                Túi Xách
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
 
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
                                             <p className="flex justify-between text-gray-400">
-                                                <span>View All</span>
-                                                <span>1234</span>
+                                                <span>Xem Tất Cả</span>
+                                                <span>20</span>
                                             </p>
                                         </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Pumps & High Heels
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sandals
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sneakers
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Boots
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Smart Shoes
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Athletic Shoes
-                                        </AccordionPanel>
-                                    </AccordionItem>
-                                    <AccordionItem borderTop={0}>
-                                        <AccordionButton
-                                            _hover={{
-                                                background: 'white',
-                                                color: 'teal.500',
-                                            }}
-                                            px={0}
-                                            py={1}
-                                        >
-                                            <SunglassesIcon className="mr-2" width={48} height={48} />
-                                            <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Kính mát
-                                            </Box>
-                                            <AccordionIcon />
-                                        </AccordionButton>
-
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
                                             <p className="flex justify-between text-gray-400">
-                                                <span>View All</span>
-                                                <span>1234</span>
+                                                <span>Balo</span>
+                                                <span>20</span>
                                             </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Pumps & High Heels
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Túi Tote</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sandals
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Túi Đeo Chéo</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sneakers
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Boots
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Smart Shoes
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Athletic Shoes
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Ví</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                     </AccordionItem>
                                     <AccordionItem borderTop={0}>
@@ -308,27 +358,27 @@ function Category() {
 
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
                                             <p className="flex justify-between text-gray-400">
-                                                <span>View All</span>
-                                                <span>1234</span>
+                                                <span>Xem Tất Cả</span>
+                                                <span>20</span>
                                             </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Pumps & High Heels
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Nam</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sandals
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Nữ</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sneakers
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Boots
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Smart Shoes
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Athletic Shoes
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Thông Minh</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                     </AccordionItem>
                                     <AccordionItem borderTop={0} borderBottom={0}>
@@ -342,40 +392,46 @@ function Category() {
                                         >
                                             <AccessoriesIcon className="mr-2" width={48} height={48} />
                                             <Box display={'flex'} justifyContent={'space-between'} width={'100%'}>
-                                                Phụ kiện
+                                                Phụ Kiện
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
 
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
                                             <p className="flex justify-between text-gray-400">
-                                                <span>View All</span>
-                                                <span>1234</span>
+                                                <span>Xem Tất Cả</span>
+                                                <span>20</span>
                                             </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Pumps & High Heels
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Móc khóa</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sandals
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Mắt kính</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Sneakers
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Mũ (Nón)</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                         <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Boots
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Smart Shoes
-                                        </AccordionPanel>
-                                        <AccordionPanel fontSize={14} py={2} pl={'44px'}>
-                                            Athletic Shoes
+                                            <p className="flex justify-between text-gray-400">
+                                                <span>Tất (Vớ)</span>
+                                                <span>20</span>
+                                            </p>
                                         </AccordionPanel>
                                     </AccordionItem>
                                 </Accordion>
                             </div>
-                            <div className="pb-4 border-b border-slate-200 p-3">
-                                <h6 className="text-lg font-semibold">Giá</h6>
+                            <div className="pb-4 px-6 border-b border-slate-200">
+                                <h6 className="text-lg font-semibold pt-4">Giá</h6>
                                 <div className="flex">
                                     <input type="text" className="input flex-1" placeholder="Từ" />
                                     <input type="text" className="input flex-1" placeholder="Đến" />
@@ -384,8 +440,8 @@ function Category() {
                                     Áp dụng
                                 </button>
                             </div>
-                            <div className="pb-4 border-b border-slate-200 p-3">
-                                <h6 className="text-lg font-semibold">Thương hiệu</h6>
+                            <div className="pb-4 px-6 border-b border-slate-200">
+                                <h6 className="text-lg font-semibold pt-4">Thương hiệu</h6>
                                 <div className="space-y-2 max-h-[64px] overflow-y-auto px-2">
                                     <div className="w-full flex items-center space-x-2 text-base">
                                         <input type="checkbox" name="adidas" id="adidas" />
@@ -409,8 +465,8 @@ function Category() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="pb-4 border-b border-slate-200 p-3">
-                                <h6 className="text-lg font-semibold">Size</h6>
+                            <div className="pb-4 px-6 border-b border-slate-200">
+                                <h6 className="text-lg font-semibold pt-4">Size</h6>
                                 <div className="space-y-2 max-h-[64px] overflow-y-auto px-2">
                                     <div className="w-full flex items-center space-x-2 text-base">
                                         <input type="checkbox" name="xs" id="xs" />
@@ -435,11 +491,11 @@ function Category() {
                                 </div>
                             </div>
                             <div className="pb-4 px-3">
-                                <h6 className="text-lg font-semibold">Màu</h6>
+                                <h6 className="text-lg font-semibold pt-4">Màu</h6>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-9">
+                    <div className="col-span-12 lg:col-span-9">
                         {/* top right */}
                         <div className="text-base mb-4">
                             <span>Sắp xếp theo: </span>
@@ -453,7 +509,7 @@ function Category() {
                         <div>
                             <div className="grid grid-cols-12 gap-4">
                                 {productFakeData.map((item, index) => (
-                                    <div key={index} className="col-span-4">
+                                    <div key={index} className="col-span-12 md:col-span-4">
                                         <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
                                     </div>
                                 ))}

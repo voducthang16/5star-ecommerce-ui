@@ -32,7 +32,7 @@ function Product({ idProduct, color, images }: ProductProps) {
                 border border-slate-200 group-hover:border-b-0"
             >
                 <div className="relative">
-                    <div className="absolute z-50 p-2 top-2 right-2 bg-[#e7eaee] rounded-full">
+                    <div className="absolute z-[21] p-2 top-2 right-2 bg-[#e7eaee] rounded-full">
                         <HeartEmptyIcon width={16} height={16} />
                     </div>
                     <div className="relative mx-auto w-[200px] max-w-[200px] h-[200px] max-h-[200px] rounded-3xl">
@@ -59,7 +59,7 @@ function Product({ idProduct, color, images }: ProductProps) {
                 <div
                     className="hidden absolute p-4 top-full -left-[1px] -right-[1px]
                     group-hover:shadow-xl group-hover:block transition-shadow rounded-b-2xl
-                    bg-white border border-t-0 border-slate-200 space-y-2 z-20"
+                    bg-white border border-t-0 border-slate-200 space-y-2 z-30"
                 >
                     {/* size */}
                     <div className="flex justify-around items-center text-sm">

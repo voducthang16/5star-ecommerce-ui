@@ -5,10 +5,11 @@ import images from '~/assets/images';
 import { CallCenterIcon, CreditCardIcon, RefundIcon, RocketIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Logo from '~/components/Logo';
+import './Footer.scss';
 function Footer() {
     return (
-        <footer className="footer-wrapper pb-20 lg:pb-0">
-            <div className="border-t border-b border-slate-200 py-10 lg:py-20">
+        <footer className="footer-wrapper overflow-hidden pb-20 lg:pb-0 text-white">
+            <div className="border-t border-b border-[#3a3d53] py-10 lg:py-20">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="col-span-1">
@@ -150,20 +151,20 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-2 md:col-span-4 border-t border-slate-200 pt-10 lg:pt-20">
+                    <div className="col-span-2 md:col-span-4 border-t border-[#3a3d53] pt-10 lg:pt-20">
                         <div className="flex flex-col md:flex-row justify-between space-y-4">
                             <div className="w-full">
                                 <div className="logo w-[40%]">
                                     <Logo />
                                 </div>
-                                <ul className="flex flex-wrap justify-center md:justify-start mt-6 text-sm text-gray-600 space-x-4 leading-6">
+                                <ul className="flex flex-wrap justify-center md:justify-start mt-6 text-sm space-x-4 leading-6">
                                     <li>Cửa hàng</li>
                                     <li>Tiếp thị liên kết</li>
                                     <li>Hỗ trợ</li>
                                     <li>Bảo mật</li>
                                     <li>Điều khoản sử dụng</li>
                                 </ul>
-                                <p className="mt-8 text-center md:text-start text-xs text-gray-600">
+                                <p className="mt-8 text-center md:text-start text-xs">
                                     © Đã đăng ký Bản quyền. Thực hiện bởi 5Star Team
                                 </p>
                             </div>

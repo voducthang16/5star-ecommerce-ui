@@ -1,12 +1,18 @@
 import { useEffect } from 'react';
-import { LogoIcon, FourSquaresIcon } from '~/components/Icons';
+import { FourSquaresIcon } from '~/components/Icons';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { IoReorderThreeSharp } from 'react-icons/io5';
-import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart, AiOutlineDelete } from 'react-icons/ai';
 import Search from '../Search';
-import { Link } from 'react-router-dom';
+import './Header.scss';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '~/components/Logo';
+import Image from '~/components//Image';
+import images from '~/assets/images';
 function Header() {
+    let activeStyle = {
+        color: '#0097a7',
+    };
     const handleScroll = () => {
         const windowWidth = window.innerWidth;
         document.addEventListener('scroll', () => {
@@ -42,6 +48,16 @@ function Header() {
                     category!.classList.toggle('sticky-mt-36', window.scrollY > 200);
                 }
             }
+
+            // Cart
+            if (document.querySelector('.cart-page')) {
+                const cart = document.querySelector('.cart-page');
+                if (windowWidth < 1024) {
+                    cart!.classList.toggle('sticky-mt-20', window.scrollY > 200);
+                } else {
+                    cart!.classList.toggle('sticky-mt-36', window.scrollY > 200);
+                }
+            }
         });
     };
     useEffect(() => {
@@ -58,7 +74,7 @@ function Header() {
     };
     return (
         <header>
-            <div className="header-wrapper">
+            <div className="header-wrapper overflow-hidden relative z-[9999]">
                 <div className="header bg-white border-b border-slate-200 shadow max-h-36">
                     <div className="container h-20">
                         <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 h-20">
@@ -97,16 +113,114 @@ function Header() {
                                         </span>
                                     </li>
                                     <li className="hidden lg:block icon-header-wrapper">
-                                        <AiOutlineUser className="text-2xl" />
+                                        <Link to={'/my-account'}>
+                                            <AiOutlineUser className="text-2xl" />
+                                        </Link>
                                     </li>
-                                    <li className="hidden lg:block icon-header-wrapper">
-                                        <AiOutlineShoppingCart className="text-2xl" />
-                                        <span
-                                            style={{ fontSize: '10px' }}
-                                            className="absolute -top-1 -right-1 bg-cyan-500 text-white h-4 w-4 block text-center rounded-full"
-                                        >
-                                            5
-                                        </span>
+                                    <li className="hidden lg:block icon-header-wrapper relative">
+                                        <Link to={'/cart'}>
+                                            <AiOutlineShoppingCart className="text-2xl" />
+                                            <span
+                                                style={{ fontSize: '10px' }}
+                                                className="absolute -top-1 -right-1 bg-cyan-500 text-white h-4 w-4 block text-center rounded-full"
+                                            >
+                                                5
+                                            </span>
+                                        </Link>
+                                        <div className="cart-hover absolute top-full pt-4 right-0 w-[400px]">
+                                            <div className="bg-white rounded-xl p-4 cart-hover-wrapper cursor-default">
+                                                <div className="flex justify-between text-sm mb-2">
+                                                    <span className="cursor-text">2 sản phẩm</span>
+                                                    <Link className="text-[#2f5acf]" to={'/cart'}>
+                                                        Xem tất cả
+                                                    </Link>
+                                                </div>
+                                                {/* list product in cart */}
+                                                <div className="max-h-[250px] overflow-y-auto">
+                                                    <div className="flex space-x-2 py-4 mr-2 border-b border-slate-200">
+                                                        <Link to={'/'} className="w-[30%]">
+                                                            <Image
+                                                                className="w-full object-contain"
+                                                                src={
+                                                                    'https://cartzilla.createx.studio/img/shop/cart/widget/02.jpg'
+                                                                }
+                                                            />
+                                                        </Link>
+                                                        <Link
+                                                            to={'/'}
+                                                            className="flex-1 text-base flex flex-col justify-around"
+                                                        >
+                                                            <h6>
+                                                                Áo Polo nam thể thao thoáng khí, nhuộm sạch Cleandye
+                                                            </h6>
+                                                            <span className="text-xs">Xanh Aqua/2XL</span>
+                                                            <p className="flex items-center space-x-2">
+                                                                <span className="text-[#2f5acf]">300.000 VND</span>
+                                                                <span>x</span>
+                                                                <span>2</span>
+                                                            </p>
+                                                        </Link>
+                                                        <div className="flex items-center justify-center hover:text-red-600 cursor-pointer">
+                                                            <AiOutlineDelete />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex space-x-2 py-4 mr-2 border-b border-slate-200">
+                                                        <Link to={'/'} className="w-[30%]">
+                                                            <Image
+                                                                className="w-full object-contain"
+                                                                src={
+                                                                    'https://cartzilla.createx.studio/img/shop/cart/widget/02.jpg'
+                                                                }
+                                                            />
+                                                        </Link>
+                                                        <Link
+                                                            to={'/'}
+                                                            className="flex-1 text-base flex flex-col justify-around"
+                                                        >
+                                                            <h6>
+                                                                Áo Polo nam thể thao thoáng khí, nhuộm sạch Cleandye
+                                                            </h6>
+                                                            <span className="text-xs">Xanh Aqua/2XL</span>
+                                                            <p className="flex items-center space-x-2">
+                                                                <span className="text-[#2f5acf]">300.000 VND</span>
+                                                                <span>x</span>
+                                                                <span>2</span>
+                                                            </p>
+                                                        </Link>
+                                                        <div className="flex items-center justify-center hover:text-red-600 cursor-pointer">
+                                                            <AiOutlineDelete />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex space-x-2 py-4 mr-2 border-b border-slate-200">
+                                                        <Link to={'/'} className="w-[30%]">
+                                                            <Image
+                                                                className="w-full object-contain"
+                                                                src={
+                                                                    'https://cartzilla.createx.studio/img/shop/cart/widget/02.jpg'
+                                                                }
+                                                            />
+                                                        </Link>
+                                                        <Link
+                                                            to={'/'}
+                                                            className="flex-1 text-base flex flex-col justify-around"
+                                                        >
+                                                            <h6>
+                                                                Áo Polo nam thể thao thoáng khí, nhuộm sạch Cleandye
+                                                            </h6>
+                                                            <span className="text-xs">Xanh Aqua/2XL</span>
+                                                            <p className="flex items-center space-x-2">
+                                                                <span className="text-[#2f5acf]">300.000 VND</span>
+                                                                <span>x</span>
+                                                                <span>2</span>
+                                                            </p>
+                                                        </Link>
+                                                        <div className="flex items-center justify-center hover:text-red-600 cursor-pointer">
+                                                            <AiOutlineDelete />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -131,9 +245,13 @@ function Header() {
                                         </Link>
                                     </li> */}
                                     <li>
-                                        <Link className="hover:text-[#0097a7] transition-all" to="/category">
+                                        <NavLink
+                                            className="hover:text-[#0097a7] transition-all"
+                                            to="/category"
+                                            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                                        >
                                             Danh mục
-                                        </Link>
+                                        </NavLink>
                                     </li>
                                     <li>
                                         <Link className="hover:text-[#0097a7] transition-all" to="/about">
