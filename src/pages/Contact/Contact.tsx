@@ -50,7 +50,7 @@ function Contact() {
                     <h2 className="mb-[16px] text-[24px] md:text-[28px] font-medium text-center">
                         Partner outlet stores
                     </h2>
-                    <div className="md:flex">
+                    <div className="md:flex justify-center">
                         <div className="pt-[24px] md:px-[15px]">
                             <img
                                 className="rounded-[6px]"

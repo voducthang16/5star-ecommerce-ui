@@ -3,22 +3,15 @@ import NotFound from '~/layouts/NotFound';
 import About from '~/pages/About';
 import Blog from '~/pages/Blog';
 import BlogDetail from '~/pages/BlogDetail';
+import Cart from '~/pages/Cart';
+import Category from '~/pages/Category';
 import Contact from '~/pages/Contact';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
-
-<<<<<<< HEAD
-=======
-import Cart from '~/pages/Cart';
->>>>>>> 2007cebc891e476b24f2f1c8b9dd81994c22468c
-import Category from '~/pages/Category';
 import MyAccount from '~/pages/MyAccount';
 import ProductDetail from '~/pages/ProductDetail';
 import Register from '~/pages/Register';
-<<<<<<< HEAD
 
-=======
->>>>>>> 2007cebc891e476b24f2f1c8b9dd81994c22468c
 interface Routes {
     path: string;
     Component: React.ComponentType | any;
