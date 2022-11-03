@@ -1,14 +1,16 @@
 // Different Layout
 import NotFound from '~/layouts/NotFound';
 import About from '~/pages/About';
+import Blog from '~/pages/Blog';
+import BlogDetail from '~/pages/BlogDetail';
 import Contact from '~/pages/Contact';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 
-import ProductDetail from '~/pages/ProductDetail';
 import Category from '~/pages/Category';
-import Register from '~/pages/Register';
 import MyAccount from '~/pages/MyAccount';
+import ProductDetail from '~/pages/ProductDetail';
+import Register from '~/pages/Register';
 
 interface Routes {
     path: string;
@@ -42,6 +44,14 @@ const publicRoutes: Routes[] = [
     {
         path: '/about',
         Component: About,
+    },
+    {
+        path: '/blog',
+        Component: Blog,
+    },
+    {
+        path: '/blog-detail',
+        Component: BlogDetail,
     },
     {
         path: '/login',
