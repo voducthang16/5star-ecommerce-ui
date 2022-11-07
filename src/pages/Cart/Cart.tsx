@@ -3,9 +3,31 @@ import { CodIcon } from '~/components/Icons';
 import './Cart.scss';
 import Image from '~/components/Image';
 import images from '~/assets/images';
+import { ErrorMessage, Field, Form, Formik, FormikProps } from 'formik';
 import { IoCloseOutline } from 'react-icons/io5';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { InputField } from '~/layouts/components/CustomField';
+type ValuesForm = {
+    fullname: string;
+    phone: string;
+    email: string;
+    address: string;
+    note: string;
+};
+
+const initCheckoutForm = {
+    fullname: '',
+    phone: '',
+    email: '',
+    address: '',
+    note: '',
+};
+
 function Cart() {
+    const handleSubmitForm = (values: ValuesForm) => {
+        console.log(values);
+    };
+
     return (
         <div className="cart-page">
             <div className="container py-20">
@@ -24,30 +46,26 @@ function Cart() {
                                 </Link>
                             </p>
                         </div>
-                        <form action="" className="space-y-4">
-                            <div className="flex space-x-4">
-                                <input type="text" className="input input-form flex-1" placeholder="Họ tên" />
-                                <input type="text" className="input input-form flex-1" placeholder="Số điện thoại" />
-                            </div>
-                            <div>
-                                <input type="email" className="input input-form" placeholder="Email" />
-                            </div>
-                            <div>
-                                <input
-                                    type="text"
-                                    className="input input-form"
-                                    placeholder="Địa chỉ (ví dụ: 123 Vạn Phúc, phường Vạn Phúc)"
-                                />
-                            </div>
-                            <div>Address</div>
-                            <div>
-                                <input
-                                    type="text"
-                                    className="input input-form"
-                                    placeholder="Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)"
-                                />
-                            </div>
-                        </form>
+                        <Formik
+                            initialValues={initCheckoutForm}
+                            onSubmit={(values: ValuesForm) => handleSubmitForm(values)}
+                        >
+                            {(formik: FormikProps<ValuesForm>) => (
+                                <Form>
+                                    <div className="form-group grid gird-cols-1 md:grid-cols-2 gap-2">
+                                        <InputField name="fullname" placeholder="Họ & tên" className="flex-1" />
+                                        <InputField name="phone" placeholder="Số điện thoại" />
+                                    </div>
+                                    <div className="form-group mt-2">
+                                        <InputField type="email" name="email" placeholder="Nhập email của bạn" />
+                                    </div>
+                                    <div className="form-group mt-2">
+                                        <InputField type="email" name="email" placeholder="Nhập địa chỉ" />
+                                    </div>
+                                </Form>
+                            )}
+                        </Formik>
+
                         <div>
                             <h5 className="text-2xl font-bold mb-4">Hình thức thanh toán</h5>
                             <div className="space-y-4">
@@ -135,16 +153,17 @@ function Cart() {
                                             </select>
                                         </div>
                                         <div className="flex justify-between items-center">
-                                            <div className="flex items-center w-2/5">
-                                                <span>
+                                            <div className="flex items-center w-[120px] quantity-group bg-slate-100 rounded-2xl p-2 shadow-sm mt-2">
+                                                <span className="minusBtn text-base p-1 cursor-pointer rounded-full border text-black border-gray-400 ml-2">
                                                     <AiOutlineMinus />
                                                 </span>
                                                 <input
-                                                    className="w-full border border-slate-200 p-1"
+                                                    className="quantity-number w-full border border-slate-200 p-1"
                                                     type="number"
                                                     value={1}
+                                                    min={0}
                                                 />
-                                                <span>
+                                                <span className="plusBtn text-base p-1  cursor-pointer rounded-full border text-black border-gray-400 mr-2">
                                                     <AiOutlinePlus />
                                                 </span>
                                             </div>

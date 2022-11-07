@@ -235,7 +235,10 @@ function Header() {
                             <div className="col-span-4 flex items-center">
                                 <ul className="flex text-base space-x-8">
                                     <li>
-                                        <Link className="hover:text-[#009ef7] transition-all" to="/">
+                                        <Link
+                                            className="hover:text-primary font-semibold duration-300 transition-all"
+                                            to="/"
+                                        >
                                             Trang chủ
                                         </Link>
                                     </li>
@@ -246,7 +249,7 @@ function Header() {
                                     </li> */}
                                     <li>
                                         <NavLink
-                                            className="hover:text-[#0097a7] transition-all"
+                                            className="hover:text-primary font-semibold duration-300 transition-all"
                                             to="/category"
                                             style={({ isActive }) => (isActive ? activeStyle : undefined)}
                                         >
@@ -254,12 +257,18 @@ function Header() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <Link className="hover:text-[#0097a7] transition-all" to="/about">
+                                        <Link
+                                            className="hover:text-primary font-semibold duration-300 transition-all"
+                                            to="/about"
+                                        >
                                             Giới thiệu
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="hover:text-[#0097a7] transition-all" to="/contact">
+                                        <Link
+                                            className="hover:text-primary font-semibold duration-300 transition-all"
+                                            to="/contact"
+                                        >
                                             Liên lạc
                                         </Link>
                                     </li>
