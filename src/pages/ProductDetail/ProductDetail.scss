@@ -58,3 +58,16 @@
         }
     }
 }
+
+.quantity-group {
+    .quantity-number {
+        height: auto;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        padding: 0;
+        text-align: center;
+        font-size: 14px;
+        color: #4a5568;
+        outline: none;
+    }
+}

@@ -1,22 +1,35 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Loading from '~/components/Loading';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Mousewheel, Navigation, Pagination } from 'swiper';
-import Image from '~/components/Image';
-import './ProductDetail.scss';
-import Breadcrumb from '~/components/Breadcrumb';
-import { PackageIcon, StarHalfIcon, StartEmptyIcon, StartIcon } from '~/components/Icons';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 import { AiFillHeart, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { IoNotifications } from 'react-icons/io5';
-import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
+import { useParams } from 'react-router-dom';
+import { Mousewheel, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Breadcrumb from '~/components/Breadcrumb';
+import { PackageIcon } from '~/components/Icons';
+import Image from '~/components/Image';
+import Loading from '~/components/Loading';
 import Rate from '~/layouts/components/Rate';
-import Product from '~/layouts/components/Product';
+import './ProductDetail.scss';
 function ProductDetail() {
     const [loading, setLoading] = useState(true);
     const [filled, setFilled] = useState(0);
+    const [quantity, setQuantity] = useState(1);
+
+    const handleQuantity = (type: string) => {
+        if (type === 'asc') {
+            setQuantity(quantity + 1);
+        } else {
+            if (quantity <= 1) {
+                setQuantity(1);
+            } else {
+                setQuantity(quantity - 1);
+            }
+        }
+    };
+
     const length = 3;
     useEffect(() => {
         setTimeout(() => {
@@ -72,14 +85,14 @@ function ProductDetail() {
         },
     };
     const [width, setWidth] = useState(0);
-    useEffect(() => {
-        const windowWidth = window.innerWidth;
-        if (windowWidth < 1024) {
-            setWidth(0);
-        } else {
-            setWidth(10250);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const windowWidth = window.innerWidth;
+    //     if (windowWidth < 1024) {
+    //         setWidth(0);
+    //     } else {
+    //         setWidth(1025);
+    //     }
+    // }, []);
     return loading ? (
         <Loading />
     ) : (
@@ -181,12 +194,23 @@ function ProductDetail() {
                                 </div>
                             </div>
                             <div className="flex items-center space-x-4">
-                                <div className="flex items-center w-2/5">
-                                    <span>
+                                <div className="flex items-center w-[150px] quantity-group bg-slate-100 rounded-2xl p-2 py-3 shadow-sm">
+                                    <span
+                                        className="minusBtn text-base p-1 cursor-pointer rounded-full border text-black border-gray-400 ml-2 hover:bg-black hover:text-white transition-all duration-200"
+                                        onClick={() => handleQuantity('dec')}
+                                    >
                                         <AiOutlineMinus />
                                     </span>
-                                    <input className="w-full border border-slate-200 p-1" type="number" value={1} />
-                                    <span>
+                                    <input
+                                        className="quantity-number w-full border border-slate-200 p-1"
+                                        type="number"
+                                        value={quantity}
+                                        min={0}
+                                    />
+                                    <span
+                                        className="plusBtn text-base p-1  cursor-pointer rounded-full border text-black border-gray-400 mr-2  hover:bg-black hover:text-white transition-all duration-200"
+                                        onClick={() => handleQuantity('asc')}
+                                    >
                                         <AiOutlinePlus />
                                     </span>
                                 </div>

@@ -1,5 +1,5 @@
 import Config from '~/config';
-import AxiosInstance from './AxiosInstance';
+import AxiosInstance from '~/utils/AxiosInstance';
 
 let url: string = 'api/auth/user';
 
