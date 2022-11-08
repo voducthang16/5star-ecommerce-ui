@@ -479,7 +479,7 @@ function Blog() {
                         </nav>
                     </div>
 
-                    {/*  */}
+                    {/* search and options */}
                     <div className="lg:col-span-2 xl:col-span-3 2xl:col-span-1">
                         {/* search and accordion */}
                         <div className="mt-[24px] lg:mt-0">
@@ -487,7 +487,7 @@ function Blog() {
                                 {/* search */}
                                 <div className="py-[5px] w-full relative bg-[#f8f8f8] rounded-[5px]">
                                     <input
-                                        className="pl-[20px] pr-[68px] py-[8px] outline-none text-[14px] font-[600] bg-[#f8f8f8]"
+                                        className="w-full pl-[20px] pr-[68px] py-[8px] outline-none text-[14px] font-[600] bg-[#f8f8f8]"
                                         type="text"
                                         placeholder="Search..."
                                     />
