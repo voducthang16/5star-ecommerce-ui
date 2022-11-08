@@ -25,7 +25,7 @@ function BlogDetail() {
                                     placeholder="Search..."
                                 />
                                 <div className="w-[2px] h-[20px] bg-[#ccc] absolute right-[54px] top-[25%]"></div>
-                                <BsSearch className="w-[14px] h-[20px] absolute right-[20px] top-[25%] text-[#000]" />
+                                <BsSearch className="w-[14px] h-[20px] absolute right-[20px] top-[25%] text-[#000] hover:cursor-pointer" />
                             </div>
                         </div>
                     </div>
@@ -490,8 +490,10 @@ function BlogDetail() {
                                         </div>
 
                                         <div className="flex">
-                                            <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777]" />
-                                            <span className="text-[14px] text-[#0da487]">Reply</span>
+                                            <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777] hover:cursor-pointer" />
+                                            <span className="text-[14px] text-[#0da487] hover:cursor-pointer">
+                                                Reply
+                                            </span>
                                         </div>
                                     </div>
 
@@ -522,8 +524,10 @@ function BlogDetail() {
                                         </div>
 
                                         <div className="flex">
-                                            <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777]" />
-                                            <span className="text-[14px] text-[#0da487]">Reply</span>
+                                            <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777] hover:cursor-pointer" />
+                                            <span className="text-[14px] text-[#0da487] hover:cursor-pointer">
+                                                Reply
+                                            </span>
                                         </div>
                                     </div>
 
@@ -555,8 +559,10 @@ function BlogDetail() {
                                         </div>
 
                                         <div className="flex">
-                                            <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777]" />
-                                            <span className="text-[14px] text-[#0da487]">Reply</span>
+                                            <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777] hover:cursor-pointer" />
+                                            <span className="text-[14px] text-[#0da487] hover:cursor-pointer">
+                                                Reply
+                                            </span>
                                         </div>
                                     </div>
 
