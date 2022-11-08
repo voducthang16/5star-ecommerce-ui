@@ -492,7 +492,7 @@ function Blog() {
                                         placeholder="Search..."
                                     />
                                     <div className="w-[2px] h-[20px] bg-[#ccc] absolute right-[54px] top-[25%]"></div>
-                                    <BsSearch className="w-[14px] h-[20px] absolute right-[20px] top-[25%] text-[#000]" />
+                                    <BsSearch className="w-[14px] h-[20px] absolute right-[20px] top-[25%] text-[#000] hover:cursor-pointer" />
                                 </div>
                             </div>
                         </div>
