@@ -20,11 +20,12 @@ import {
 function Blog() {
     return (
         <section className="py-[32px] md:py-[36px] lg:py-[38px] xl:py-[44px]">
-            <div className="px-[20px] md:px-[54px] lg:px-[78px] xl:px-[108px]">
-                <div className="lg:grid lg:grid-cols-5 lg:gap-6 xl:grid-cols-9">
-                    <div className="lg:order-1 lg:col-span-3 xl:col-span-6">
+            <div className="px-[20px] md:px-[54px] lg:px-[78px] xl:px-[108px] 2xl:px-[124px]">
+                <div className="lg:grid lg:gap-6 lg:grid-cols-5 xl:grid-cols-9 2xl:grid-cols-4">
+                    {/* blog item */}
+                    <div className="lg:order-1 lg:col-span-3 xl:col-span-6 2xl:col-span-3">
                         {/* post item */}
-                        <div className="md:grid md:grid-cols-2 md:gap-6">
+                        <div className="md:grid md:grid-cols-2 2xl:grid-cols-3 md:gap-6">
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
@@ -478,7 +479,8 @@ function Blog() {
                         </nav>
                     </div>
 
-                    <div className="lg:col-span-2 xl:col-span-3">
+                    {/*  */}
+                    <div className="lg:col-span-2 xl:col-span-3 2xl:col-span-1">
                         {/* search and accordion */}
                         <div className="mt-[24px] lg:mt-0">
                             <div>
