@@ -12,10 +12,10 @@ function Footer() {
     return (
         <footer className="footer-wrapper overflow-hidden pb-20 lg:pb-0 text-white mt-10 relative">
             <div className="bg-footer-l">
-                <Image src={images.bg_footer_l} alt="" className="w-[400px] absolute z-[1] top-0 left-0" />
+                <Image src={images.bg_footer_l} alt="" className="w-[400px] absolute z-[0] top-0 left-0" />
             </div>
             <div className="bg-footer-l">
-                <Image src={images.bg_footer_r} alt="" className="w-[400px] absolute z-[1] right-0 bottom-0" />
+                <Image src={images.bg_footer_r} alt="" className="w-[400px] absolute z-[0] right-0 bottom-0" />
             </div>
             <div className="border-t border-b border-[#3a3d53] py-10 pt-20">
                 <div className="container">

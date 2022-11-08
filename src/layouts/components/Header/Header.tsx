@@ -1,20 +1,20 @@
 import { useEffect } from 'react';
-import { FourSquaresIcon } from '~/components/Icons';
+import { AiOutlineDelete, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { IoReorderThreeSharp } from 'react-icons/io5';
-import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart, AiOutlineDelete } from 'react-icons/ai';
+import { Link, NavLink } from 'react-router-dom';
+import Image from '~/components//Image';
+import { FourSquaresIcon } from '~/components/Icons';
+import Logo from '~/components/Logo';
 import Search from '../Search';
 import './Header.scss';
-import { Link, NavLink } from 'react-router-dom';
-import Logo from '~/components/Logo';
-import Image from '~/components//Image';
-import images from '~/assets/images';
 function Header() {
     let activeStyle = {
         color: '#0097a7',
     };
     const handleScroll = () => {
         const windowWidth = window.innerWidth;
+
         document.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             header!.classList.toggle('sticky', window.scrollY > 200);
@@ -60,6 +60,7 @@ function Header() {
             }
         });
     };
+
     useEffect(() => {
         handleScroll();
     }, []);
@@ -74,7 +75,7 @@ function Header() {
     };
     return (
         <header>
-            <div className="header-wrapper overflow-hidden relative z-[10]">
+            <div className="header-wrapper relative z-[100]">
                 <div className="header bg-white border-b border-slate-200 shadow max-h-36">
                     <div className="container h-20">
                         <div className="grid grid-cols-2 lg:grid-cols-8 gap-4 h-20">
@@ -97,7 +98,7 @@ function Header() {
                                     <li className="hidden lg:block icon-header-wrapper">
                                         <AiOutlineHeart className="text-2xl" />
                                         <span
-                                            className="absolute -top-1 -right-1 bg-cyan-500 text-white h-4 w-4 
+                                            className="absolute -top-1 -right-1 bg-primary text-white h-4 w-4 
                                         block text-center rounded-full text-[10px]"
                                         >
                                             5
@@ -106,7 +107,7 @@ function Header() {
                                     <li className="icon-header-wrapper">
                                         <IoMdNotificationsOutline className="text-2xl" />
                                         <span
-                                            className="absolute top-0 right-0 bg-cyan-500 text-white h-4 w-4 
+                                            className="absolute top-0 right-0 bg-primary text-white h-4 w-4 
                                         block text-center rounded-full text-[10px]"
                                         >
                                             3
@@ -122,7 +123,7 @@ function Header() {
                                             <AiOutlineShoppingCart className="text-2xl" />
                                             <span
                                                 style={{ fontSize: '10px' }}
-                                                className="absolute -top-1 -right-1 bg-cyan-500 text-white h-4 w-4 block text-center rounded-full"
+                                                className="absolute -top-1 -right-1 bg-primary text-white h-4 w-4 block text-center rounded-full"
                                             >
                                                 5
                                             </span>
