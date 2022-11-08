@@ -11,9 +11,9 @@ import { BsCalendar4, BsChatLeft, BsFillReplyFill, BsHandThumbsUp, BsPerson, BsS
 
 function BlogDetail() {
     return (
-        <section className="px-[20px] py-[32px] md:px-[54px] lg:px-[78px] xl:px-[108px] xl:py-[44px]">
-            <div className="lg:grid lg:grid-cols-7 lg:gap-6 xl:grid-cols-3">
-                <div className="hidden lg:block lg:col-span-3 xl:col-span-1">
+        <section className="px-[20px] py-[32px] md:px-[54px] lg:px-[78px] xl:px-[108px] xl:py-[44px] 2xl:px-[124px]">
+            <div className="lg:grid lg:grid-cols-7 lg:gap-6 xl:grid-cols-3 2xl:grid-cols-4">
+                <div className="hidden lg:block lg:col-span-3 xl:col-span-1 2xl:col-span-1">
                     {/* search and accordion */}
                     <div className="mt-[24px] lg:mt-0">
                         <div>
@@ -389,7 +389,9 @@ function BlogDetail() {
                         </div>
                     </ChakraProvider>
                 </div>
-                <div className="lg:col-span-4 xl:col-span-2">
+
+                {/* blog content */}
+                <div className="lg:col-span-4 xl:col-span-2 2xl:col-span-3">
                     <div className="relative mb-[24px] py-[8px] w-full h-[390px] bg-[url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg')] bg-cover bg-center bg-no-repeat transition-filter duration-[400ms] ease-in rounded-[5px] object-cover">
                         <div className="w-full absolute bottom-0 px-[15px] pt-[55px] pb-[40px] bg-gradient-to-r from-[#fff0] to-[#ffffff]">
                             {/* <ul className="text-[14px] flex justify-center capitalize">
