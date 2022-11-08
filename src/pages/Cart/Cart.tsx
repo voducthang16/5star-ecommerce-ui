@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-import { CodIcon } from '~/components/Icons';
-import './Cart.scss';
-import Image from '~/components/Image';
-import images from '~/assets/images';
-import { ErrorMessage, Field, Form, Formik, FormikProps } from 'formik';
-import { IoCloseOutline } from 'react-icons/io5';
+import { Form, Formik, FormikProps } from 'formik';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { IoCloseOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+import images from '~/assets/images';
+import { CodIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 import { InputField } from '~/layouts/components/CustomField';
+import './Cart.scss';
 type ValuesForm = {
     fullname: string;
     phone: string;

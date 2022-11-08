@@ -16,6 +16,9 @@ const images: any = {
     vector_register: require('~/assets/images/vector-signup.png'),
     spepay: require('~/assets/images/spepay.png'),
     momo: require('~/assets/images/momo.png'),
+    avatarDefault: require('~/assets/images/avatar-default.png'),
+    userSetting: require('~/assets/images/myaccount-user.gif'),
+    profile_account: require('~/assets/images/profile-myaccount.png'),
 };
 
 export default images;

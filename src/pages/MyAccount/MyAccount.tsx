@@ -8,6 +8,10 @@ import { Link, useLocation } from 'react-router-dom';
 import Breadcrumb from '~/components/Breadcrumb';
 import { Info, Order } from '~/layouts/components/MyAccount';
 import './MyAccount.scss';
+import { Tooltip } from '@chakra-ui/react';
+import Image from '~/components/Image';
+import images from '~/assets/images';
+import Wishlist from '~/layouts/components/MyAccount/Wishlist';
 const MyAccount = () => {
     const location: any = useLocation();
     const [tabIndex, setTabIndex] = useState(() => {
@@ -39,29 +43,33 @@ const MyAccount = () => {
             <div className="container pb-[50px]">
                 <Tabs isManual variant="soft-rounded" colorScheme="green" defaultIndex={tabIndex}>
                     <div className="grid grid-cols-12 mt-10">
-                        <div className="box-tabs col-span-12 md:col-span-3 h-full w-full mr-2 bg-[#f8f8f8] rounded-md">
+                        <div className="box-tabs col-span-12 md:col-span-3 w-full mr-2 bg-[#f8f8f8] rounded-md h-fit">
                             <div className="top border-b border-gray-200 flex justify-center flex-col items-center py-4">
-                                <div className="avatar-upload w-[100px] h-[100px] relative border border-gray-300 rounded-full">
-                                    <img
-                                        src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
+                                <div className="avatar-upload w-[100px] h-[100px] relative border border-gray-300 rounded-full cursor-pointer">
+                                    <Image
+                                        src={images.avatarDefault}
                                         alt=""
                                         className="shadow-md w-full h-full rounded-full bg-[#f8f8f8] object-contain border border-gray-500 p-1"
                                     />
-                                    <div className="cover-input absolute bottom-0 right-0 bg-white w-[30px] h-[30px] text-center rounded-full shadow-md">
-                                        <label
-                                            htmlFor="uploadAvatar"
-                                            className="h-fit text-lg text-gray-500 flex items-center justify-center cursor-pointer"
-                                        >
-                                            <GoPencil className="text-center mt-[5px]" />
-                                        </label>
-                                        <input
-                                            type="file"
-                                            id="uploadAvatar"
-                                            className="opacity-0 w-0"
-                                            onChange={(e) => handleChangeAvatar(e)}
-                                        />
-                                    </div>
+
+                                    <Tooltip label="Cập nhật ảnh đại diện" hasArrow>
+                                        <div className="cover-input absolute bottom-0 right-0 bg-white w-[30px] h-[30px] text-center rounded-full shadow-md">
+                                            <label
+                                                htmlFor="uploadAvatar"
+                                                className="h-fit text-lg text-gray-500 flex items-center justify-center cursor-pointer"
+                                            >
+                                                <GoPencil className="text-center mt-[5px]" />
+                                            </label>
+                                            <input
+                                                type="file"
+                                                id="uploadAvatar"
+                                                className="opacity-0 w-0"
+                                                onChange={(e) => handleChangeAvatar(e)}
+                                            />
+                                        </div>
+                                    </Tooltip>
                                 </div>
+
                                 <div className="fullname">
                                     <h3 className="text-lg font-semibold mt-2 text-[#4a5568]">Nguyễn Văn A</h3>
                                 </div>
@@ -70,7 +78,7 @@ const MyAccount = () => {
                                 <Link to="/my-account/info">
                                     <Tab
                                         className="tab-col-item mt-4"
-                                        _selected={{ color: 'white', bg: '#3EB5D0', borderLeft: '4px solid #066D84' }}
+                                        _selected={{ color: 'white', bg: '#319795', borderLeft: '4px solid #066D84' }}
                                     >
                                         <span className="text-xl mr-2">
                                             <BiUser />
@@ -81,7 +89,7 @@ const MyAccount = () => {
                                 <Link to="/my-account/order">
                                     <Tab
                                         className="tab-col-item"
-                                        _selected={{ color: 'white', bg: '#3EB5D0', borderLeft: '4px solid #066D84' }}
+                                        _selected={{ color: 'white', bg: '#319795', borderLeft: '4px solid #066D84' }}
                                     >
                                         <span className="text-xl mr-2">
                                             <BsHandbag />
@@ -92,7 +100,7 @@ const MyAccount = () => {
                                 <Link to="/my-account/wish-list">
                                     <Tab
                                         className="tab-col-item"
-                                        _selected={{ color: 'white', bg: '#3EB5D0', borderLeft: '4px solid #066D84' }}
+                                        _selected={{ color: 'white', bg: '#319795', borderLeft: '4px solid #066D84' }}
                                     >
                                         <span className="text-xl mr-2">
                                             <BsHeart />
@@ -105,7 +113,7 @@ const MyAccount = () => {
                                     <Tab
                                         className="tab-col-item"
                                         onClick={handleLogout}
-                                        _selected={{ color: 'white', bg: '#3EB5D0', borderLeft: '4px solid #066D84' }}
+                                        _selected={{ color: 'white', bg: '#319795', borderLeft: '4px solid #066D84' }}
                                     >
                                         <span className="text-xl mr-2">
                                             <MdLogout />
@@ -116,8 +124,8 @@ const MyAccount = () => {
                             </TabList>
                         </div>
 
-                        <div className="content col-span-12 md:col-span-8 w-full h-full">
-                            <div className="tab-content pl-[50px]">
+                        <div className="content col-span-12 md:col-span-9 w-full h-full">
+                            <div className="tab-content md:pl-[50px] mt-5 md:mt-0">
                                 <TabPanels>
                                     <TabPanel padding={0}>
                                         <Info />
@@ -126,7 +134,7 @@ const MyAccount = () => {
                                         <Order />
                                     </TabPanel>
                                     <TabPanel padding={0}>
-                                        <p>three!</p>
+                                        <Wishlist />
                                     </TabPanel>
                                 </TabPanels>
                             </div>
