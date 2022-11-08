@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import Countdown from 'react-countdown';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { EffectFade, Navigation, Pagination } from 'swiper';
+import { BsSearch } from 'react-icons/bs';
+import { Autoplay, EffectCreative, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -28,6 +29,7 @@ function Home() {
             title: 'Ưu đãi lớn',
         },
     ];
+
     const productFakeData = [
         {
             id: 'product_1',
@@ -102,7 +104,8 @@ function Home() {
             ],
         },
     ];
-    const CompleteCountdown = () => <span>You are good to go!</span>;
+    // const CompleteCountdown = () => <span>You are good to go!</span>;
+
     const [slidesPerView, setSlidesPerView] = useState(3);
     useEffect(() => {
         const windowWidth = window.innerWidth;
@@ -116,16 +119,19 @@ function Home() {
         <div className="home overflow-hidden">
             {/* Big Slide */}
             <section className="bg-[#e3ffe6]">
-                <div className="container">
-                    <div className="grid grid-cols-4 lg:gap-x-12">
-                        <div className="hidden lg:block lg:col-span-1">
-                            <div className="py-8 flex flex-col h-full justify-around">
+                <div className=" !px-3 !md:px-0">
+                    <div className="grid grid-cols-9 lg:gap-x-6">
+                        <div className="hidden lg:block lg:col-span-2">
+                            <div className="py-8 flex flex-col h-full justify-around items-center">
                                 {[1, 2, 3].map((index) => (
-                                    <div key={index} className="flex items-center bg-[#ffcca2] px-4 pt-4 rounded-lg">
+                                    <div
+                                        key={index}
+                                        className="flex items-center bg-[#ffcca2] px-4 pt-4 my-1 rounded-lg w-[80%]"
+                                    >
                                         <Image className="w-2/5" src={images.banner_sm01} alt={'Small Banner'} />
                                         <div>
                                             <h4 className="text-lg">Với nhiều sản phẩm hấp dẫn</h4>
-                                            <a className="inline-flex items-center text-base text-pink-400" href="/">
+                                            <a className="inline-flex items-center text-base text-pink-500" href="/">
                                                 Xem thêm <AiOutlineArrowRight className="ml-2" />
                                             </a>
                                         </div>
@@ -133,24 +139,34 @@ function Home() {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-span-4 lg:col-span-3">
+                        <div className="col-span-9 lg:col-span-7">
                             <Swiper
                                 spaceBetween={30}
-                                effect={'fade'}
+                                grabCursor={true}
+                                effect={'creative'}
+                                centeredSlides={true}
                                 autoplay={{
-                                    delay: 6000,
+                                    delay: 5000,
                                     disableOnInteraction: false,
                                 }}
+                                creativeEffect={{
+                                    prev: {
+                                        translate: ['-120%', 0, -500],
+                                    },
+                                    next: {
+                                        translate: ['120%', 0, -500],
+                                    },
+                                }}
+                                loop={true}
                                 pagination={{
-                                    dynamicBullets: true,
                                     clickable: true,
                                 }}
                                 navigation={true}
-                                modules={[EffectFade, Navigation, Pagination]}
+                                modules={[Autoplay, Pagination, Navigation, EffectCreative]}
                             >
                                 {configSlide.map((slide, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="relative pt-12 lg:py-44">
+                                        <div className="relative pt-12 lg:py-44 cursor-pointer">
                                             <div className="pb-8 lg:pb-0">
                                                 <span className="desc-active block text-base md:text-xl text-slate-700 font-medium">
                                                     Trong mùa hè này, chúng tôi đang có 🔥
@@ -169,26 +185,11 @@ function Home() {
                                                 >
                                                     <span>Mua ngay</span>
                                                     <span>
-                                                        <svg className="w-5 h-5 ml-2.5" viewBox="0 0 24 24" fill="none">
-                                                            <path
-                                                                d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-                                                                stroke="currentColor"
-                                                                strokeWidth="1.5"
-                                                                strokeLinecap="round"
-                                                                strokeLinejoin="round"
-                                                            ></path>
-                                                            <path
-                                                                d="M22 22L20 20"
-                                                                stroke="currentColor"
-                                                                strokeWidth="1.5"
-                                                                strokeLinecap="round"
-                                                                strokeLinejoin="round"
-                                                            ></path>
-                                                        </svg>
+                                                        <BsSearch className="ml-2 text-xl" />
                                                     </span>
                                                 </a>
                                             </div>
-                                            <div className="lg:absolute lg:top-0 lg:bottom-0  lg:-right-36 lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
+                                            <div className="lg:absolute lg:top-0 lg:bottom-0 lg:-right-[1rem] lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
                                                 <Image
                                                     className="w-full h-full object-contain object-right-top img-active"
                                                     src={slide.logo}

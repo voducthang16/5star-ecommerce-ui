@@ -2,15 +2,6 @@
     background: linear-gradient(90deg, #262834 6.15%, #20222f 50%);
     .list-menu {
         li {
-            &:hover a::before {
-                width: 100%;
-            }
-            &:hover a {
-                margin-left: 10px;
-            }
-            &:hover a::after {
-                opacity: 1;
-            }
             a {
                 position: relative;
                 transition: all 0.3s ease-in-out;
@@ -36,6 +27,15 @@
                     background-color: var(--primary);
                     -webkit-transition: all 0.3s ease-in-out;
                     transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                    margin-left: 10px;
+                    &::after {
+                        opacity: 1;
+                    }
+                    &::before {
+                        width: 100%;
+                    }
                 }
             }
         }
