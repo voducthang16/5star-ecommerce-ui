@@ -10,7 +10,13 @@ import Logo from '~/components/Logo';
 import './Footer.scss';
 function Footer() {
     return (
-        <footer className="footer-wrapper overflow-hidden pb-20 lg:pb-0 text-white mt-10">
+        <footer className="footer-wrapper overflow-hidden pb-20 lg:pb-0 text-white mt-10 relative">
+            <div className="bg-footer-l">
+                <Image src={images.bg_footer_l} alt="" className="w-[400px] absolute z-[1] top-0 left-0" />
+            </div>
+            <div className="bg-footer-l">
+                <Image src={images.bg_footer_r} alt="" className="w-[400px] absolute z-[1] right-0 bottom-0" />
+            </div>
             <div className="border-t border-b border-[#3a3d53] py-10 pt-20">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -123,7 +129,7 @@ function Footer() {
                                 <RocketIcon width={40} height={40} className={'fill-pink-700'} />
                             </div>
                             <div className="space-y-2">
-                                <h5 className="text-base font-semibold">Giao hàng nhanh chóng và miễn phí</h5>
+                                <h5 className="text-base font-semibold">Giao hàng nhanh, miễn phí</h5>
                                 <h6 className="text-xs font-normal">
                                     Giao hàng miễn phí cho tất cả các đơn đặt hàng trên 200.000VND
                                 </h6>
