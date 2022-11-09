@@ -51,12 +51,12 @@ function About() {
     };
 
     return (
-        <div>
-            <div className="w-full py-[32px] px-[20px] md:px-[54px] md:py-[40px] lg:px-[108px]">
+        <section>
+            <div className="w-full py-[32px] px-[20px] md:px-[54px] md:py-[40px] lg:px-[108px] 2xl:px-[124px]">
                 <div className="mb-[32px] xl:flex justify-between">
                     <div className="flex justify-evenly items-center lg:px-[24px]">
-                        <div className="mt-[-20px] mr-[12px] w-full h-[258px] md:h-[384px] lg:w-[422px] lg:h-[626px] xl:h-[384px] xl:w-[258px] bg-[url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/about-us/1.jpg')] bg-cover bg-center rounded-tr-[50px] rounded-bl-[50px]"></div>
-                        <div className="mt-[40px] ml-[12px] w-full h-[254px] md:h-[384px] lg:w-[422px] lg:h-[626px] xl:h-[384px] xl:w-[258px] bg-[url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/about-us/2.jpg')] bg-cover bg-center rounded-tl-[50px] rounded-br-[50px]"></div>
+                        <div className="mt-[-20px] mr-[12px] w-full h-[258px] md:h-[384px] lg:w-[422px] lg:h-[626px] xl:h-[384px] xl:w-[258px] 2xl:h-[435px] 2xl:w-[294px] bg-[url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/about-us/1.jpg')] bg-cover bg-center rounded-tr-[50px] rounded-bl-[50px]"></div>
+                        <div className="mt-[40px] ml-[12px] w-full h-[254px] md:h-[384px] lg:w-[422px] lg:h-[626px] xl:h-[384px] xl:w-[258px] 2xl:h-[435px] 2xl:w-[294px] bg-[url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/about-us/2.jpg')] bg-cover bg-center rounded-tl-[50px] rounded-br-[50px]"></div>
                     </div>
                     <div className="mt-[16px] lg:px-[24px]">
                         <div>
@@ -72,7 +72,7 @@ function About() {
                                 thời trang, thương hiệu vượt qua ranh giới của thời trang streetwear bằng cách không
                                 ngừng sáng tạo các trang phục với các bộ sưu tập độc đáo.
                             </p>
-                            {/* <ul className="mt-[32px]">
+                            <ul className="mt-[32px]">
                                 <li className="mb-[16px]">
                                     <div className="flex">
                                         <div className="">
@@ -135,7 +135,7 @@ function About() {
                                         </div>
                                     </div>
                                 </li>
-                            </ul> */}
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -275,7 +275,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
