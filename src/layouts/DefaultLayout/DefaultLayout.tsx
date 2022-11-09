@@ -33,8 +33,8 @@ function DefaultLayout({ Children }: DefaultLayoutProps) {
         <>
             <button
                 className="scroll-to-top fixed right-4 bottom-24 lg:bottom-4 z-[22]
-                min-w-[40px] min-h-[40px] bg-[#fe696a] opacity-0 invisible shadow rounded-lg 
-                flex items-center justify-center transition-all"
+                min-w-[40px] min-h-[40px] bg-primary opacity-0 invisible shadow rounded-full 
+                flex items-center justify-center transition-all p-3"
             >
                 <AiOutlineArrowUp className="text-2xl fill-white" />
             </button>

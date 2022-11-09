@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { background, Button } from '@chakra-ui/react';
 import Countdown from 'react-countdown';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { BsSearch } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import { Autoplay, EffectCreative, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -12,109 +13,9 @@ import images from '~/assets/images';
 import { Vector } from '~/components/Icons';
 import Image from '~/components/Image';
 import Product from '~/layouts/components/Product';
+import { configSlide, fourStep, productFakeData, specialProduct } from '~/utils/DataMockup/HomePageData';
 import './Home.scss';
 function Home() {
-    const day = '2023-09-19T12:00:00';
-    const configSlide = [
-        {
-            logo: `${images.hero1}`,
-            title: 'important of coffee',
-        },
-        {
-            logo: `${images.hero2}`,
-            title: 'the home of coffee',
-        },
-        {
-            logo: `${images.hero3}`,
-            title: 'Ưu đãi lớn',
-        },
-    ];
-
-    const productFakeData = [
-        {
-            id: 'product_1',
-            color: ['#a78bfa', '#facc15', '#2c3b54'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_2',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_3',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_5',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_5',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_5',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_5',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-    ];
-    // const CompleteCountdown = () => <span>You are good to go!</span>;
-
-    const [slidesPerView, setSlidesPerView] = useState(3);
-    useEffect(() => {
-        const windowWidth = window.innerWidth;
-        if (windowWidth < 1024) {
-            setSlidesPerView(1);
-        } else {
-            setSlidesPerView(3);
-        }
-    }, []);
     return (
         <div className="home overflow-hidden">
             {/* Big Slide */}
@@ -160,36 +61,40 @@ function Home() {
                                 loop={true}
                                 pagination={{
                                     clickable: true,
+                                    dynamicBullets: true,
                                 }}
                                 navigation={true}
                                 modules={[Autoplay, Pagination, Navigation, EffectCreative]}
                             >
-                                {configSlide.map((slide, index) => (
+                                {configSlide.map((slide: any, index: number) => (
                                     <SwiperSlide key={index}>
                                         <div className="relative pt-12 lg:py-44 cursor-pointer">
                                             <div className="pb-8 lg:pb-0">
                                                 <span className="desc-active block text-base md:text-xl text-slate-700 font-medium">
                                                     Trong mùa hè này, chúng tôi đang có 🔥
                                                 </span>
-                                                <h2 className="title-active mt-6 font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl !leading-[114%] text-slate-900">
+                                                <h2
+                                                    className="title-active mt-6 font-semibold text-3xl sm:text-4xl md:text-5xl w-[70%]
+                                                    xl:text-6xl 2xl:text-7xl !leading-[114%] text-slate-900 relative z-10 break-words"
+                                                >
                                                     {slide.title}
                                                 </h2>
-                                                <a
+                                                <Link
                                                     className="relative h-auto inline-flex items-center justify-center 
                                                             rounded-full transition-colors text-sm sm:text-base font-medium py-3 px-6 
                                                             sm:py-5 sm:px-9 disabled:bg-opacity-90 bg-slate-900 hover:bg-slate-800 
                                                             text-slate-50 dark:text-slate-800 shadow-xl focus:outline-none focus:ring-2 
                                                             focus:ring-offset-2 focus:ring-primary-6000 mt-10 link-active"
                                                     rel="noopener noreferrer"
-                                                    href="/"
+                                                    to="/"
                                                 >
                                                     <span>Mua ngay</span>
                                                     <span>
                                                         <BsSearch className="ml-2 text-xl" />
                                                     </span>
-                                                </a>
+                                                </Link>
                                             </div>
-                                            <div className="lg:absolute lg:top-0 lg:bottom-0 lg:-right-[1rem] lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl">
+                                            <div className="lg:absolute lg:top-0 lg:bottom-0 lg:-right-[1rem] lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl z-[5]">
                                                 <Image
                                                     className="w-full h-full object-contain object-right-top img-active"
                                                     src={slide.logo}
@@ -204,14 +109,29 @@ function Home() {
                     </div>
                 </div>
             </section>
+
             {/* 3 Slide  */}
-            <section className="container my-10 lg:my-20">
+            <section className="px-5 my-10 lg:my-20">
                 <div className="bg-white h-60">
                     <Swiper
-                        slidesPerView={slidesPerView}
                         spaceBetween={30}
-                        navigation={true}
-                        modules={[Navigation]}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                            },
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
                         className="h-60"
                     >
                         {[1, 2, 3, 4, 5, 6].map((index) => (
@@ -248,9 +168,19 @@ function Home() {
             </section>
             {/* List Product */}
             <section className="container">
-                <div className="py-10 lg:py-20 border-t border-slate-200/">
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-                        {productFakeData.map((item, index) => (
+                <div className="py-10">
+                    <div className="title-heading my-5 text-center">
+                        <h3 className="uppercase font-bold text-4xl">sản phẩm nổi bật</h3>
+                        <span className="title-divider">
+                            <span className="square"></span>
+                            <span className="square"></span>
+                        </span>
+                        <p className="text-tbase text-xl font-normal my-2">
+                            Những sản phẩm thời trang nổi bật, được giới trẻ ưa thích nhất
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-10">
+                        {productFakeData.map((item: any, index: number) => (
                             <div key={index} className="col-span-1">
                                 <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
                             </div>
@@ -258,33 +188,65 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* SPECIAL PRODUCT IMAGE */}
+            <section className="special-products container">
+                <div className="py-10 lg:py-20">
+                    <div className="title-heading my-5 text-center mb-10">
+                        <h3 className="uppercase font-bold text-4xl">Danh mục đặc biệt</h3>
+                        <span className="title-divider">
+                            <span className="square"></span>
+                            <span className="square"></span>
+                        </span>
+                    </div>
+                    <div className="grid  grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 h-full">
+                        {specialProduct.map((item, index: number) => (
+                            <div
+                                className={`lookbook-item relative col-span-2
+                                h-fit
+                                text-right overflow-hidden rounded-md cursor-pointer ${item.column}`}
+                            >
+                                <Link to="" className="">
+                                    <div className="content absolute bottom-6 left-2/4 -translate-x-2/4 w-[90%] p-3 shadow-md text-center bg-white opacity-80">
+                                        <h3 className="text-lg font-semibold text-tbase">{item.title}</h3>
+                                        <h2 className="text-xl text-tblack font-bold">Man’s Latest Collection</h2>
+                                    </div>
+                                    <Image src={item.image} className="h-auto w-full" />
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
             {/* Sale */}
-            <section className="container">
-                <div className="py-10 lg:py-20 border-t border-slate-200/">
-                    <div className="p-8 bg-[#eff8ff] rounded-2xl">
-                        <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-8">
+            <section className="sale">
+                <div className="py-10 lg:py-20">
+                    <div className="p-10 bg-[#f6f8fa] rounded-2xl shadow-sm">
+                        <div className="container grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-8">
                             <div className="col-span-1">
                                 <div className="h-full flex flex-col justify-center">
                                     <div>
-                                        <h6 className="inline-block text-sm px-2 py-1 bg-[#f34770] text-white rounded-md">
+                                        <h6 className="inline-block text-lg px-2 py-1 bg-[#f34770] text-white rounded-md mb-5">
                                             Ưu đãi giới hạn
                                         </h6>
                                     </div>
-                                    <h4 className="text-2xl mt-2 font-medium">Tất cả</h4>
-                                    <h3 className="text-3xl mt-2 font-semibold">sản phẩm mới nhất</h3>
-                                    <p className="text-xl mt-1 mb-3 font-light">đang giảm giá. Nhanh tay nào!</p>
-                                    <Countdown date={day} />
+                                    <h4 className="text-4xl mt-2 font-semibold uppercase">Tất cả</h4>
+                                    <h3 className="text-4xl mt-2 font-semibold uppercase my-3">sản phẩm mới nhất</h3>
+                                    <p className="text-xl mb-5">Đang giảm giá. Nhanh tay nào!</p>
+                                    <Countdown date="2022-12-30T01:02:03" renderer={renderer} />
                                     <div className="mt-6">
-                                        <a href="/" className="py-3 px-6 bg-[#4e54c8] text-white text-lg rounded-lg">
-                                            View Offer
-                                        </a>
+                                        <Link to="/">
+                                            <Button colorScheme="teal" className="!py-[25px] !px-[50px] !text-2xl">
+                                                Mua ngay
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-1 flex items-center justify-center">
+                            <div className="image-sale-big col-span-1 flex items-center justify-center p-5 relative">
                                 <Image
-                                    className="object-contain w-full"
-                                    src={'https://cartzilla.createx.studio/img/home/banners/offer.jpg'}
+                                    className="object-cover max-w-full w-[70%] h-auto z-[2] relative"
+                                    src={'https://uiuxom.com/ulina/html/images/home1/7.png'}
                                     alt={'Sale Product'}
                                 />
                             </div>
@@ -293,77 +255,43 @@ function Home() {
                 </div>
             </section>
             {/* 4 Step */}
+
             <section className="container">
-                <div className="py-10 lg:py-24 border-t border-b border-slate-200">
+                <div className="py-10 lg:py-20">
                     <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 xl:gap-20">
                         <div className="hidden md:block absolute inset-x-0 top-5">
                             <Vector className="w-full" />
                         </div>
-                        <div className="relative flex flex-col items-center max-w-xs mx-auto">
-                            <div className="mb-4 sm:mb-6 max-w-[140px] mx-auto">
-                                <Image src={images.step1} alt="Step 1" />
-                            </div>
-                            <div className="text-center mt-auto space-y-5">
-                                <span className="inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100">
-                                    Bước 1
-                                </span>
-                                <h3 className="text-base font-semibold">Lọc &amp; Khám phá</h3>
-                                <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                    Tính năng lọc và đề xuất thông minh giúp bạn dễ dàng tìm thấy
-                                </span>
-                            </div>
-                        </div>
-                        <div className="relative flex flex-col items-center max-w-xs mx-auto">
-                            <div className="mb-4 sm:mb-6 max-w-[140px] mx-auto">
-                                <Image src={images.step2} alt="Step 2" />
-                            </div>
-                            <div className="text-center mt-auto space-y-5">
-                                <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-indigo-800 bg-indigo-100">
-                                    Bước 2
-                                </span>
-                                <h3 className="text-base font-semibold">Thêm vào giỏ hàng</h3>
-                                <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                    Dễ dàng chọn đúng mặt hàng và thêm chúng vào giỏ hàng
-                                </span>
-                            </div>
-                        </div>
-                        <div className="relative flex flex-col items-center max-w-xs mx-auto">
-                            <div className="mb-4 sm:mb-6 max-w-[140px] mx-auto">
-                                <Image src={images.step3} alt="Step 3" />
-                            </div>
-                            <div>
+                        {fourStep.map((item: any, index: number) => (
+                            <div className="relative flex flex-col items-center max-w-xs mx-auto">
+                                <div className="mb-4 sm:mb-6 max-w-[140px] mx-auto">
+                                    <Image src={item.image} alt="Step 1" />
+                                </div>
                                 <div className="text-center mt-auto space-y-5">
-                                    <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-yellow-800 bg-yellow-100  relative">
-                                        Bước 3
+                                    <span
+                                        className={`inline-flex px-2.5 py-1 rounded-full font-medium text-base relative ${item.color}`}
+                                    >
+                                        Bước {index + 1}
                                     </span>
-                                    <h3 className="text-base font-semibold">Chuyển phát nhanh</h3>
-                                    <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                        Bên vận chuyển sẽ xác nhận và giao hàng nhanh chóng cho bạn
+                                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                                    <span className="block text-slate-600 dark:text-slate-400 text-base leading-6">
+                                        {item.sub_title}
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="relative flex flex-col items-center max-w-xs mx-auto">
-                            <div className="mb-4 sm:mb-6 max-w-[140px] mx-auto">
-                                <Image src={images.step4} alt="Step 4" />
-                            </div>
-                            <div>
-                                <div className="text-center mt-auto space-y-5">
-                                    <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-purple-800 bg-purple-100  relative">
-                                        Bước 4
-                                    </span>
-                                    <h3 className="text-base font-semibold">Tận hưởng sản phẩm</h3>
-                                    <span className="block text-slate-600 dark:text-slate-400 text-sm leading-6">
-                                        Chúc các bạn vui vẻ và tận hưởng những sản phẩm chất lượng 5 sao
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
             {/* Best Accessories */}
             <section className="container py-10 lg:py-24">
+                <div className="title-heading my-5 text-center mb-10">
+                    <h3 className="uppercase font-bold text-4xl">Thương hiệu yêu thích</h3>
+                    <span className="title-divider">
+                        <span className="square"></span>
+                        <span className="square"></span>
+                    </span>
+                </div>
                 <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6">
                     <div className="col-span-1">
                         <h3 className="mb-4 text-base font-medium">Bán chạy nhất</h3>
@@ -423,3 +351,38 @@ function Home() {
 }
 
 export default Home;
+
+const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
+    return (
+        <span>
+            <div className="ulinaCountDown is-countdown">
+                <span className="countdown-row countdown-show flex gap-5 text-center">
+                    <span className="countdown-section flex flex-col text-center justify-center">
+                        <span className="countdown-amount bg-[#fff] h-[72px] w-[72px] rounded-full p-4 text-center shadow-sm">
+                            {days}
+                        </span>
+                        <span className="countdown-period">Ngày</span>
+                    </span>
+                    <span className="countdown-section flex flex-col">
+                        <span className="countdown-amount bg-[#fff] h-[72px] w-[72px] rounded-full p-4 text-center shadow-sm">
+                            {hours}
+                        </span>
+                        <span className="countdown-period">Giờ</span>
+                    </span>
+                    <span className="countdown-section flex flex-col">
+                        <span className="countdown-amount bg-[#fff] h-[72px] w-[72px] rounded-full p-4 text-center shadow-sm">
+                            {minutes}
+                        </span>
+                        <span className="countdown-period">Phút</span>
+                    </span>
+                    <span className="countdown-section flex flex-col">
+                        <span className="countdown-amount bg-[#fff] h-[72px] w-[72px] rounded-full p-4 text-center shadow-sm">
+                            {seconds}
+                        </span>
+                        <span className="countdown-period">Giây</span>
+                    </span>
+                </span>
+            </div>
+        </span>
+    );
+};
