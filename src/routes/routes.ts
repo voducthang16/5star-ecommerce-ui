@@ -9,6 +9,7 @@ import Contact from '~/pages/Contact';
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import MyAccount from '~/pages/MyAccount';
+import OrderSuccess from '~/pages/OrderSuccess';
 import ProductDetail from '~/pages/ProductDetail';
 import Register from '~/pages/Register';
 
@@ -85,6 +86,10 @@ const publicRoutes: Routes[] = [
     {
         path: '/cart',
         Component: Cart,
+    },
+    {
+        path: '/order-success',
+        Component: OrderSuccess,
     },
     {
         path: '*',
