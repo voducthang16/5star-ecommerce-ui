@@ -20,6 +20,9 @@ const images: any = {
     profile_account: require('~/assets/images/profile-myaccount.png'),
     bg_footer_l: require('~/assets/images/bg-footer-l.png'),
     bg_footer_r: require('~/assets/images/bg-footer-r.png'),
+    special_1: require('~/assets/images/special-prod-1.jpg'),
+    special_2: require('~/assets/images/special-prod-2.jpg'),
+    special_4: require('~/assets/images/special-prod-4.jpg'),
 };
 
 export default images;
