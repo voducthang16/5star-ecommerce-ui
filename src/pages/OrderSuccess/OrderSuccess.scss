@@ -1,12 +1,13 @@
-@keyframes mover {
-    0% {
-        transform: translateY(0);
+.order-success-comp {
+    .img-animation {
+        animation: mover 1s infinite alternate;
     }
-    100% {
-        transform: translateY(-7px);
+    @keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-7px);
+        }
     }
-}
-
-.img-animation {
-    animation: mover 1s infinite alternate;
 }

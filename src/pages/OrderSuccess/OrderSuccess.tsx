@@ -2,7 +2,7 @@ import './OrderSuccess.scss';
 
 function OrderSuccess() {
     return (
-        <section>
+        <section className="order-success-comp">
             <div className="px-5 py-10 bg-[#f7f7f7]">
                 {/* image */}
                 <div className="mx-[137px]">

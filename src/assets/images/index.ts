@@ -23,6 +23,10 @@ const images: any = {
     special_1: require('~/assets/images/special-prod-1.jpg'),
     special_2: require('~/assets/images/special-prod-2.jpg'),
     special_4: require('~/assets/images/special-prod-4.jpg'),
+    about_man: require('~/assets/images/about-man.png'),
+    about_bg_dot: require('~/assets/images/about-bg-dot.png'),
+    about_women: require('~/assets/images/about-women.jpg'),
+    about_man_jean: require('~/assets/images/about-man-jean.jpg'),
 };
 
 export default images;

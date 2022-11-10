@@ -1,4 +1,4 @@
-import { background, Button } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import Countdown from 'react-countdown';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { BsSearch } from 'react-icons/bs';
@@ -211,7 +211,7 @@ function Home() {
                                         <h3 className="text-lg font-semibold text-tbase">{item.title}</h3>
                                         <h2 className="text-xl text-tblack font-bold">Man’s Latest Collection</h2>
                                     </div>
-                                    <Image src={item.image} className="h-auto w-full" />
+                                    <Image src={item.image} className="h-auto w-full object-cover object-center" />
                                 </Link>
                             </div>
                         ))}
