@@ -1,3 +1,5 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { DefaultLayout } from '~/layouts/';
@@ -15,6 +17,10 @@ function useScrollToTop() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
 }
 
 function FragmentLayout({ Children }: FragmentLayoutProps) {

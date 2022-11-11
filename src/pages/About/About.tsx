@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import images from '~/assets/images';
 import Breadcrumb from '~/components/Breadcrumb';
 import Image from '~/components/Image';
+import { fourStepAbout } from '~/utils/DataMockup/AboutPageData';
 import './About.scss';
 function About() {
     return (
@@ -12,14 +13,14 @@ function About() {
             <div className="w-full py-[32px] px-[20px] md:px-[54px] md:py-[40px] lg:px-[108px] 2xl:px-[124px] mt-10">
                 <div className="mb-[32px] grid grid-cols-2 gap-5 lg:gap-20">
                     <div className="flex justify-center gap-5 col-span-2 lg:col-span-1">
-                        <div className="image-banner-1 max-w-[400px] h-[90%] overflow-hidden">
+                        <div className="image-banner-1 max-w-[400px] h-[90%] overflow-hidden" data-aos="zoom-in-up">
                             <Image
                                 src={images.about_man_jean}
                                 alt=""
                                 className="rounded-bl-[50px] rounded-tr-[50px] w-full h-full object-cover object-center overflow-hidden"
                             />
                         </div>
-                        <div className="image-banner-2 max-w-[400px] h-[90%] overflow-hidden">
+                        <div className="image-banner-2 max-w-[400px] h-[90%] overflow-hidden" data-aos="zoom-in-up">
                             <Image
                                 alt=""
                                 src={images.about_women}
@@ -27,83 +28,41 @@ function About() {
                             />
                         </div>
                     </div>
-                    <div className="mt-[16px] lg:px-[24px] col-span-2 lg:col-span-1">
-                        <div>
-                            <h4 className="mb-[8px] text-[16px] capitalize text-[#222]">Về chúng tôi</h4>
-                            <h2 className="mb-[12px] text-[28px] capitalize font-semibold text-[#222222]]">
+                    <div className="mt-[16px] lg:px-[24px] col-span-2 lg:col-span-1 w-[80%]">
+                        <div data-aos="fade-up">
+                            <h4 className="mb-[8px] text-xl font-semibold capitalize text-primary" data-aos="fade-up">
+                                Về chúng tôi
+                            </h4>
+                            <h2
+                                className="mb-[12px] text-[28px] capitalize font-semibold text-[#222222]]"
+                                data-aos="fade-up"
+                                data-aos-delay="100"
+                            >
                                 Chúng tôi tạo ra những sản phẩm độc đáo
                             </h2>
                         </div>
                         <div>
-                            <p className="text-[14px] text-justify leading-6 text-[#4a5568]">
+                            <p
+                                className="text-lg text-justify leading-6 text-[#4a5568] font-normal"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
                                 5star là lựa chọn hàng đầu dành cho các tín đồ thời trang Streetwear sành điệu. Sứ mệnh
                                 của 5star là trao quyền cho thế hệ trẻ toàn thế giới tự do thể hiện phong cách thông qua
                                 thời trang, thương hiệu vượt qua ranh giới của thời trang streetwear bằng cách không
                                 ngừng sáng tạo các trang phục với các bộ sưu tập độc đáo.
                             </p>
-                            <ul className="mt-[32px]">
-                                <li className="mb-[16px]">
-                                    <div className="flex">
-                                        <div className="">
-                                            <img
-                                                className="w-[30px] mr-[12px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/svg/3/delivery.svg"
-                                                alt=""
-                                            />
+                            <ul className="mt-[32px]" data-aos="fade-up">
+                                {fourStepAbout.map((item: any, index: number) => (
+                                    <li className="my-5" data-aos="fade-up" data-aos-delay={index * 400}>
+                                        <div className="flex">
+                                            <div className="icon text-primary mr-3">{item?.icon}</div>
+                                            <div className="">
+                                                <h5 className="text-lg font-semibold text-[#222222]">{item?.title}</h5>
+                                            </div>
                                         </div>
-                                        <div className="">
-                                            <h5 className="text-[15px] text-[#222222]">Free delivery for all orders</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li className="mb-[16px]">
-                                    <div className="flex">
-                                        <div className="">
-                                            <img
-                                                className="w-[30px] mr-[12px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <div className="">
-                                            <h5 className="text-[15px] text-[#222222]">Only fresh foods</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li className="mb-[16px]">
-                                    <div className="flex">
-                                        <div className="">
-                                            <img
-                                                className="w-[30px] mr-[12px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/svg/3/delivery.svg"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <div className="">
-                                            <h5 className="text-[15px] text-[#222222]">Free delivery for all orders</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li className="mb-[16px]">
-                                    <div className="flex">
-                                        <div className="">
-                                            <img
-                                                className="w-[30px] mr-[12px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/svg/3/leaf.svg"
-                                                alt=""
-                                            />
-                                        </div>
-
-                                        <div className="">
-                                            <h5 className="text-[15px] text-[#222222]">Only fresh foods</h5>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -112,8 +71,12 @@ function About() {
 
             <div className="py-[32px] px-[28px] bg-[#f8f8f8]">
                 <div className="text-center">
-                    <h4 className="mb-[8px] text-[16px] text-[#0da487]">Chúng tôi làm gì</h4>
-                    <h2 className="mb-[28px] text-[23px]">Chúng tôi được khách hàng tin cậy</h2>
+                    <h4 className="mb-[8px] text-xl font-semibold capitalize text-primary" data-aos="fade-up">
+                        Chúng tôi làm được gì
+                    </h4>
+                    <h2 className="mb-[28px] text-[23px]" data-aos="fade-up" data-aos-delay="300">
+                        Chúng tôi được khách hàng tin cậy
+                    </h2>
                 </div>
                 <div className="px-[14px] mb-[30px]">
                     <Swiper
@@ -138,7 +101,7 @@ function About() {
                     >
                         {[1, 2, 3, 4, 5, 6].map((index) => (
                             <SwiperSlide key={index}>
-                                <div className="item-slider cursor-pointer">
+                                <div className="item-slider cursor-pointer" data-aos="zoom-in-up">
                                     <div className="p-[28px] rounded-[22px] bg-[#fff] mr-[12px]">
                                         <span className="icon text-[3rem] text-primary mb-2 inline-block">
                                             <BsCartCheck />
@@ -156,7 +119,11 @@ function About() {
                 </div>
             </div>
 
-            <div className="py-[16px] container bg-slate-50 shadow-sm rounded-3xl px-[16px] lg:pt-10 mt-20 mb-32">
+            <div
+                className="py-[16px] container bg-slate-50 shadow-sm rounded-3xl px-[16px] lg:pt-10 mt-20 mb-32"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+            >
                 <div className="relative flex flex-col lg:flex-row rounded-2xl sm:rounded-[40px] p-4 pb-0 sm:p-5 sm:pb-0 lg:p-24">
                     <div className="absolute inset-0">
                         <Image

@@ -43,7 +43,10 @@ const MyAccount = () => {
             <div className="container pb-[50px]">
                 <Tabs isManual variant="soft-rounded" colorScheme="green" defaultIndex={tabIndex}>
                     <div className="grid grid-cols-12 mt-10">
-                        <div className="box-tabs col-span-12 md:col-span-3 w-full mr-2 bg-[#f8f8f8] rounded-md h-fit">
+                        <div
+                            className="box-tabs col-span-12 md:col-span-3 w-full mr-2 bg-[#f8f8f8] rounded-md h-fit"
+                            data-aos="fade-up"
+                        >
                             <div className="top border-b border-gray-200 flex justify-center flex-col items-center py-4">
                                 <div className="avatar-upload w-[100px] h-[100px] relative border border-gray-300 rounded-full cursor-pointer">
                                     <Image
@@ -124,7 +127,11 @@ const MyAccount = () => {
                             </TabList>
                         </div>
 
-                        <div className="content col-span-12 md:col-span-9 w-full h-full">
+                        <div
+                            className="content col-span-12 md:col-span-9 w-full h-full"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
                             <div className="tab-content md:pl-[50px] mt-5 md:mt-0">
                                 <TabPanels>
                                     <TabPanel padding={0}>

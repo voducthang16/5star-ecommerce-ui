@@ -81,7 +81,13 @@ const Info = () => {
                         </div>
                         <div className="hidden lg:col-span-3 lg:block">
                             <div className="image-myaccount w-full">
-                                <Image src={images.profile_account} alt="" className="w-[120%] h-full" />
+                                <Image
+                                    src={images.profile_account}
+                                    alt=""
+                                    className="w-[120%] h-full"
+                                    data-aos="zoom-in"
+                                    data-aos-delay="300"
+                                />
                             </div>
                         </div>
                     </div>
