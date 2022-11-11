@@ -8,9 +8,10 @@ import './Breadcrumb.scss';
 interface BreadcrumbProps {
     name?: string;
     share?: boolean;
+    category?: boolean;
 }
 
-const Breadcrumb = ({ name, share = true }: BreadcrumbProps) => {
+const Breadcrumb = ({ name, category = true, share = true }: BreadcrumbProps) => {
     return (
         <div className="breadcrumb my-4 bg-[#f8f8f8] py-6">
             <div className="container">
@@ -22,12 +23,14 @@ const Breadcrumb = ({ name, share = true }: BreadcrumbProps) => {
                             </span>
                             Trang chủ
                         </h5>
-                        <h5 className="flex items-center mr-2 hover-text">
-                            <span className="text-gray-400 mx-1 text-sm">
-                                <MdOutlineKeyboardArrowRight />
-                            </span>
-                            <Link to="/category">Danh mục</Link>
-                        </h5>
+                        {category ? (
+                            <h5 className="flex items-center mr-2 hover-text">
+                                <span className="text-gray-400 mx-1 text-sm">
+                                    <MdOutlineKeyboardArrowRight />
+                                </span>
+                                <Link to="/category">Danh mục</Link>
+                            </h5>
+                        ) : null}
                         <h5 className="flex items-center hover-text">
                             <span className="text-gray-400 mx-1 text-sm">
                                 <MdOutlineKeyboardArrowRight />

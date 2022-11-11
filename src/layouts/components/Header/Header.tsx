@@ -89,9 +89,6 @@ function Header() {
                             </div>
                             <div className="col-span-1 lg:col-span-2 flex items-center">
                                 <ul className="flex-1 flex justify-end lg:space-x-2 xl:space-x-6">
-                                    <li onClick={handleShowNavbarMobile} className="icon-header-wrapper lg:hidden">
-                                        <IoReorderThreeSharp className="text-2xl" />
-                                    </li>
                                     <li onClick={handleShowNavbar} className="hidden icon-header-wrapper three-sharp">
                                         <IoReorderThreeSharp className="text-2xl" />
                                     </li>
@@ -112,6 +109,9 @@ function Header() {
                                         >
                                             3
                                         </span>
+                                    </li>
+                                    <li onClick={handleShowNavbarMobile} className="icon-header-wrapper lg:hidden">
+                                        <IoReorderThreeSharp className="text-2xl" />
                                     </li>
                                     <li className="hidden lg:block icon-header-wrapper">
                                         <Link to={'/my-account'}>
