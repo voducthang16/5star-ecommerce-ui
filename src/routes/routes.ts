@@ -12,6 +12,7 @@ import MyAccount from '~/pages/MyAccount';
 import OrderSuccess from '~/pages/OrderSuccess';
 import ProductDetail from '~/pages/ProductDetail';
 import Register from '~/pages/Register';
+import StoreSystem from '~/pages/StoreSystem';
 
 interface Routes {
     path: string;
@@ -90,6 +91,10 @@ const publicRoutes: Routes[] = [
     {
         path: '/order-success',
         Component: OrderSuccess,
+    },
+    {
+        path: 'store-system',
+        Component: StoreSystem,
     },
     {
         path: '*',

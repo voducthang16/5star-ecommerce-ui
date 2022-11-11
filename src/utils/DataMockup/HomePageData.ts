@@ -5,18 +5,18 @@ export const productFakeData = [
         id: 'product_1',
         color: ['#a78bfa', '#facc15', '#2c3b54'],
         images: [
-            'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-            'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-            'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            'https://i.imgur.com/zHTIVMk.jpg',
+            'https://i.imgur.com/sPnmn3M.jpg',
+            'https://i.imgur.com/TnQejuQ.jpg',
         ],
     },
     {
         id: 'product_2',
         color: ['#fb923c', '#38bdf8', '#4ade80'],
         images: [
-            'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-            'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-            'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
+            'https://i.imgur.com/KhSMJFm.png',
+            'https://i.imgur.com/OajX95x.png',
+            'https://i.imgur.com/7KeQLjS.png',
         ],
     },
     {

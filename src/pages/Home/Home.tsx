@@ -179,7 +179,7 @@ function Home() {
                             Những sản phẩm thời trang nổi bật, được giới trẻ ưa thích nhất
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-10">
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-10">
                         {productFakeData.map((item: any, index: number) => (
                             <div key={index} className="col-span-1">
                                 <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
@@ -199,15 +199,18 @@ function Home() {
                             <span className="square"></span>
                         </span>
                     </div>
-                    <div className="grid  grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 h-full">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 h-full">
                         {specialProduct.map((item, index: number) => (
                             <div
-                                className={`lookbook-item relative col-span-2
-                                h-fit
+                                key={index}
+                                className={`lookbook-item relative col-span-2 h-fit
                                 text-right overflow-hidden rounded-md cursor-pointer ${item.column}`}
                             >
                                 <Link to="" className="">
-                                    <div className="content absolute bottom-6 left-2/4 -translate-x-2/4 w-[90%] p-3 shadow-md text-center bg-white opacity-80">
+                                    <div
+                                        className="content absolute bottom-6 left-2/4 -translate-x-2/4 w-[90%] p-3 
+                                    shadow-md text-center bg-white opacity-80"
+                                    >
                                         <h3 className="text-lg font-semibold text-tbase">{item.title}</h3>
                                         <h2 className="text-xl text-tblack font-bold">Man’s Latest Collection</h2>
                                     </div>
