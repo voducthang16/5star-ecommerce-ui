@@ -13,7 +13,7 @@ function StoreSystem() {
                     <div className="md:w-4/5 lg:w-3/5">
                         <Search placeholder="Nhập từ khóa để tìm sản phẩm, thương hiệu bạn mong muốn. Ví dụ: 5Star" />
                     </div>
-                    <div className="flex md:flex-col md:space-y-4 justify-center lg:space-x-4">
+                    <div className="flex md:flex-col lg:flex-row md:space-y-4 justify-center lg:items-center lg:space-x-4 lg:space-y-0">
                         <Link className="flex items-center" to={'tel:0123456789'}>
                             <div className="p-1 bg-white rounded-full">
                                 <AiOutlineQuestion className="!fill-black" />

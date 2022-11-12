@@ -58,6 +58,15 @@ function Header() {
                     cart!.classList.toggle('sticky-mt-36', window.scrollY > 200);
                 }
             }
+            // my-account-component
+            if (document.querySelector('.my-account-component')) {
+                const about = document.querySelector('.my-account-component');
+                if (windowWidth < 1024) {
+                    about!.classList.toggle('sticky-mt-20', window.scrollY > 200);
+                } else {
+                    about!.classList.toggle('sticky-mt-36', window.scrollY > 200);
+                }
+            }
         });
     };
 
@@ -93,13 +102,15 @@ function Header() {
                                         <IoReorderThreeSharp className="text-2xl" />
                                     </li>
                                     <li className="hidden lg:block icon-header-wrapper">
-                                        <AiOutlineHeart className="text-2xl" />
-                                        <span
-                                            className="absolute -top-1 -right-1 bg-primary text-white h-4 w-4 
+                                        <Link to={'/my-account/wish-list'}>
+                                            <AiOutlineHeart className="text-2xl" />
+                                            <span
+                                                className="absolute -top-1 -right-1 bg-primary text-white h-4 w-4 
                                         block text-center rounded-full text-[10px]"
-                                        >
-                                            5
-                                        </span>
+                                            >
+                                                5
+                                            </span>
+                                        </Link>
                                     </li>
                                     <li className="icon-header-wrapper">
                                         <IoMdNotificationsOutline className="text-2xl" />
