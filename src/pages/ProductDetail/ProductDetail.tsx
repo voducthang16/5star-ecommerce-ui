@@ -96,7 +96,7 @@ function ProductDetail() {
     return loading ? (
         <Loading />
     ) : (
-        <div className="product-detail overflow-hidden">
+        <div className="product-detail">
             <Breadcrumb name={'Sản phẩm'} />
             <section className="container pb-10 lg:pb-20">
                 <div className="grid grid-cols-12 lg:gap-4 shadow-2xl lg:p-4 rounded-2xl">

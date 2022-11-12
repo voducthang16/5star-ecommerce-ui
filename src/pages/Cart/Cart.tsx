@@ -3,6 +3,7 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { IoCloseOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import images from '~/assets/images';
+import Breadcrumb from '~/components/Breadcrumb';
 import { CodIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import { InputField } from '~/layouts/components/CustomField';
@@ -30,14 +31,15 @@ function Cart() {
 
     return (
         <div className="cart-page">
-            <div className="container py-20">
+            {/* <Breadcrumb name={'Sản phẩm'} /> */}
+            <div className="container py-10 lg:py-20">
                 <div className="grid grid-cols-12 gap-8">
                     <div
                         className="col-span-12 md:col-span-7 space-y-5 relative 
                     after:absolute after:content-[''] after:w-px after:bg-slate-200
                     after:top-0 after:bottom-0 after:-right-5"
                     >
-                        <div className="flex justify-between items-center">
+                        <div className="flex flex-wrap space-y-4 lg:space-y-0 flex-col-reverse lg:flex-row justify-between items-center">
                             <h5 className="text-2xl font-bold">Thông tin vận chuyển</h5>
                             <p className="text-base">
                                 Bạn đã có tài khoản?{' '}

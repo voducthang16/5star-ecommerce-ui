@@ -17,7 +17,7 @@ import { configSlide, fourStep, productFakeData, specialProduct } from '~/utils/
 import './Home.scss';
 function Home() {
     return (
-        <div className="home overflow-hidden">
+        <div className="home">
             {/* Big Slide */}
             <section className="bg-[#e3ffe6]">
                 <div className=" !px-3 !md:px-0">
