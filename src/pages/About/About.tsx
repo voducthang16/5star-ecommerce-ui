@@ -121,74 +121,8 @@ function About() {
                 </div>
             </div>
 
-            <div className="mt-[32px] py-[32px] px-[12px] bg-[#f8f8f8]">
-                <div className="text-center">
-                    <h4 className="mb-[8px] text-xl font-semibold capitalize text-primary" data-aos="fade-up">
-                        Latest Testimonals
-                    </h4>
-                    <h2 className="mb-[28px] text-[23px]" data-aos="fade-up" data-aos-delay="300">
-                        What people say
-                    </h2>
-                </div>
-                <div className="mb-[30px]">
-                    <Swiper
-                        spaceBetween={30}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 20,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 40,
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 50,
-                            },
-                        }}
-                        pagination={{
-                            dynamicBullets: true,
-                        }}
-                        modules={[Pagination]}
-                    >
-                        {[1, 2, 3, 4, 5, 6].map((index) => (
-                            <SwiperSlide key={index}>
-                                <div className="item-slider cursor-pointer" data-aos="zoom-in-up">
-                                    <div className="p-[18px] rounded-[10px] bg-[#fff] mr-[12px]">
-                                        <Rate className="flex space-x-1" average={4} />
-                                        <h3 className="mt-[10px] mb-[13px] text-[20px] font-[400] leading-6">
-                                            Top Quality, Beautiful Location
-                                        </h3>
-                                        <p className="mb-6 text-[14px] text-[#4a5568]">
-                                            "Yeah, and if you were the pope they'd be all, "Straighten your pope hat."
-                                            And "Put on your good vestments." What are their names? Yep, I remember.
-                                            They came in last at the Olympics!"
-                                        </p>
-                                        <div className="flex">
-                                            <div className="w-[66px] mr-[12px]">
-                                                <img
-                                                    className="w-full h-full object-contain rounded-[8px]"
-                                                    src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/user/1.jpg"
-                                                    alt=""
-                                                />
-                                            </div>
-
-                                            <div className="flex flex-col justify-center">
-                                                <h4 className="text-[16px] text-primary font-[700]">Betty J. Turner</h4>
-                                                <h6 className="mt-[4px] text-[13px] text-[#4a5568]">CTO, Company</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </div>
-
             <div
-                className="py-[16px] container bg-slate-50 shadow-sm rounded-3xl px-[16px] lg:pt-10 mt-20 mb-32"
+                className="py-[16px] container bg-slate-50 shadow-sm rounded-3xl px-[16px] lg:pt-10 mt-20 mb-[80px]"
                 data-aos="fade-down"
                 data-aos-duration="1000"
             >
@@ -253,6 +187,72 @@ function About() {
                     >
                         <Image src={images.about_man} alt="" className="object-cover w-full h-full" />
                     </div>
+                </div>
+            </div>
+
+            <div className="py-[32px] px-[12px] bg-[#f8f8f8]">
+                <div className="text-center">
+                    <h4 className="mb-[8px] text-xl font-semibold capitalize text-primary" data-aos="fade-up">
+                        Latest Testimonals
+                    </h4>
+                    <h2 className="mb-[28px] text-[23px]" data-aos="fade-up" data-aos-delay="300">
+                        What people say
+                    </h2>
+                </div>
+                <div className="mb-[30px]">
+                    <Swiper
+                        spaceBetween={30}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                            },
+                        }}
+                        pagination={{
+                            dynamicBullets: true,
+                        }}
+                        modules={[Pagination]}
+                    >
+                        {[1, 2, 3, 4, 5, 6].map((index) => (
+                            <SwiperSlide key={index}>
+                                <div className="item-slider cursor-pointer" data-aos="zoom-in-up">
+                                    <div className="p-[18px] rounded-[10px] bg-[#fff] mr-[12px]">
+                                        <Rate className="flex space-x-1" average={4} />
+                                        <h3 className="mt-[10px] mb-[13px] text-[20px] font-[400] leading-6">
+                                            Top Quality, Beautiful Location
+                                        </h3>
+                                        <p className="mb-6 text-[14px] text-[#4a5568]">
+                                            "Yeah, and if you were the pope they'd be all, "Straighten your pope hat."
+                                            And "Put on your good vestments." What are their names? Yep, I remember.
+                                            They came in last at the Olympics!"
+                                        </p>
+                                        <div className="flex">
+                                            <div className="w-[66px] mr-[12px]">
+                                                <img
+                                                    className="w-full h-full object-contain rounded-[8px]"
+                                                    src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/user/1.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+
+                                            <div className="flex flex-col justify-center">
+                                                <h4 className="text-[16px] text-primary font-[700]">Betty J. Turner</h4>
+                                                <h6 className="mt-[4px] text-[13px] text-[#4a5568]">CTO, Company</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </section>
