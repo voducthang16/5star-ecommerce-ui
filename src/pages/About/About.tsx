@@ -1,6 +1,5 @@
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { BsCartCheck } from 'react-icons/bs';
-import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import images from '~/assets/images';
 import Breadcrumb from '~/components/Breadcrumb';
@@ -219,7 +218,7 @@ function About() {
                         pagination={{
                             dynamicBullets: true,
                         }}
-                        modules={[Pagination]}
+                        modules={[]}
                     >
                         {[1, 2, 3, 4, 5, 6].map((index) => (
                             <SwiperSlide key={index}>

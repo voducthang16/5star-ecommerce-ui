@@ -46,11 +46,11 @@
 }
 
 .sticky-mt-36 {
-    @apply mt-36;
+    @apply pt-36;
 }
 
 .sticky-mt-20 {
-    @apply mt-20;
+    @apply pt-20;
 }
 
 .icon-header-wrapper {
@@ -68,4 +68,8 @@
 
 .hover-text {
     @apply hover:text-primary transition-all duration-200 cursor-pointer;
+}
+
+.error-validate {
+    @apply text-sm text-red-500 text-left w-full;
 }

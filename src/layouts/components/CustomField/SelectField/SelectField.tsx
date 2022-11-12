@@ -15,7 +15,7 @@ const SelectField = ({ label, options, defaultValue, placeholder, ...props }: an
                     </option>
                 ))}
             </Select>
-            <ErrorMessage component="span" name={field.name} className="error" />
+            <ErrorMessage component="span" name={field.name} className="error-validate" />
         </FormControl>
     );
 };

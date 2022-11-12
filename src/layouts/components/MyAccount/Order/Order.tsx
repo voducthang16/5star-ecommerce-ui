@@ -1,5 +1,4 @@
-import { Button, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
-import { FaRegEye } from 'react-icons/fa';
+import { Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 import { RiVipCrown2Line } from 'react-icons/ri';
 import ModalViewOrder from './ModalViewOrder';
 

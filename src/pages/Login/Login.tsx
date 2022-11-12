@@ -1,11 +1,11 @@
 import {
     Button,
-    Checkbox,
     FormControl,
     Input,
     InputGroup,
     InputLeftElement,
     InputRightElement,
+    useToast,
 } from '@chakra-ui/react';
 import { ErrorMessage, Field, Form, Formik, FormikProps } from 'formik';
 import { useState } from 'react';
@@ -14,30 +14,51 @@ import { FiUserCheck } from 'react-icons/fi';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 import { MdOutlineFacebook } from 'react-icons/md';
 import { RiLockPasswordLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import images from '~/assets/images';
 
 import Image from '~/components/Image';
 import Logo from '~/components/Logo';
 import InputFieldIcon from '~/layouts/components/CustomField/InputFieldIcon';
+import { AuthService } from '~/services';
+import { LoginType } from '~/utils/Types';
+import { LoginSchema } from '~/utils/validationSchema';
 import './Login.scss';
-type ValuesForm = {
-    username: string;
-    password: string;
-    rememberPassword: boolean;
-};
 
 const initLoginForm = {
     username: '',
     password: '',
-    rememberPassword: false,
 };
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    // END STATE
 
-    const handleSubmitLogin = (values: ValuesForm) => {
-        console.log(values);
+    const Navigate = useNavigate();
+    const toast = useToast();
+
+    // HANDLE LOGIC
+    const handleSubmitLogin = (values: LoginType) => {
+        AuthService.signIn(values).then(
+            (res: any) => {
+                if (res.statusCode === 201) {
+                    let accessToken = res?.data?.accessToken;
+                    if (accessToken) {
+                        localStorage.setItem('access_token', accessToken);
+                        Navigate('/');
+                        toast({
+                            position: 'top-right',
+                            title: 'Đăng nhập thành công',
+                            duration: 2000,
+                            status: 'success',
+                        });
+                    }
+                }
+            },
+            (err) => {
+                console.log(err);
+            },
+        );
     };
 
     const HandleTogglePassword = () => {
@@ -70,9 +91,10 @@ const Login = () => {
                         </div>
                         <Formik
                             initialValues={initLoginForm}
-                            onSubmit={(values: ValuesForm) => handleSubmitLogin(values)}
+                            validationSchema={LoginSchema}
+                            onSubmit={(values: LoginType) => handleSubmitLogin(values)}
                         >
-                            {(formik: FormikProps<ValuesForm>) => (
+                            {(formik: FormikProps<LoginType>) => (
                                 <Form className=" max-w-[400px] m-auto">
                                     <div className="form-group">
                                         <InputFieldIcon
@@ -134,7 +156,7 @@ const Login = () => {
                                                             <ErrorMessage
                                                                 component="div"
                                                                 name={field.name}
-                                                                className="error w-full text-left"
+                                                                className="error-validate"
                                                             />
                                                         </>
                                                     );
@@ -143,12 +165,12 @@ const Login = () => {
                                         </FormControl>
                                     </div>
                                     <div className="forgot-box flex justify-between">
-                                        <Field name="rememberPassword">
+                                        {/* <Field name="rememberPassword">
                                             {(props: any) => {
                                                 const { field } = props;
                                                 return <Checkbox {...field}>Nhớ mật khẩu</Checkbox>;
                                             }}
-                                        </Field>
+                                        </Field> */}
                                         <div className="forgot text-primary text-base font-semibold">
                                             <Link to="">Quên mật khẩu ?</Link>
                                         </div>

@@ -40,7 +40,7 @@ function Home() {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-span-9 lg:col-span-7">
+                        <div className="slide-hero col-span-9 lg:col-span-7">
                             <Swiper
                                 spaceBetween={30}
                                 grabCursor={true}

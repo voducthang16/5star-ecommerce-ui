@@ -19,52 +19,12 @@ function Header() {
             const header = document.querySelector('.header');
             header!.classList.toggle('sticky', window.scrollY > 200);
 
-            // Home
-            if (document.querySelector('.home')) {
-                const home = document.querySelector('.home');
+            if (document.querySelector('.header-scroll')) {
+                const headerScroll = document.querySelector('.header-scroll');
                 if (windowWidth < 1024) {
-                    home!.classList.toggle('sticky-mt-20', window.scrollY > 200);
+                    headerScroll!.classList.toggle('sticky-mt-20', window.scrollY > 200);
                 } else {
-                    home!.classList.toggle('sticky-mt-36', window.scrollY > 200);
-                }
-            }
-
-            // Product Detail
-            if (document.querySelector('.product-detail')) {
-                const productDetail = document.querySelector('.product-detail');
-                if (windowWidth < 1024) {
-                    productDetail!.classList.toggle('sticky-mt-20', window.scrollY > 200);
-                } else {
-                    productDetail!.classList.toggle('sticky-mt-36', window.scrollY > 200);
-                }
-            }
-
-            // Category
-            if (document.querySelector('.category-page')) {
-                const category = document.querySelector('.category-page');
-                if (windowWidth < 1024) {
-                    category!.classList.toggle('sticky-mt-20', window.scrollY > 200);
-                } else {
-                    category!.classList.toggle('sticky-mt-36', window.scrollY > 200);
-                }
-            }
-
-            // Cart
-            if (document.querySelector('.cart-page')) {
-                const cart = document.querySelector('.cart-page');
-                if (windowWidth < 1024) {
-                    cart!.classList.toggle('sticky-mt-20', window.scrollY > 200);
-                } else {
-                    cart!.classList.toggle('sticky-mt-36', window.scrollY > 200);
-                }
-            }
-            // my-account-component
-            if (document.querySelector('.my-account-component')) {
-                const about = document.querySelector('.my-account-component');
-                if (windowWidth < 1024) {
-                    about!.classList.toggle('sticky-mt-20', window.scrollY > 200);
-                } else {
-                    about!.classList.toggle('sticky-mt-36', window.scrollY > 200);
+                    headerScroll!.classList.toggle('sticky-mt-36', window.scrollY > 200);
                 }
             }
         });

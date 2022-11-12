@@ -39,7 +39,7 @@ function DefaultLayout({ Children }: DefaultLayoutProps) {
                 <AiOutlineArrowUp className="text-2xl fill-white" />
             </button>
             <Header />
-            <main>
+            <main className="header-scroll">
                 <Children />
             </main>
             <Footer />
