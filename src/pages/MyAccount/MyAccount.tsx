@@ -4,7 +4,7 @@ import { BiUser } from 'react-icons/bi';
 import { BsHandbag, BsHeart } from 'react-icons/bs';
 import { GoPencil } from 'react-icons/go';
 import { MdLogout } from 'react-icons/md';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Breadcrumb from '~/components/Breadcrumb';
 import { Info, Order } from '~/layouts/components/MyAccount';
 import './MyAccount.scss';
@@ -14,6 +14,7 @@ import images from '~/assets/images';
 import Wishlist from '~/layouts/components/MyAccount/Wishlist';
 const MyAccount = () => {
     const location: any = useLocation();
+    const Navigate = useNavigate();
     const [tabIndex, setTabIndex] = useState(() => {
         const pathLink = location.pathname.split('/')[2];
         switch (pathLink) {
@@ -28,13 +29,16 @@ const MyAccount = () => {
         }
     });
 
+    // END STATE
+
     const handleChangeAvatar = (event: any) => {
         let files = event?.target?.files[0];
         console.log(files);
     };
 
     const handleLogout = () => {
-        console.log('log out');
+        Navigate('/login');
+        localStorage.removeItem('access_token');
     };
 
     return (
@@ -112,18 +116,16 @@ const MyAccount = () => {
                                     </Tab>
                                 </Link>
 
-                                <Link to="">
-                                    <Tab
-                                        className="tab-col-item"
-                                        onClick={handleLogout}
-                                        _selected={{ color: 'white', bg: '#319795', borderLeft: '4px solid #066D84' }}
-                                    >
-                                        <span className="text-xl mr-2">
-                                            <MdLogout />
-                                        </span>
-                                        Đăng xuất
-                                    </Tab>
-                                </Link>
+                                <Tab
+                                    className="tab-col-item"
+                                    onClick={handleLogout}
+                                    _selected={{ color: 'white', bg: '#319795', borderLeft: '4px solid #066D84' }}
+                                >
+                                    <span className="text-xl mr-2">
+                                        <MdLogout />
+                                    </span>
+                                    Đăng xuất
+                                </Tab>
                             </TabList>
                         </div>
 

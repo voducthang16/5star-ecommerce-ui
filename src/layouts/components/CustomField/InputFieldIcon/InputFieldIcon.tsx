@@ -35,7 +35,7 @@ const InputFieldIcon = ({
                                 />
                             </InputGroup>
 
-                            <ErrorMessage component="div" name={field.name} className="error w-full text-left" />
+                            <ErrorMessage component="div" name={field.name} className="error-validate" />
                         </>
                     );
                 }}

@@ -1,4 +1,5 @@
 import { Button } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import Countdown from 'react-countdown';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { BsSearch } from 'react-icons/bs';
@@ -13,9 +14,20 @@ import images from '~/assets/images';
 import { Vector } from '~/components/Icons';
 import Image from '~/components/Image';
 import Product from '~/layouts/components/Product';
+import ProductService from '~/services/ProductService';
 import { configSlide, fourStep, productFakeData, specialProduct } from '~/utils/DataMockup/HomePageData';
 import './Home.scss';
+
 function Home() {
+    const getAllProduct = async () => {
+        let result = await ProductService.getAllProduct();
+        console.log(result);
+    };
+
+    useEffect(() => {
+        getAllProduct();
+    }, []);
+
     return (
         <div className="home">
             {/* Big Slide */}
@@ -40,7 +52,7 @@ function Home() {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-span-9 lg:col-span-7">
+                        <div className="slide-hero col-span-9 lg:col-span-7">
                             <Swiper
                                 spaceBetween={30}
                                 grabCursor={true}
