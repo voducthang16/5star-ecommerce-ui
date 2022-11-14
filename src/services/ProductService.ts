@@ -11,10 +11,10 @@ const getAllProduct = async () => {
                 let hash2: any = {};
                 res.stocks.forEach((stock: any) => {
                     if (!hash[stock?.classify_1?.attribute]) {
-                        hash[stock?.classify_1?.attribute] = true;
+                        hash[stock?.classify_1?.attribute] = stock.id_classify_1;
                     }
                     if (!hash2[stock?.classify_2?.attribute]) {
-                        hash2[stock?.classify_2?.attribute] = true;
+                        hash2[stock?.classify_2?.attribute] = stock.id_classify_2;
                     }
                 });
                 res.classify_1 = hash;

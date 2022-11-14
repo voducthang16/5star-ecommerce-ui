@@ -14,19 +14,20 @@ import images from '~/assets/images';
 import { Vector } from '~/components/Icons';
 import Image from '~/components/Image';
 import Product from '~/layouts/components/Product';
-import ProductService from '~/services/ProductService';
+// import ProductService from '~/services/ProductService';
 import { configSlide, fourStep, productFakeData, specialProduct } from '~/utils/DataMockup/HomePageData';
+
+import { useAppSelector, useAppDispatch } from '~/app/hooks';
+import { getProducts, fetchProductAsync } from '~/features/product/productSlice';
 import './Home.scss';
 
 function Home() {
-    const getAllProduct = async () => {
-        let result = await ProductService.getAllProduct();
-        console.log(result);
-    };
+    const dispatch = useAppDispatch();
+    const products = useAppSelector(getProducts);
 
     useEffect(() => {
-        getAllProduct();
-    }, []);
+        dispatch(fetchProductAsync());
+    }, [dispatch]);
 
     return (
         <div className="home">
@@ -192,9 +193,16 @@ function Home() {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-10">
-                        {productFakeData.map((item: any, index: number) => (
+                        {products.map((item: any, index: number) => (
                             <div key={index} className="col-span-1">
-                                <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
+                                <Product
+                                    idProduct={`${item.id}`}
+                                    name={item.name}
+                                    slug={item.slug}
+                                    color={item.classify_1}
+                                    size={item.classify_2}
+                                    images={item.image}
+                                />
                             </div>
                         ))}
                     </div>

@@ -6,15 +6,21 @@ import { Link } from 'react-router-dom';
 import Rate from '../Rate';
 interface ProductProps {
     idProduct?: string;
+    name?: string;
+    slug?: string;
     color?: any;
+    size?: any;
     images?: any;
 }
 
-function Product({ idProduct, color, images }: ProductProps) {
+function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
+    const colorArray = Object.entries(color);
+    const sizeArray = Object.entries(size);
+    console.log(sizeArray);
     const handleChangeImage = (id: string, index: any) => {
         const indexImage = index;
-        const element = document.querySelector(`#${id}`);
-        const images = element?.querySelectorAll('.images');
+        const element = document.querySelector(`#product_${id}`);
+        const images = element?.querySelectorAll(`.images_${id}`);
         images?.forEach((item, index) => {
             if (item.classList.contains('z-20')) {
                 item.classList.remove('z-20');
@@ -25,7 +31,7 @@ function Product({ idProduct, color, images }: ProductProps) {
         });
     };
     return (
-        <div id={idProduct} className="group product-hover">
+        <div id={`product_${idProduct}`} className="group product-hover">
             <div className="relative">
                 <div className="absolute z-[21] p-2 top-2 right-2 cursor-pointer bg-[#ffffff] rounded-full">
                     <HeartEmptyIcon width={16} height={16} />
@@ -35,7 +41,7 @@ function Product({ idProduct, color, images }: ProductProps) {
                         {images.map((item: any, index: any) => (
                             <Image
                                 key={index}
-                                className="images absolute inset-0 w-full rounded-3xl object-contain bg-[#f1f1f1]"
+                                className={`images_${idProduct} absolute inset-0 w-full rounded-3xl object-contain bg-[#f1f1f1]`}
                                 src={item}
                                 alt="Product"
                             />
@@ -46,50 +52,24 @@ function Product({ idProduct, color, images }: ProductProps) {
                         >
                             {/* size */}
                             <div className="flex justify-around items-center text-sm mb-[10px]">
-                                <div>
-                                    <input
-                                        className="size w-px h-px appearance-none"
-                                        type="radio"
-                                        name="size"
-                                        id="36"
-                                    />
-                                    <label
-                                        className="size-label bg-white w-10 h-10 text-center leading-10 inline-block border border-slate-200 rounded-lg"
-                                        htmlFor="36"
-                                    >
-                                        36
-                                    </label>
-                                </div>
-                                <div>
-                                    <input
-                                        className="size w-px h-px appearance-none"
-                                        type="radio"
-                                        name="size"
-                                        id="37"
-                                    />
-                                    <label
-                                        className="size-label bg-white w-10 h-10 text-center leading-10 inline-block border border-slate-200 rounded-lg"
-                                        htmlFor="37"
-                                    >
-                                        37
-                                    </label>
-                                </div>
-                                <div>
-                                    <input
-                                        className="size w-px h-px appearance-none"
-                                        type="radio"
-                                        name="size"
-                                        id="38"
-                                    />
-                                    <label
-                                        className="size-label bg-white inline-block w-10 h-10 text-center leading-10 border border-slate-200 rounded-lg"
-                                        htmlFor="38"
-                                    >
-                                        38
-                                    </label>
-                                </div>
+                                {sizeArray.map(([key, value], index) => (
+                                    <div key={index}>
+                                        <input
+                                            className="size w-px h-px appearance-none"
+                                            type="radio"
+                                            name="size"
+                                            id={`${idProduct}_${value}`}
+                                        />
+                                        <label
+                                            className="size-label bg-white w-10 h-10 text-center 
+                                        leading-10 inline-block border border-slate-200 rounded-lg"
+                                            htmlFor={`${idProduct}_${value}`}
+                                        >
+                                            {key}
+                                        </label>
+                                    </div>
+                                ))}
                             </div>
-
                             {/* add to cart */}
                             {/* <div className="flex justify-around items-center text-sm py-3 text-white bg-[#fe696a] rounded-lg">
                                 <button className="flex justify-around items-center">
@@ -101,22 +81,22 @@ function Product({ idProduct, color, images }: ProductProps) {
                     </div>
                     {/* color */}
                     <div className="flex space-x-4 items-center text-sm h-10 mt-4">
-                        {color.map((item: any, index: any) => (
-                            <div key={item}>
+                        {colorArray.map(([key, value], index) => (
+                            <div key={index}>
                                 <input
                                     className="color w-px h-px appearance-none"
                                     type="radio"
                                     name="color"
-                                    id={`${idProduct}_${item}`}
+                                    id={`${idProduct}_${value}`}
                                 />
                                 <label
                                     onClick={() => handleChangeImage(idProduct!, index)}
                                     className="color-label bg-white relative inline-block w-10 h-10 border border-slate-200 rounded-full"
-                                    htmlFor={`${idProduct}_${item}`}
+                                    htmlFor={`${idProduct}_${value}`}
                                 >
                                     <span
-                                        style={{ backgroundColor: `${item}` }}
-                                        className="absolute inset-1 rounded-full"
+                                        style={{ backgroundColor: `#cccccc` }}
+                                        className={`absolute inset-1 rounded-full ${key}`}
                                     ></span>
                                 </label>
                             </div>
@@ -124,8 +104,8 @@ function Product({ idProduct, color, images }: ProductProps) {
                     </div>
                     <div className="mt-4">
                         <span className="block mb-2 text-sm font-medium text-[#7d879c]">Thể thao</span>
-                        <Link className="block text-base font-semibold text-[#373f50]" to="/product/details">
-                            Quần Short
+                        <Link className="block text-base font-semibold text-[#373f50]" to={`/product/${slug}`}>
+                            {name}
                         </Link>
                         <div className="mt-4 flex justify-between items-center">
                             <span className="text-sm">1000.000VND</span>
