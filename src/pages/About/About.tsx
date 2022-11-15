@@ -10,7 +10,7 @@ import './About.scss';
 function About() {
     return (
         <section className="about-comp mt-5">
-            <Breadcrumb />
+            <Breadcrumb page="Giới thiệu" />
             <div className="w-full py-[32px] px-[20px] md:px-[54px] md:py-[40px] lg:px-[108px] 2xl:px-[124px] mt-10">
                 <div className="mb-[32px] grid grid-cols-2 gap-5 lg:gap-20">
                     <div className="flex justify-center gap-5 col-span-2 lg:col-span-1">
@@ -192,10 +192,10 @@ function About() {
             <div className="py-[32px] px-[12px] bg-[#f8f8f8]">
                 <div className="text-center">
                     <h4 className="mb-[8px] text-xl font-semibold capitalize text-primary" data-aos="fade-up">
-                        Latest Testimonals
+                        Các đánh giá từ khách hàng
                     </h4>
                     <h2 className="mb-[28px] text-[23px]" data-aos="fade-up" data-aos-delay="300">
-                        What people say
+                        Mọi người nói gì ?
                     </h2>
                 </div>
                 <div className="mb-[30px]">
@@ -226,12 +226,11 @@ function About() {
                                     <div className="p-[18px] rounded-[10px] bg-[#fff] mr-[12px]">
                                         <Rate className="flex space-x-1" average={4} />
                                         <h3 className="mt-[10px] mb-[13px] text-[20px] font-[400] leading-6">
-                                            Top Quality, Beautiful Location
+                                            Đánh giá chất lượng
                                         </h3>
-                                        <p className="mb-6 text-[14px] text-[#4a5568]">
-                                            "Yeah, and if you were the pope they'd be all, "Straighten your pope hat."
-                                            And "Put on your good vestments." What are their names? Yep, I remember.
-                                            They came in last at the Olympics!"
+                                        <p className="mb-6 text-sm text-[#4a5568]">
+                                            Sản phẩm chất lượng, trao đổi trả hàng uy tín. Áo đẹp chuẩn form người, mẫu
+                                            mã đa dạng. Mọi người nên ủng hộ để cửa hàng ngày càng phát triển ạ !
                                         </p>
                                         <div className="flex">
                                             <div className="w-[66px] mr-[12px]">
@@ -243,8 +242,7 @@ function About() {
                                             </div>
 
                                             <div className="flex flex-col justify-center">
-                                                <h4 className="text-[16px] text-primary font-[700]">Betty J. Turner</h4>
-                                                <h6 className="mt-[4px] text-[13px] text-[#4a5568]">CTO, Company</h6>
+                                                <h4 className="text-[16px] text-primary font-[700]">Nguyễn Thị Loan</h4>
                                             </div>
                                         </div>
                                     </div>

@@ -219,6 +219,15 @@ function Header() {
                                             Product Detail
                                         </Link>
                                     </li> */}
+
+                                    <li>
+                                        <Link
+                                            className="hover:text-primary font-semibold duration-300 transition-all"
+                                            to="/about"
+                                        >
+                                            Giới thiệu
+                                        </Link>
+                                    </li>
                                     <li>
                                         <NavLink
                                             className="hover:text-primary font-semibold duration-300 transition-all"
@@ -231,17 +240,9 @@ function Header() {
                                     <li>
                                         <Link
                                             className="hover:text-primary font-semibold duration-300 transition-all"
-                                            to="/about"
-                                        >
-                                            Giới thiệu
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            className="hover:text-primary font-semibold duration-300 transition-all"
                                             to="/contact"
                                         >
-                                            Liên lạc
+                                            Liên hệ
                                         </Link>
                                     </li>
                                 </ul>
