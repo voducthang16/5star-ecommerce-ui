@@ -43,7 +43,7 @@ const MyAccount = () => {
 
     return (
         <div className="my-account-component">
-            <Breadcrumb share={false} />
+            <Breadcrumb share={false} page="Quản lý tài khoản" />
             <div className="container pb-[50px]">
                 <Tabs isManual variant="soft-rounded" colorScheme="green" defaultIndex={tabIndex}>
                     <div className="grid grid-cols-12 mt-10">

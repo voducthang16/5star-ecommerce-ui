@@ -36,7 +36,7 @@ function StoreSystem() {
                         </Link>
                     </div>
                 </div>
-                <Breadcrumb name="Hệ Thống Cửa Hàng 5Star" category={false} share={false} />
+                <Breadcrumb page="Hệ Thống Cửa Hàng 5Star" category={false} share={false} />
                 <div>
                     <Image
                         src="https://hotro.hasaki.vn/images/graphics/banner_hethong.jpg"

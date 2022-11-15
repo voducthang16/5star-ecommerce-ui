@@ -97,7 +97,7 @@ function ProductDetail() {
         <Loading />
     ) : (
         <div className="product-detail">
-            <Breadcrumb name={'Sản phẩm'} />
+            <Breadcrumb page={'Sản phẩm'} />
             <section className="container pb-10 lg:pb-20">
                 <div className="grid grid-cols-12 lg:gap-4 shadow-2xl lg:p-4 rounded-2xl">
                     <div className="col-span-12 lg:col-span-7">

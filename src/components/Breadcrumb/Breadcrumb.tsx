@@ -6,12 +6,14 @@ import { Link } from 'react-router-dom';
 import './Breadcrumb.scss';
 
 interface BreadcrumbProps {
-    name?: string;
+    page?: string;
     share?: boolean;
     category?: boolean;
+    parentPage?: string;
+    parentLink?: string;
 }
 
-const Breadcrumb = ({ name, category = true, share = true }: BreadcrumbProps) => {
+const Breadcrumb = ({ page, parentPage, parentLink = '/', share = true }: BreadcrumbProps) => {
     return (
         <div className="breadcrumb my-4 bg-[#f8f8f8] py-6">
             <div className="container">
@@ -23,13 +25,13 @@ const Breadcrumb = ({ name, category = true, share = true }: BreadcrumbProps) =>
                             </span>
                             Trang chủ
                         </h5>
-                        {category ? (
+                        {parentPage ? (
                             <>
                                 <h5 className="flex items-center mr-2 hover-text">
                                     <span className="text-gray-400 mx-1 text-sm">
                                         <MdOutlineKeyboardArrowRight />
                                     </span>
-                                    <Link to="/category">Danh mục</Link>
+                                    <Link to={parentLink}>{parentPage}</Link>
                                 </h5>
                             </>
                         ) : null}
@@ -37,7 +39,7 @@ const Breadcrumb = ({ name, category = true, share = true }: BreadcrumbProps) =>
                             <span className="text-gray-400 mx-1 text-sm">
                                 <MdOutlineKeyboardArrowRight />
                             </span>
-                            <Link to="">{name}</Link>
+                            <Link to="">{page}</Link>
                         </h5>
                     </div>
                     {share ? (

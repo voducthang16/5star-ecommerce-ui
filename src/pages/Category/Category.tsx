@@ -18,119 +18,9 @@ function Category() {
         dispatch(fetchProductAsync());
     }, [dispatch]);
 
-    const productFakeData = [
-        {
-            id: 'product_1',
-            color: ['#a78bfa', '#facc15', '#2c3b54'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_2',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_3',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-        {
-            id: 'product_4',
-            color: ['#fb923c', '#38bdf8', '#4ade80'],
-            images: [
-                'https://cartzilla.createx.studio/img/shop/catalog/01.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/02.jpg',
-                'https://cartzilla.createx.studio/img/shop/catalog/03.jpg',
-            ],
-        },
-    ];
     return (
         <div className="category-page">
-            <Breadcrumb name={slug ? `${slug}` : 'Tất cả'} share={false} />
+            <Breadcrumb page={slug ? `${slug}` : 'Tất cả'} parentPage="Danh mục" share={false} />
             <div className="container pb-20">
                 <div className="grid grid-cols-12 gap-5">
                     <div
@@ -146,7 +36,7 @@ function Category() {
                                     <IoMdClose />
                                 </div>
                             </div>
-                            <div className="pb-4 px-6 border-b border-slate-200">
+                            <div className="pb-4 px-6 border-b border-slate-200" data-aos="fade-up">
                                 <h6 className="text-lg font-semibold pt-4">Danh mục</h6>
                                 <Accordion allowToggle px={5}>
                                     <AccordionItem borderTop={0}>
@@ -432,7 +322,11 @@ function Category() {
                                     </AccordionItem>
                                 </Accordion>
                             </div>
-                            <div className="pb-4 px-6 border-b border-slate-200">
+                            <div
+                                className="pb-4 px-6 border-b border-slate-200"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
                                 <h6 className="text-lg font-semibold pt-4">Giá</h6>
                                 <div className="flex">
                                     <input type="text" className="input flex-1" placeholder="Từ" />
@@ -442,7 +336,11 @@ function Category() {
                                     Áp dụng
                                 </button>
                             </div>
-                            <div className="pb-4 px-6 border-b border-slate-200">
+                            <div
+                                className="pb-4 px-6 border-b border-slate-200"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
                                 <h6 className="text-lg font-semibold pt-4">Thương hiệu</h6>
                                 <div className="space-y-2 max-h-[64px] overflow-y-auto px-2">
                                     <div className="w-full flex items-center space-x-2 text-base">
@@ -511,7 +409,12 @@ function Category() {
                         <div>
                             <div className="grid grid-cols-12 gap-4">
                                 {products.map((item: any, index) => (
-                                    <div key={index} className="col-span-12 md:col-span-4">
+                                    <div
+                                        key={index}
+                                        className="col-span-12 md:col-span-4"
+                                        data-aos="zoom-in-down"
+                                        data-aos-delay="200"
+                                    >
                                         <Product
                                             idProduct={`${item.id}`}
                                             name={item.name}
