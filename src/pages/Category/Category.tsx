@@ -1,21 +1,23 @@
-import { useParams } from 'react-router-dom';
-import Breadcrumb from '~/components/Breadcrumb';
-import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
-import {
-    AccessoriesIcon,
-    BagIcon,
-    ClothingIcon,
-    JeansIcon,
-    ShirtIcon,
-    ShoesIcon,
-    SunglassesIcon,
-    WatchIcon,
-} from '~/components/Icons';
-import './Category.scss';
-import Product from '~/layouts/components/Product';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
+import { useParams } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '~/app/hooks';
+import Breadcrumb from '~/components/Breadcrumb';
+import { AccessoriesIcon, BagIcon, JeansIcon, ShirtIcon, ShoesIcon, WatchIcon } from '~/components/Icons';
+import { fetchProductAsync, getProducts } from '~/features/product/productSlice';
+import Product from '~/layouts/components/Product';
+import './Category.scss';
 function Category() {
     const { slug } = useParams();
+
+    const dispatch = useAppDispatch();
+    const products = useAppSelector(getProducts);
+
+    useEffect(() => {
+        dispatch(fetchProductAsync());
+    }, [dispatch]);
+
     const productFakeData = [
         {
             id: 'product_1',
@@ -508,9 +510,16 @@ function Category() {
                         </div>
                         <div>
                             <div className="grid grid-cols-12 gap-4">
-                                {productFakeData.map((item, index) => (
+                                {products.map((item: any, index) => (
                                     <div key={index} className="col-span-12 md:col-span-4">
-                                        <Product idProduct={`${item.id}`} color={item.color} images={item.images} />
+                                        <Product
+                                            idProduct={`${item.id}`}
+                                            name={item.name}
+                                            slug={item.slug}
+                                            color={item.classify_1}
+                                            size={item.classify_2}
+                                            images={item.image}
+                                        />
                                     </div>
                                 ))}
                             </div>

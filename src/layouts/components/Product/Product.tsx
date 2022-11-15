@@ -14,9 +14,8 @@ interface ProductProps {
 }
 
 function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
-    const colorArray = Object.entries(color);
-    const sizeArray = Object.entries(size);
-    console.log(sizeArray);
+    const colorArray: any = color ? Object?.entries(color) : '';
+    const sizeArray: any = size ? Object?.entries(size) : '';
     const handleChangeImage = (id: string, index: any) => {
         const indexImage = index;
         const element = document.querySelector(`#product_${id}`);
@@ -52,7 +51,7 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                         >
                             {/* size */}
                             <div className="flex justify-around items-center text-sm mb-[10px]">
-                                {sizeArray.map(([key, value], index) => (
+                                {sizeArray?.map(([key, value]: any, index: any) => (
                                     <div key={index}>
                                         <input
                                             className="size w-px h-px appearance-none"
@@ -81,7 +80,7 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                     </div>
                     {/* color */}
                     <div className="flex space-x-4 items-center text-sm h-10 mt-4">
-                        {colorArray.map(([key, value], index) => (
+                        {colorArray?.map(([key, value]: any, index: any) => (
                             <div key={index}>
                                 <input
                                     className="color w-px h-px appearance-none"
@@ -95,8 +94,8 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                                     htmlFor={`${idProduct}_${value}`}
                                 >
                                     <span
-                                        style={{ backgroundColor: `#cccccc` }}
-                                        className={`absolute inset-1 rounded-full ${key}`}
+                                        style={{ backgroundColor: `${key}` }}
+                                        className={`absolute inset-1 rounded-full`}
                                     ></span>
                                 </label>
                             </div>

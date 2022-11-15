@@ -40,6 +40,7 @@ function Home() {
                                 {[1, 2, 3].map((index) => (
                                     <div
                                         key={index}
+                                        data-aos="fade-left"
                                         className="flex items-center bg-[#ffcca2] px-4 pt-4 my-1 rounded-lg w-[80%]"
                                     >
                                         <Image className="w-2/5" src={images.banner_sm01} alt={'Small Banner'} />
@@ -149,7 +150,11 @@ function Home() {
                     >
                         {[1, 2, 3, 4, 5, 6].map((index) => (
                             <SwiperSlide key={index}>
-                                <div className="relative h-full box-border overflow-hidden rounded-2xl group">
+                                <div
+                                    className="relative h-full box-border overflow-hidden rounded-2xl group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="400"
+                                >
                                     <div className="absolute inset-0 opacity-0 bg-black/10 group-hover:opacity-40 cursor-pointer transition-opacity"></div>
                                     <div className="h-full p-6 flex justify-between bg-[#fefce8]">
                                         <div>
@@ -194,7 +199,7 @@ function Home() {
                     </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-10">
                         {products.map((item: any, index: number) => (
-                            <div key={index} className="col-span-1">
+                            <div key={index} className="col-span-1" data-aos="zoom-in" data-aos-delay="200">
                                 <Product
                                     idProduct={`${item.id}`}
                                     name={item.name}
@@ -213,7 +218,9 @@ function Home() {
             <section className="special-products container">
                 <div className="py-10 lg:py-20">
                     <div className="title-heading my-5 text-center mb-10">
-                        <h3 className="uppercase font-bold text-4xl">Danh mục đặc biệt</h3>
+                        <h3 className="uppercase font-bold text-4xl" data-aos="fade-up" data-aos-delay="100">
+                            Danh mục đặc biệt
+                        </h3>
                         <span className="title-divider">
                             <span className="square"></span>
                             <span className="square"></span>
@@ -223,6 +230,8 @@ function Home() {
                         {specialProduct.map((item, index: number) => (
                             <div
                                 key={index}
+                                data-aos="fade-up"
+                                data-aos-delay="300"
                                 className={`lookbook-item relative col-span-2 h-fit
                                 text-right overflow-hidden rounded-md cursor-pointer ${item.column}`}
                             >
@@ -231,8 +240,20 @@ function Home() {
                                         className="content absolute bottom-6 left-2/4 -translate-x-2/4 w-[90%] p-3 
                                     shadow-md text-center bg-white opacity-80"
                                     >
-                                        <h3 className="text-lg font-semibold text-tbase">{item.title}</h3>
-                                        <h2 className="text-xl text-tblack font-bold">Man’s Latest Collection</h2>
+                                        <h3
+                                            className="text-lg font-semibold text-tbase"
+                                            data-aos="fade-down"
+                                            data-aos-delay="200"
+                                        >
+                                            {item.title}
+                                        </h3>
+                                        <h2
+                                            className="text-xl text-tblack font-bold"
+                                            data-aos="fade-up"
+                                            data-aos-delay="200"
+                                        >
+                                            Thời trang Nam phong độ
+                                        </h2>
                                     </div>
                                     <Image src={item.image} className="h-auto w-full object-cover object-center" />
                                 </Link>
@@ -249,17 +270,40 @@ function Home() {
                             <div className="col-span-1">
                                 <div className="h-full flex flex-col justify-center">
                                     <div>
-                                        <h6 className="inline-block text-lg px-2 py-1 bg-[#f34770] text-white rounded-md mb-5">
+                                        <h6
+                                            className="inline-block text-lg px-2 py-1 bg-[#f34770] text-white rounded-md mb-5"
+                                            data-aos="fade-up"
+                                            data-aos-delay="200"
+                                        >
                                             Ưu đãi giới hạn
                                         </h6>
                                     </div>
-                                    <h4 className="text-4xl mt-2 font-semibold uppercase">Tất cả</h4>
-                                    <h3 className="text-4xl mt-2 font-semibold uppercase my-3">sản phẩm mới nhất</h3>
-                                    <p className="text-xl mb-5">Đang giảm giá. Nhanh tay nào!</p>
+                                    <h4
+                                        className="text-4xl mt-2 font-semibold uppercase"
+                                        data-aos="fade-up"
+                                        data-aos-delay="200"
+                                    >
+                                        Tất cả
+                                    </h4>
+                                    <h3
+                                        className="text-4xl mt-2 font-semibold uppercase my-3"
+                                        data-aos="fade-up"
+                                        data-aos-delay="200"
+                                    >
+                                        sản phẩm mới nhất
+                                    </h3>
+                                    <p className="text-xl mb-5" data-aos="fade-up" data-aos-delay="200">
+                                        Đang giảm giá. Nhanh tay nào!
+                                    </p>
                                     <Countdown date="2022-12-30T01:02:03" renderer={renderer} />
                                     <div className="mt-6">
                                         <Link to="/">
-                                            <Button colorScheme="teal" className="!py-[25px] !px-[50px] !text-2xl">
+                                            <Button
+                                                colorScheme="teal"
+                                                className="!py-[25px] !px-[50px] !text-2xl"
+                                                data-aos="fade-up"
+                                                data-aos-delay="200"
+                                            >
                                                 Mua ngay
                                             </Button>
                                         </Link>
@@ -268,6 +312,8 @@ function Home() {
                             </div>
                             <div className="image-sale-big col-span-1 flex items-center justify-center p-5 relative">
                                 <Image
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
                                     className="object-cover max-w-full w-[70%] h-auto z-[2] relative"
                                     src={'https://uiuxom.com/ulina/html/images/home1/7.png'}
                                     alt={'Sale Product'}
@@ -286,7 +332,11 @@ function Home() {
                             <Vector className="w-full" />
                         </div>
                         {fourStep.map((item: any, index: number) => (
-                            <div className="relative flex flex-col items-center max-w-xs mx-auto">
+                            <div
+                                className="relative flex flex-col items-center max-w-xs mx-auto"
+                                data-aos="fade-left"
+                                data-aos-delay={index * 200}
+                            >
                                 <div className="mb-4 sm:mb-6 max-w-[140px] mx-auto">
                                     <Image src={item.image} alt="Step 1" />
                                 </div>
@@ -309,18 +359,27 @@ function Home() {
             {/* Best Accessories */}
             <section className="container py-10 lg:py-24">
                 <div className="title-heading my-5 text-center mb-10">
-                    <h3 className="uppercase font-bold text-4xl">Thương hiệu yêu thích</h3>
-                    <span className="title-divider">
+                    <h3 className="uppercase font-bold text-4xl" data-aos="fade-up" data-aos-delay="200">
+                        Thương hiệu yêu thích
+                    </h3>
+                    <span className="title-divider" data-aos="fade-up" data-aos-delay="300">
                         <span className="square"></span>
                         <span className="square"></span>
                     </span>
                 </div>
                 <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6">
                     <div className="col-span-1">
-                        <h3 className="mb-4 text-base font-medium">Bán chạy nhất</h3>
+                        <h3 className="mb-4 text-base font-medium" data-aos="fade-up" data-aos-delay="200">
+                            Bán chạy nhất
+                        </h3>
                         <div className="space-y-2">
                             {[1, 2, 3, 4].map((item, index) => (
-                                <div key={index} className="pb-2 flex items-center space-x-4 border-b border-slate-200">
+                                <div
+                                    key={index}
+                                    className="pb-2 flex items-center space-x-4 border-b border-slate-200"
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 200}
+                                >
                                     <div className="min-w-[64px] h-16">
                                         <Image
                                             src={'https://cartzilla.createx.studio/img/shop/cart/widget/01.jpg'}
@@ -344,8 +403,13 @@ function Home() {
                         <h3 className="mb-4 text-base font-medium">Hàng mới</h3>
                         <div className="space-y-2">
                             {[1, 2, 3, 4].map((item, index) => (
-                                <div key={index} className="pb-2 flex items-center space-x-4 border-b border-slate-200">
-                                    <div className="min-w-[64px] h-16">
+                                <div
+                                    key={index}
+                                    className="pb-2 flex items-center space-x-4 border-b border-slate-200"
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 200}
+                                >
+                                    <div className="min-w-[64px] h-16" data-aos="zoom-in" data-aos-delay="400">
                                         <Image
                                             src={'https://cartzilla.createx.studio/img/shop/cart/widget/01.jpg'}
                                             alt={'Product'}
