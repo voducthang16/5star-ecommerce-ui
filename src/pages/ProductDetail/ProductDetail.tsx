@@ -114,28 +114,26 @@ function ProductDetail() {
                                 loop={true}
                                 pagination={pagination}
                                 modules={[Mousewheel, Pagination]}
-                                className="container lg:pl-20 h-[500px]"
+                                className="w-[500px] h-[500px]"
                             >
                                 <SwiperSlide>
                                     <Image
                                         className="md:mx-auto object-contain h-full"
-                                        src={
-                                            'https://chisnghiax.com/ciseco/static/media/detail1.f45e3a4d9bfeafd2f70b.jpg'
-                                        }
+                                        src={'https://i.imgur.com/zHTIVMk.jpg'}
                                         alt={'Product'}
                                     />
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Image
                                         className="md:mx-auto object-contain"
-                                        src={'https://cartzilla.createx.studio/img/shop/catalog/02.jpg'}
+                                        src={'https://i.imgur.com/sPnmn3M.jpg'}
                                         alt={'Product'}
                                     />
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Image
                                         className="md:mx-auto object-contain"
-                                        src={'https://cartzilla.createx.studio/img/shop/catalog/03.jpg'}
+                                        src={'https://i.imgur.com/TnQejuQ.jpg'}
                                         alt={'Product'}
                                     />
                                 </SwiperSlide>

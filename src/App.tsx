@@ -17,10 +17,6 @@ function useScrollToTop() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
-
-    useEffect(() => {
-        AOS.init({ duration: 1000 });
-    }, []);
 }
 
 function FragmentLayout({ Children }: FragmentLayoutProps) {
@@ -28,6 +24,9 @@ function FragmentLayout({ Children }: FragmentLayoutProps) {
 }
 
 function App() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
     return (
         <>
             {useScrollToTop()}
