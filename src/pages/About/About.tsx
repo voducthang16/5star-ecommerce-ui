@@ -11,17 +11,17 @@ function About() {
     return (
         <section className="about-comp mt-5">
             <Breadcrumb page="Giới thiệu" />
-            <div className="w-full py-[32px] px-[20px] md:px-[54px] md:py-[40px] lg:px-[108px] 2xl:px-[124px] mt-10">
+            <div className="container mt-10">
                 <div className="mb-[32px] grid grid-cols-2 gap-5 lg:gap-20">
                     <div className="flex justify-center gap-5 col-span-2 lg:col-span-1">
-                        <div className="image-banner-1 max-w-[400px] h-[90%] overflow-hidden" data-aos="zoom-in-up">
+                        <div className="image-banner-1 max-w-[400px] h-[90%]" data-aos="zoom-in-up">
                             <Image
                                 src={images.about_man_jean}
                                 alt=""
                                 className="rounded-bl-[50px] rounded-tr-[50px] w-full h-full object-cover object-center overflow-hidden"
                             />
                         </div>
-                        <div className="image-banner-2 max-w-[400px] h-[90%] overflow-hidden" data-aos="zoom-in-up">
+                        <div className="image-banner-2 max-w-[400px] h-[90%]" data-aos="zoom-in-up">
                             <Image
                                 alt=""
                                 src={images.about_women}
@@ -29,13 +29,13 @@ function About() {
                             />
                         </div>
                     </div>
-                    <div className="mt-[16px] lg:px-[24px] col-span-2 lg:col-span-1 w-[80%]">
+                    <div className="mt-[16px] lg:px-[24px] col-span-2 lg:col-span-1 px-5">
                         <div data-aos="fade-up">
                             <h4 className="mb-[8px] text-xl font-semibold capitalize text-primary" data-aos="fade-up">
                                 Về chúng tôi
                             </h4>
                             <h2
-                                className="mb-[12px] text-[28px] capitalize font-semibold text-[#222222]]"
+                                className="mb-[12px] text-[28px] capitalize font-semibold text-[#222222]"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
@@ -55,7 +55,7 @@ function About() {
                             </p>
                             <ul className="mt-[32px]" data-aos="fade-up">
                                 {fourStepAbout.map((item: any, index: number) => (
-                                    <li className="my-5" data-aos="fade-up" data-aos-delay={index * 400}>
+                                    <li className="my-5" data-aos="fade-up" data-aos-delay={index * 200}>
                                         <div className="flex">
                                             <div className="icon text-primary mr-3">{item?.icon}</div>
                                             <div className="">

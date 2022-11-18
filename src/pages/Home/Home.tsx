@@ -32,7 +32,7 @@ function Home() {
     return (
         <div className="home">
             {/* Big Slide */}
-            <section className="bg-[#e3ffe6]">
+            <section className="bg-[#e3ffe6] overflow-x-hidden">
                 <div className=" !px-3 !md:px-0">
                     <div className="grid grid-cols-9 lg:gap-x-6">
                         <div className="hidden lg:block lg:col-span-2">
@@ -125,7 +125,7 @@ function Home() {
             </section>
 
             {/* 3 Slide  */}
-            <section className="px-5 my-10 lg:my-20">
+            <section className="px-5 my-10 lg:my-20 overflow-x-hidden">
                 <div className="bg-white h-60">
                     <Swiper
                         spaceBetween={30}
@@ -185,7 +185,7 @@ function Home() {
                 </div>
             </section>
             {/* List Product */}
-            <section className="container">
+            <section className="container overflow-x-hidden">
                 <div className="py-10">
                     <div className="title-heading my-5 text-center">
                         <h3 className="uppercase font-bold text-4xl">sản phẩm nổi bật</h3>
@@ -215,7 +215,7 @@ function Home() {
             </section>
 
             {/* SPECIAL PRODUCT IMAGE */}
-            <section className="special-products container">
+            <section className="special-products container overflow-x-hidden">
                 <div className="py-10 lg:py-20">
                     <div className="title-heading my-5 text-center mb-10">
                         <h3 className="uppercase font-bold text-4xl" data-aos="fade-up" data-aos-delay="100">
@@ -263,7 +263,7 @@ function Home() {
                 </div>
             </section>
             {/* Sale */}
-            <section className="sale">
+            <section className="sale overflow-x-hidden">
                 <div className="py-10 lg:py-20">
                     <div className="p-10 bg-[#f6f8fa] rounded-2xl shadow-sm">
                         <div className="container grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-8">
@@ -325,7 +325,7 @@ function Home() {
             </section>
             {/* 4 Step */}
 
-            <section className="container">
+            <section className="container overflow-x-hidden">
                 <div className="py-10 lg:py-20">
                     <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 xl:gap-20">
                         <div className="hidden md:block absolute inset-x-0 top-5">
@@ -357,7 +357,7 @@ function Home() {
                 </div>
             </section>
             {/* Best Accessories */}
-            <section className="container py-10 lg:py-24">
+            <section className="container py-10 lg:py-24 overflow-x-hidden">
                 <div className="title-heading my-5 text-center mb-10">
                     <h3 className="uppercase font-bold text-4xl" data-aos="fade-up" data-aos-delay="200">
                         Thương hiệu yêu thích
