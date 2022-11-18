@@ -22,7 +22,7 @@ function BlogDetail() {
                                 <input
                                     className="w-full pl-[20px] pr-[68px] py-[8px] outline-none text-[14px] font-[600] bg-[#f8f8f8]"
                                     type="text"
-                                    placeholder="Search..."
+                                    placeholder="Tìm kiếm..."
                                 />
                                 <div className="w-[2px] h-[20px] bg-[#ccc] absolute right-[54px] top-[25%]"></div>
                                 <BsSearch className="w-[14px] h-[20px] absolute right-[20px] top-[25%] text-[#000] hover:cursor-pointer" />
@@ -38,7 +38,7 @@ function BlogDetail() {
                                     <h2 className="text-[16px] font-[700]">
                                         <AccordionButton className="hover:!bg-[transparent]">
                                             <Box flex="1" textAlign="left">
-                                                Recent post
+                                                Bài viết gần đây
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -50,7 +50,7 @@ function BlogDetail() {
                                                     <a className="w-full h-full" href="#">
                                                         <img
                                                             className="w-full h-full"
-                                                            src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                            src="https://lzd-img-global.slatic.net/g/p/3173dccba40c40aa43599a742f678efd.png_200x200q80.png_.webp"
                                                             alt=""
                                                         />
                                                     </a>
@@ -58,7 +58,7 @@ function BlogDetail() {
                                                 <div className="pl-[15px] w-full">
                                                     <a href="#">
                                                         <h5 className="text-[16px] font-[600]">
-                                                            Green onion knife and salad placed
+                                                            Áo khoác Davies nam nữ DSW Reflect Track Jacket
                                                         </h5>
                                                     </a>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
@@ -73,7 +73,7 @@ function BlogDetail() {
                                                     <a className="w-full h-full" href="#">
                                                         <img
                                                             className="w-full h-full"
-                                                            src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                            src="https://lzd-img-global.slatic.net/g/p/377dcd238e2eb9b4dc6d6255b1db6dc2.png_720x720q80.jpg_.webp"
                                                             alt=""
                                                         />
                                                     </a>
@@ -81,7 +81,7 @@ function BlogDetail() {
                                                 <div className="pl-[15px] w-full">
                                                     <a href="#">
                                                         <h5 className="text-[16px] font-[600]">
-                                                            Green onion knife and salad placed
+                                                            Áo bomber bóng chày nam nữ Davies brand
                                                         </h5>
                                                     </a>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
@@ -96,7 +96,7 @@ function BlogDetail() {
                                                     <a className="w-full h-full" href="#">
                                                         <img
                                                             className="w-full h-full"
-                                                            src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                            src="https://lzd-img-global.slatic.net/g/p/db1f9e51eae19240195a7c5035335d5b.jpg_720x720q80.jpg_.webp"
                                                             alt=""
                                                         />
                                                     </a>
@@ -104,7 +104,7 @@ function BlogDetail() {
                                                 <div className="pl-[15px] w-full">
                                                     <a href="#">
                                                         <h5 className="text-[16px] font-[600]">
-                                                            Green onion knife and salad placed
+                                                            Áo phông nam nữ form rộng tay lỡ
                                                         </h5>
                                                     </a>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
@@ -119,7 +119,8 @@ function BlogDetail() {
                                                     <a className="w-full h-full" href="#">
                                                         <img
                                                             className="w-full h-full"
-                                                            src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                            src="https://lzd-img-global.slatic.net/g/p/7589333ae1832ef3741a593fc4e52980.jpg_720x720q80.jpg_.webp
+                                                            "
                                                             alt=""
                                                         />
                                                     </a>
@@ -127,7 +128,7 @@ function BlogDetail() {
                                                 <div className="pl-[15px] w-full">
                                                     <a href="#">
                                                         <h5 className="text-[16px] font-[600]">
-                                                            Green onion knife and salad placed
+                                                            Hoodie zip local brand áo khoác nỉ form rộng
                                                         </h5>
                                                     </a>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
@@ -151,7 +152,7 @@ function BlogDetail() {
                                     <h2 className="text-[16px] font-[700]">
                                         <AccordionButton className="hover:!bg-[transparent]">
                                             <Box flex="1" textAlign="left">
-                                                Category
+                                                Danh mục
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -392,7 +393,7 @@ function BlogDetail() {
 
                 {/* blog content */}
                 <div className="lg:col-span-4 xl:col-span-2 2xl:col-span-3">
-                    <div className="relative mb-[24px] py-[8px] w-full h-[390px] bg-[url('https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg')] bg-cover bg-center bg-no-repeat transition-filter duration-[400ms] ease-in rounded-[5px] object-cover">
+                    <div className="relative mb-[24px] py-[8px] w-full h-[390px] bg-[url('https://www.girav.com/media/catalog/category/categoriebanner_NL_lente_2016_polo2_26.jpg')] bg-cover bg-center bg-no-repeat transition-filter duration-[400ms] ease-in rounded-[5px] object-cover">
                         <div className="w-full absolute bottom-0 px-[15px] pt-[55px] pb-[40px] bg-gradient-to-r from-[#fff0] to-[#ffffff]">
                             {/* <ul className="text-[14px] flex justify-center capitalize">
                                 <li className="relative">backpack</li>
@@ -404,7 +405,7 @@ function BlogDetail() {
                                 </li>
                             </ul> */}
                             <h2 className="my-[10px] text-[22px] text-[#222222] text-center font-[700]">
-                                Agriculture Conference Harvest 2022 in Paris
+                                DAVIES – Local brand nổi tiếng tại Việt Nam
                             </h2>
                             <ul className="text-[14px] flex gap-4 justify-center">
                                 <li>
@@ -416,13 +417,13 @@ function BlogDetail() {
                                 <li>
                                     <div className="flex items-center">
                                         <BsCalendar4 className="w-[16px] h-[16px] mr-[3px]" />
-                                        <span>April 19, 2022</span>
+                                        <span>19/04/2022</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="flex items-center">
                                         <BsChatLeft className="w-[16px] h-[16px] mr-[3px]" />
-                                        <span>82 Comment</span>
+                                        <span>82 nhận xét</span>
                                     </div>
                                 </li>
                             </ul>
@@ -433,35 +434,26 @@ function BlogDetail() {
                     <div>
                         <p className="text-[15px] mb-[12px] text-justify">
                             <span className="w-[38px] h-[38px] mt-[8px] mr-[8px] flex items-center justify-center text-[56px] float-left">
-                                S
+                                P
                             </span>
-                            hotgun approach message the initiative so can I just chime in on that one. Make sure to
-                            include in your wheelhouse bells and whistles, and touch base slow-walk our commitment nor
-                            what's the status on the deliverables for eow?. Create spaces to explore whatâ€™s next
-                            commitment to the cause , or UI, for get buy-in but draw a line in the sand, and pig in a
-                            python we've got kpis for that. Message the initiative value prop, please use "solutionise"
-                            instead of solution ideas! :) i am dead inside. Quick sync 4-blocker. Driving the initiative
-                            forward flesh that out.
+                            olo là một trong đồ local brand dường như đã trở thành trang phục cực hot không thể thiếu
+                            trong tủ đồ của mỗi người. Nhắc đến áo polo chúng ta nhớ đến những chiếc áo lịch sự, trang
+                            trọng giành cho các bạn nam. Nhưng ngày nay với sự phát triển mạnh mẽ của làn sóng thời
+                            trang trong nước, các mẫu áo polo càng ngày được cho ra đời càng nhiều đặc biệt là giành cho
+                            các bạn nữ. Hãy cùng điểm qua top 5 áo polo form rộng có cổ đang được yêu thích nhất hiện
+                            nay nhé
                         </p>
                         <p className="text-[15px] mb-[12px] text-justify">
-                            Let's unpack that later everyone thinks the soup tastes better before theyâ€™ve pissed in it
-                            pivot, re-inventing the wheel, and it's not hard guys. Market-facing pushback back of the
-                            net, for pro-sumer software let's see if we can dovetail these two projects but turn the
-                            crank for they have downloaded gmail and seems to be working for now. This is not the hill i
-                            want to die on you better eat a reality sandwich before you walk back in that boardroom land
-                            the plane yet exposing new ways to evolve our design language design thinking nor poop, so
-                            can you put it into a banner that is not alarming, but eye catching and not too giant. That
-                            is a good problem to have dog and pony show we're ahead of the curve on that one.
+                            Áo polo form rộng có cổ là loại áo polo ưu tiên về chiều ngang, và có độ dài phủ qua mông.
+                            Mục đích thiết kế của áo polo form rộng là giúp người mặc trông năng động và thoải mái. Loại
+                            áo này không phân biệt dáng người, giới tính hay độ tuổi nên đối tượng nào cũng có thể mặc
+                            được.
                         </p>
                         <p className="text-[15px] mb-[12px] text-justify">
-                            Waste of resources can you run this by clearance? hot johnny coming through driving the
-                            initiative forward our competitors are jumping the shark. Unlock meaningful moments of
-                            relaxation. Copy and paste from stack overflow a tentative event rundown is attached for
-                            your reference, including other happenings on the day you are most welcome to join us
-                            beforehand for a light lunch we would also like to invite you to other activities on the
-                            day, including the interim and closing panel discussions on the intersection of businesses
-                            and social innovation, and on building a stronger social innovation eco-system respectively
-                            what are the expectations, on-brand but completeley fresh we can't hear you.
+                            Chất liệu vải thun cá sấu (lacoste) mềm mại, thấm hút mồ hôi tốt và có khả năng co giãn 4
+                            chiều, sử dụng kỹ thuật in tiên tiến mang đến hình ảnh sắc nét đẹp mắt. Bên cạnh đó, áo thun
+                            polo cổ bẻ lịch sự nhưng mang hơi thở hiện đại và năng động. Áo polo nhà DAVIES xứng đáng
+                            trở thành một trong những trang phục yêu thích của bạn.
                         </p>
                     </div>
 

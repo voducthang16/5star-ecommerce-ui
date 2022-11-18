@@ -67,7 +67,7 @@ const Login = () => {
 
     return (
         <div className="flex justify-center h-screen overflow-x-hidden">
-            <div className="backgroud hidden w-full max-h-screen bg-primary md:flex justify-center items-center">
+            <div className="hidden w-full max-h-screen bg-primary md:flex justify-center items-center">
                 <div className="shape-animations">
                     <div className="shape-1 w-[200px] h-[200px] lg:w-[400px] lg:h-[400px]"></div>
                 </div>

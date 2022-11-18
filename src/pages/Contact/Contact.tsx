@@ -19,7 +19,7 @@ function Contact() {
                         <h2 className="mb-[8px] text-[17px] font-medium">Cửa hàng chính</h2>
                         <p className="mb-[16px] text-[14px] text-[#7d879c]">Công viên phần mềm Quang Trung</p>
                         <div className="flex justify-center items-center">
-                            <p className=" text-primary text-base">Click to see map</p>
+                            <p className=" text-primary text-base">Xem thêm</p>
                             <BsChevronRight className="ml-[6px] w-[18px] h-[18px] text-primary text-3xl" />
                         </div>
                     </div>
