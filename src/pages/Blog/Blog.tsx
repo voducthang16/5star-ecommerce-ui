@@ -17,6 +17,8 @@ import {
     BsSearch,
 } from 'react-icons/bs';
 
+import { Link } from 'react-router-dom';
+
 function Blog() {
     return (
         <section className="py-[32px] md:py-[36px] lg:py-[38px] xl:py-[44px]">
@@ -28,14 +30,154 @@ function Blog() {
                         <div className="md:grid md:grid-cols-2 2xl:grid-cols-3 md:gap-6">
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
+                                    <div className="mb-[15px] min-h-[243px]">
+                                        <Link to="/">
+                                            <img
+                                                className="rounded-t-[10px] w-full h-full"
+                                                src="https://lzd-img-global.slatic.net/g/p/8c0c4fc6c0f5d6ba7a30a85d2aa186e5.jpg_720x720q80.jpg_.webp"
+                                                alt="img-blog"
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div className="px-[20px] pb-[20px]">
+                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
+                                            <span className="flex items-center">
+                                                <BsClock className="mr-1 inline w-4 h-4" />
+                                                <span>25/02/2022</span>
+                                            </span>
+                                            <span className="flex items-center">
+                                                <BsPerson className="mr-1 inline w-4 h-4" />
+                                                <span>James M.Martin</span>
+                                            </span>
+                                        </div>
+                                        <Link to="/">
+                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
+                                                Polo DSW Polo High Low có thật sự đáng mua?
+                                            </h3>
+                                        </Link>
+                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
+                                            Đọc tiếp
+                                            <BsArrowRight className="inline ml-2" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-[24px] px-[12px] md:mt-0">
+                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="#">
+                                        <Link to="/">
+                                            <img
+                                                className="rounded-t-[10px]"
+                                                src="https://lzd-img-global.slatic.net/g/p/5068c793852e61995e3ff61ba64a5bc8.png_720x720q80.jpg_.webp"
+                                                alt="img-blog"
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div className="px-[20px] pb-[20px]">
+                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
+                                            <span className="flex items-center">
+                                                <BsClock className="mr-1 inline w-4 h-4" />
+                                                <span>01/06/2022</span>
+                                            </span>
+                                            <span className="flex items-center">
+                                                <BsPerson className="mr-1 inline w-4 h-4" />
+                                                <span>James Clear</span>
+                                            </span>
+                                        </div>
+                                        <Link to="/">
+                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
+                                                Những chi tiết thú vị về chiếc áo DEE Hockey Shirt
+                                            </h3>
+                                        </Link>
+                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
+                                            Đọc tiếp
+                                            <BsArrowRight className="inline ml-2" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-[24px] px-[12px] md:mt-0">
+                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
+                                    <div className="mb-[15px]">
+                                        <Link to="/">
+                                            <img
+                                                className="rounded-t-[10px]"
+                                                src="https://lzd-img-global.slatic.net/g/p/71347f2ab3821c7c15da9392253c0c97.jpg_720x720q80.jpg_.webp"
+                                                alt="img-blog"
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div className="px-[20px] pb-[20px]">
+                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
+                                            <span className="flex items-center">
+                                                <BsClock className="mr-1 inline w-4 h-4" />
+                                                <span>25 Feg, 2022</span>
+                                            </span>
+                                            <span className="flex items-center">
+                                                <BsPerson className="mr-1 inline w-4 h-4" />
+                                                <span>James M.Martin</span>
+                                            </span>
+                                        </div>
+                                        <Link to="/">
+                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
+                                                How to freeze fresh vegetables while preserving their best qualities.
+                                            </h3>
+                                        </Link>
+                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
+                                            Đọc tiếp
+                                            <BsArrowRight className="inline ml-2" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-[24px] px-[12px] md:mt-0">
+                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
+                                    <div className="mb-[15px]">
+                                        <Link to="/">
+                                            <img
+                                                className="rounded-t-[10px]"
+                                                src="https://lzd-img-global.slatic.net/g/p/2b0d6f87afa6b02361764574031543d3.png_720x720q80.jpg_.webp"
+                                                alt="img-blog"
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div className="px-[20px] pb-[20px]">
+                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
+                                            <span className="flex items-center">
+                                                <BsClock className="mr-1 inline w-4 h-4" />
+                                                <span>25 Feg, 2022</span>
+                                            </span>
+                                            <span className="flex items-center">
+                                                <BsPerson className="mr-1 inline w-4 h-4" />
+                                                <span>James M.Martin</span>
+                                            </span>
+                                        </div>
+                                        <Link to="/">
+                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
+                                                How to freeze fresh vegetables while preserving their best qualities.
+                                            </h3>
+                                        </Link>
+                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
+                                            Đọc tiếp
+                                            <BsArrowRight className="inline ml-2" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-[24px] px-[12px] md:mt-0">
+                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
+                                    <div className="mb-[15px]">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -48,13 +190,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -64,13 +206,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/2.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -83,13 +225,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -99,13 +241,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/3.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -118,13 +260,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -134,13 +276,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/4.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -153,13 +295,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -169,13 +311,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -188,13 +330,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -204,13 +346,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/2.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -223,13 +365,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -239,13 +381,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/3.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -258,13 +400,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -274,13 +416,13 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <a href="">
+                                        <Link to="/">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/4.jpg"
                                                 alt="img-blog"
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="px-[20px] pb-[20px]">
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
@@ -293,153 +435,13 @@ function Blog() {
                                                 <span>James M.Martin</span>
                                             </span>
                                         </div>
-                                        <a href="#">
+                                        <Link to="/">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
                                                 How to freeze fresh vegetables while preserving their best qualities.
                                             </h3>
-                                        </a>
+                                        </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
-                                            <BsArrowRight className="inline ml-2" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-[24px] px-[12px] md:mt-0">
-                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
-                                    <div className="mb-[15px]">
-                                        <a href="">
-                                            <img
-                                                className="rounded-t-[10px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
-                                                alt="img-blog"
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="px-[20px] pb-[20px]">
-                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
-                                            <span className="flex items-center">
-                                                <BsClock className="mr-1 inline w-4 h-4" />
-                                                <span>25 Feg, 2022</span>
-                                            </span>
-                                            <span className="flex items-center">
-                                                <BsPerson className="mr-1 inline w-4 h-4" />
-                                                <span>James M.Martin</span>
-                                            </span>
-                                        </div>
-                                        <a href="#">
-                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
-                                                How to freeze fresh vegetables while preserving their best qualities.
-                                            </h3>
-                                        </a>
-                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
-                                            <BsArrowRight className="inline ml-2" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-[24px] px-[12px] md:mt-0">
-                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
-                                    <div className="mb-[15px]">
-                                        <a href="">
-                                            <img
-                                                className="rounded-t-[10px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/2.jpg"
-                                                alt="img-blog"
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="px-[20px] pb-[20px]">
-                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
-                                            <span className="flex items-center">
-                                                <BsClock className="mr-1 inline w-4 h-4" />
-                                                <span>25 Feg, 2022</span>
-                                            </span>
-                                            <span className="flex items-center">
-                                                <BsPerson className="mr-1 inline w-4 h-4" />
-                                                <span>James M.Martin</span>
-                                            </span>
-                                        </div>
-                                        <a href="#">
-                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
-                                                How to freeze fresh vegetables while preserving their best qualities.
-                                            </h3>
-                                        </a>
-                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
-                                            <BsArrowRight className="inline ml-2" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-[24px] px-[12px] md:mt-0">
-                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
-                                    <div className="mb-[15px]">
-                                        <a href="">
-                                            <img
-                                                className="rounded-t-[10px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/3.jpg"
-                                                alt="img-blog"
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="px-[20px] pb-[20px]">
-                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
-                                            <span className="flex items-center">
-                                                <BsClock className="mr-1 inline w-4 h-4" />
-                                                <span>25 Feg, 2022</span>
-                                            </span>
-                                            <span className="flex items-center">
-                                                <BsPerson className="mr-1 inline w-4 h-4" />
-                                                <span>James M.Martin</span>
-                                            </span>
-                                        </div>
-                                        <a href="#">
-                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
-                                                How to freeze fresh vegetables while preserving their best qualities.
-                                            </h3>
-                                        </a>
-                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
-                                            <BsArrowRight className="inline ml-2" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-[24px] px-[12px] md:mt-0">
-                                <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
-                                    <div className="mb-[15px]">
-                                        <a href="">
-                                            <img
-                                                className="rounded-t-[10px]"
-                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/4.jpg"
-                                                alt="img-blog"
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="px-[20px] pb-[20px]">
-                                        <div className="flex align-center gap-[15px] text-[13px] uppercase">
-                                            <span className="flex items-center">
-                                                <BsClock className="mr-1 inline w-4 h-4" />
-                                                <span>25 Feg, 2022</span>
-                                            </span>
-                                            <span className="flex items-center">
-                                                <BsPerson className="mr-1 inline w-4 h-4" />
-                                                <span>James M.Martin</span>
-                                            </span>
-                                        </div>
-                                        <a href="#">
-                                            <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
-                                                How to freeze fresh vegetables while preserving their best qualities.
-                                            </h3>
-                                        </a>
-                                        <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Read more
+                                            Đọc tiếp
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
@@ -451,29 +453,29 @@ function Blog() {
                         <nav className="mt-[22px]">
                             <ul className="flex justify-center items-center text-[14px]">
                                 <li className="mr-2">
-                                    <a href="#" className="px-[12px] py-[6px] rounded-[5px]">
+                                    <Link to="/#" className="px-[12px] py-[6px] rounded-[5px]">
                                         <BsChevronDoubleLeft className="w-4 h-4 mr-4" />
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="mr-2">
-                                    <a href="#" className="px-[12px] py-[6px] rounded-[5px] bg-[#0DA487] text-[#fff]">
+                                    <Link to="/#" className="px-[12px] py-[6px] rounded-[5px] bg-[#0DA487] text-[#fff]">
                                         1
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="mr-2">
-                                    <a href="#" className="px-[12px] py-[6px] rounded-[5px]">
+                                    <Link to="/#" className="px-[12px] py-[6px] rounded-[5px]">
                                         2
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="mr-2">
-                                    <a href="#" className="px-[12px] py-[6px] rounded-[5px]">
+                                    <Link to="/#" className="px-[12px] py-[6px] rounded-[5px]">
                                         3
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="mr-2">
-                                    <a href="#" className="px-[12px] py-[6px] rounded-[5px]">
+                                    <Link to="/#" className="px-[12px] py-[6px] rounded-[5px]">
                                         <BsChevronDoubleRight className="w-4 h-4 ml-4" />
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>
@@ -489,7 +491,7 @@ function Blog() {
                                     <input
                                         className="w-full pl-[20px] pr-[68px] py-[8px] outline-none text-[14px] font-[600] bg-[#f8f8f8]"
                                         type="text"
-                                        placeholder="Search..."
+                                        placeholder="Tìm kiếm..."
                                     />
                                     <div className="w-[2px] h-[20px] bg-[#ccc] absolute right-[54px] top-[25%]"></div>
                                     <BsSearch className="w-[14px] h-[20px] absolute right-[20px] top-[25%] text-[#000] hover:cursor-pointer" />
@@ -505,7 +507,7 @@ function Blog() {
                                         <h2 className="text-[16px] font-[700]">
                                             <AccordionButton className="hover:!bg-[transparent]">
                                                 <Box flex="1" textAlign="left">
-                                                    Recent post
+                                                    Bài viết gần đây
                                                 </Box>
                                                 <AccordionIcon />
                                             </AccordionButton>
@@ -514,20 +516,20 @@ function Blog() {
                                             <div>
                                                 <div className="min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[110px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-full h-full"
-                                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                                src="https://lzd-img-global.slatic.net/g/p/3173dccba40c40aa43599a742f678efd.png_200x200q80.png_.webp"
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px] w-full">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h5 className="text-[16px] font-[600]">
-                                                                Green onion knife and salad placed
+                                                                Áo khoác Davies nam nữ DSW Reflect Track Jacket
                                                             </h5>
-                                                        </a>
+                                                        </Link>
                                                         <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                             <span>25 Jan, 2022</span>
                                                             <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -537,20 +539,20 @@ function Blog() {
 
                                                 <div className="min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[110px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-full h-full"
-                                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                                src="https://lzd-img-global.slatic.net/g/p/377dcd238e2eb9b4dc6d6255b1db6dc2.png_720x720q80.jpg_.webp"
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px] w-full">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h5 className="text-[16px] font-[600]">
-                                                                Green onion knife and salad placed
+                                                                Áo bomber bóng chày nam nữ Davies brand
                                                             </h5>
-                                                        </a>
+                                                        </Link>
                                                         <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                             <span>25 Jan, 2022</span>
                                                             <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -560,20 +562,20 @@ function Blog() {
 
                                                 <div className="min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[110px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-full h-full"
-                                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                                src="https://lzd-img-global.slatic.net/g/p/db1f9e51eae19240195a7c5035335d5b.jpg_720x720q80.jpg_.webp"
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px] w-full">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h5 className="text-[16px] font-[600]">
-                                                                Green onion knife and salad placed
+                                                                Áo phông nam nữ form rộng tay lỡ
                                                             </h5>
-                                                        </a>
+                                                        </Link>
                                                         <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                             <span>25 Jan, 2022</span>
                                                             <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -583,20 +585,21 @@ function Blog() {
 
                                                 <div className="min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[110px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-full h-full"
-                                                                src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/1.jpg"
+                                                                src="https://lzd-img-global.slatic.net/g/p/7589333ae1832ef3741a593fc4e52980.jpg_720x720q80.jpg_.webp
+                                                                "
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px] w-full">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h5 className="text-[16px] font-[600]">
-                                                                Green onion knife and salad placed
+                                                                Hoodie zip local brand áo khoác nỉ form rộng
                                                             </h5>
-                                                        </a>
+                                                        </Link>
                                                         <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                             <span>25 Jan, 2022</span>
                                                             <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -618,7 +621,7 @@ function Blog() {
                                         <h2 className="text-[16px] font-[700]">
                                             <AccordionButton className="hover:!bg-[transparent]">
                                                 <Box flex="1" textAlign="left">
-                                                    Category
+                                                    Danh mục
                                                 </Box>
                                                 <AccordionIcon />
                                             </AccordionButton>
@@ -626,7 +629,7 @@ function Blog() {
                                         <AccordionPanel>
                                             <ul>
                                                 <li className="my-4">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <div className="flex justify-between">
                                                             <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                                 Latest Recipes
@@ -635,10 +638,10 @@ function Blog() {
                                                                 10
                                                             </span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="my-4">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <div className="flex justify-between">
                                                             <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                                 Latest Recipes
@@ -647,10 +650,10 @@ function Blog() {
                                                                 10
                                                             </span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="my-4">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <div className="flex justify-between">
                                                             <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                                 Latest Recipes
@@ -659,10 +662,10 @@ function Blog() {
                                                                 10
                                                             </span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="my-4">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <div className="flex justify-between">
                                                             <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                                 Latest Recipes
@@ -671,10 +674,10 @@ function Blog() {
                                                                 12
                                                             </span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="my-4">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <div className="flex justify-between">
                                                             <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                                 Latest Recipes
@@ -683,10 +686,10 @@ function Blog() {
                                                                 8
                                                             </span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="my-4">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <div className="flex justify-between">
                                                             <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                                 Latest Recipes
@@ -695,7 +698,7 @@ function Blog() {
                                                                 6
                                                             </span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </AccordionPanel>
@@ -720,44 +723,44 @@ function Blog() {
                                         <AccordionPanel>
                                             <ul className="mt-2 flex flex-wrap gap-[10px]">
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Fruit Cutting
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Meat
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Orange
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Cake
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Pick Fruit
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Bakery
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Organix Food
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                    <a href="#" className="text-[13px] text-[#4a5568] block">
+                                                    <Link to="/#" className="text-[13px] text-[#4a5568] block">
                                                         Most Expensive Fruit
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </AccordionPanel>
@@ -783,16 +786,16 @@ function Blog() {
                                             <div>
                                                 <div className="py-4 min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[84px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-[70px] h-[70px]"
                                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/23.png"
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px] w-full">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h6 className="text-[13px] font-[600]">
                                                                 Meatigo Premium Goat Curry
                                                             </h6>
@@ -800,22 +803,22 @@ function Blog() {
                                                             <h6 className="mt-[6px] text-[13px] text-[#0da487] font-[600]">
                                                                 $ 70.00
                                                             </h6>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
 
                                                 <div className="py-4 min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[84px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-[70px] h-[70px]"
                                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/23.png"
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px]">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h6 className="text-[13px] font-[600]">
                                                                 Meatigo Premium Goat Curry
                                                             </h6>
@@ -823,22 +826,22 @@ function Blog() {
                                                             <h6 className="mt-[6px] text-[13px] text-[#0da487] font-[600]">
                                                                 $ 70.00
                                                             </h6>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
 
                                                 <div className="py-4 min-h-[74px] pt-[16px] flex items-center">
                                                     <div className="w-[84px]">
-                                                        <a className="w-full h-full" href="#">
+                                                        <Link className="w-full h-full" to="#">
                                                             <img
                                                                 className="w-[70px] h-[70px]"
                                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/23.png"
                                                                 alt=""
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="pl-[15px]">
-                                                        <a href="#">
+                                                        <Link to="/">
                                                             <h6 className="text-[13px] font-[600]">
                                                                 Meatigo Premium Goat Curry
                                                             </h6>
@@ -846,7 +849,7 @@ function Blog() {
                                                             <h6 className="mt-[6px] text-[13px] text-[#0da487] font-[600]">
                                                                 $ 70.00
                                                             </h6>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
