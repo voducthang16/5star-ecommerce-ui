@@ -85,14 +85,7 @@ function ProductDetail() {
         },
     };
     const [width, setWidth] = useState(0);
-    // useEffect(() => {
-    //     const windowWidth = window.innerWidth;
-    //     if (windowWidth < 1024) {
-    //         setWidth(0);
-    //     } else {
-    //         setWidth(1025);
-    //     }
-    // }, []);
+
     return loading ? (
         <Loading />
     ) : (
@@ -142,7 +135,7 @@ function ProductDetail() {
                     </div>
                     <div className="col-span-12 lg:col-span-5">
                         <div className="space-y-4 mt-4 lg:mt-0 px-2 lg:px-0">
-                            <h3 className="text-2xl font-bold">Sản phẩm</h3>
+                            <h3 className="text-2xl font-bold">Áo Polo Nam thời trang mát mẻ</h3>
                             <h4 className="text-base font-normal flex items-center space-x-2">
                                 <PackageIcon width={16} height={16} className="mr-2" />
                                 Tình trạng:<span className="inline-block text-[#29b474]">Còn hàng</span>
@@ -153,8 +146,8 @@ function ProductDetail() {
                                 <span className="ml-2 inline-block text-sm text-[#aeb4be]">Đã bán(web): 12345</span>
                             </div>
                             <div className="flex space-x-4 text-base items-end">
-                                <span className="font-semibold">150.000 VND</span>
-                                <del className="text-[#c4c4c4]">300.000 VND</del>
+                                <span className="font-semibold">289.000 VND</span>
+                                <del className="text-[#c4c4c4]">329.000 VND</del>
                                 <span className="text-[#ff3102] text-sm">-50%</span>
                             </div>
                             <div className="text-base">
