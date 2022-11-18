@@ -107,7 +107,7 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                             {name}
                         </Link>
                         <div className="mt-4 flex justify-between items-center">
-                            <span className="text-sm">1000.000VND</span>
+                            <span className="text-sm">200.000 VND</span>
                             <Rate className="flex space-x-1" average={3.7} />
                         </div>
                     </div>
