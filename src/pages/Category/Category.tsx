@@ -332,7 +332,7 @@ function Category() {
                                     <input type="text" className="input flex-1" placeholder="Từ" />
                                     <input type="text" className="input flex-1" placeholder="Đến" />
                                 </div>
-                                <button className="bg-pink-300 text-center text-base w-full py-3 text-white rounded-lg">
+                                <button className="bg-primary text-center text-base w-full py-3 text-white rounded-lg">
                                     Áp dụng
                                 </button>
                             </div>
