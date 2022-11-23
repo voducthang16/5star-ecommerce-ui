@@ -16,7 +16,6 @@ import {
     BsPerson,
     BsSearch,
 } from 'react-icons/bs';
-
 import { Link } from 'react-router-dom';
 
 function Blog() {
@@ -206,7 +205,7 @@ function Blog() {
                             <div className="mt-[24px] px-[12px] md:mt-0">
                                 <div className="mx-[-12px] border-[1px] border-solid border-[#ececec] rounded-[10px]">
                                     <div className="mb-[15px]">
-                                        <Link to="/">
+                                        <Link to="">
                                             <img
                                                 className="rounded-t-[10px]"
                                                 src="https://themes.pixelstrap.com/fastkart/assets/images/inner-page/blog/2.jpg"
@@ -218,20 +217,20 @@ function Blog() {
                                         <div className="flex align-center gap-[15px] text-[13px] uppercase">
                                             <span className="flex items-center">
                                                 <BsClock className="mr-1 inline w-4 h-4" />
-                                                <span>25 Feg, 2022</span>
+                                                <span>25 T8, 2022</span>
                                             </span>
                                             <span className="flex items-center">
                                                 <BsPerson className="mr-1 inline w-4 h-4" />
-                                                <span>James M.Martin</span>
+                                                <span>Duy Luan</span>
                                             </span>
                                         </div>
-                                        <Link to="/">
+                                        <Link to="#">
                                             <h3 className="mt-[10px] mb-[6px] text-[16px] font-[600] leading-6">
-                                                How to freeze fresh vegetables while preserving their best qualities.
+                                                Cách lựa chọn size quần ảo chuẩn nhất
                                             </h3>
                                         </Link>
                                         <button className="mt-[8px] px-[22px] py-[10px] rounded-[5px] text-[14px] bg-[#e6f6f3] text-[#0da487] hover:bg-[#0DA487] hover:text-[#fff]">
-                                            Đọc tiếp
+                                            Đọc thêm
                                             <BsArrowRight className="inline ml-2" />
                                         </button>
                                     </div>
