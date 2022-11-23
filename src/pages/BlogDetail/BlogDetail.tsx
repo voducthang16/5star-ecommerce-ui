@@ -492,16 +492,16 @@ function BlogDetail() {
                                         <div className="flex">
                                             <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777] hover:cursor-pointer" />
                                             <span className="text-[14px] text-[#0da487] hover:cursor-pointer">
-                                                Reply
+                                                Trả lời
                                             </span>
                                         </div>
                                     </div>
 
                                     <div className="mt-[14px] mb-[35px]">
                                         <p className="text-[13px]">
-                                            "This proposal is a win-win situation which will cause a stellar paradigm
-                                            shift, and produce a multi-fold increase in deliverables a better
-                                            understanding"
+                                            Đề xuất này là một tình huống đôi bên cùng có lợi sẽ tạo ra một mô hình xuất
+                                            sắc thay đổi và tạo ra sự gia tăng gấp nhiều lần trong các sản phẩm tốt hơn
+                                            sự hiểu biết
                                         </p>
                                     </div>
                                 </li>
@@ -518,15 +518,15 @@ function BlogDetail() {
                                             </div>
 
                                             <div>
-                                                <h6 className="mb-[6px] text-[13px]">30 Jan, 2022</h6>
-                                                <h5 className="text-[15px] text-[#4a5568] font-[600]">Glenn Greer</h5>
+                                                <h6 className="mb-[6px] text-[13px]">30 T8, 2022</h6>
+                                                <h5 className="text-[15px] text-[#4a5568] font-[600]">Son Dang</h5>
                                             </div>
                                         </div>
 
                                         <div className="flex">
                                             <BsFillReplyFill className="mr-[10px] w-[18px] h-[18px] text-[#777] hover:cursor-pointer" />
                                             <span className="text-[14px] text-[#0da487] hover:cursor-pointer">
-                                                Reply
+                                                Trả lời
                                             </span>
                                         </div>
                                     </div>
