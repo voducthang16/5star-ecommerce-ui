@@ -64,8 +64,8 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                                         />
                                         <label
                                             onClick={() => {
-                                                dispatch(product_parent(idProduct));
                                                 dispatch(insertSize({ value, idProduct }));
+                                                dispatch(product_parent(idProduct));
                                             }}
                                             className="size-label bg-white w-10 h-10 text-center 
                                             leading-10 inline-block border border-slate-200 rounded-lg"
@@ -98,8 +98,8 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                                 <label
                                     onClick={() => {
                                         handleChangeImage(idProduct, index);
-                                        dispatch(product_parent(+idProduct));
                                         dispatch(insertColor({ value, idProduct }));
+                                        dispatch(product_parent(+idProduct));
                                     }}
                                     className="color-label bg-white relative inline-block w-10 h-10 border border-slate-200 rounded-full"
                                     htmlFor={`${idProduct}_${value}`}
