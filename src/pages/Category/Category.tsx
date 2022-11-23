@@ -416,7 +416,7 @@ function Category() {
                                         data-aos-delay="200"
                                     >
                                         <Product
-                                            idProduct={`${item.id}`}
+                                            idProduct={item.id}
                                             name={item.name}
                                             slug={item.slug}
                                             color={item.classify_1}

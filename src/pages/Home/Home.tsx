@@ -15,10 +15,10 @@ import { Vector } from '~/components/Icons';
 import Image from '~/components/Image';
 import Product from '~/layouts/components/Product';
 // import ProductService from '~/services/ProductService';
-import { configSlide, fourStep, productFakeData, specialProduct } from '~/utils/DataMockup/HomePageData';
+import { configSlide, fourStep, specialProduct } from '~/utils/DataMockup/HomePageData';
 
-import { useAppSelector, useAppDispatch } from '~/app/hooks';
-import { getProducts, fetchProductAsync } from '~/features/product/productSlice';
+import { useAppDispatch, useAppSelector } from '~/app/hooks';
+import { fetchProductAsync, getProducts } from '~/features/product/productSlice';
 import './Home.scss';
 
 function Home() {
@@ -201,7 +201,7 @@ function Home() {
                         {products.map((item: any, index: number) => (
                             <div key={index} className="col-span-1" data-aos="zoom-in" data-aos-delay="200">
                                 <Product
-                                    idProduct={`${item.id}`}
+                                    idProduct={item.id}
                                     name={item.name}
                                     slug={item.slug}
                                     color={item.classify_1}
