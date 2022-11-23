@@ -1,11 +1,12 @@
-import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { StartIcon, StarHalfIcon, StartEmptyIcon, HeartIcon, HeartEmptyIcon, ViewIcon } from '~/components/Icons';
-import Image from '~/components/Image';
-import './Product.scss';
 import { Link } from 'react-router-dom';
+import { useAppDispatch } from '~/app/hooks';
+import { HeartEmptyIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 import Rate from '../Rate';
+import { insertSize, insertColor, product_parent } from '~/features/cart/cartSlice';
+import './Product.scss';
 interface ProductProps {
-    idProduct?: string;
+    idProduct: number;
     name?: string;
     slug?: string;
     color?: any;
@@ -14,9 +15,11 @@ interface ProductProps {
 }
 
 function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
+    const dispatch = useAppDispatch();
+
     const colorArray: any = color ? Object?.entries(color) : '';
     const sizeArray: any = size ? Object?.entries(size) : '';
-    const handleChangeImage = (id: string, index: any) => {
+    const handleChangeImage = (id: number, index: any) => {
         const indexImage = index;
         const element = document.querySelector(`#product_${id}`);
         const images = element?.querySelectorAll(`.images_${id}`);
@@ -60,8 +63,12 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                                             id={`${idProduct}_${value}`}
                                         />
                                         <label
+                                            onClick={() => {
+                                                dispatch(product_parent(idProduct));
+                                                dispatch(insertSize({ value, idProduct }));
+                                            }}
                                             className="size-label bg-white w-10 h-10 text-center 
-                                        leading-10 inline-block border border-slate-200 rounded-lg"
+                                            leading-10 inline-block border border-slate-200 rounded-lg"
                                             htmlFor={`${idProduct}_${value}`}
                                         >
                                             {key}
@@ -89,7 +96,11 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                                     id={`${idProduct}_${value}`}
                                 />
                                 <label
-                                    onClick={() => handleChangeImage(idProduct!, index)}
+                                    onClick={() => {
+                                        handleChangeImage(idProduct, index);
+                                        dispatch(product_parent(+idProduct));
+                                        dispatch(insertColor({ value, idProduct }));
+                                    }}
                                     className="color-label bg-white relative inline-block w-10 h-10 border border-slate-200 rounded-full"
                                     htmlFor={`${idProduct}_${value}`}
                                 >
