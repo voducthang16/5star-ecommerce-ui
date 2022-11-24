@@ -11,6 +11,7 @@
         pointer-events: none;
         transform: translateY(-20px);
         transition: all ease 0.4s;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
     &:hover {
         .product-size-hover {
