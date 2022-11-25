@@ -42,6 +42,8 @@ const getAllProduct = async () => {
                 // );
                 if (Object.entries(res.classify_1).length > 0 && Object.entries(res.classify_2).length > 0) {
                     res.classify_n = 2;
+                } else if (Object.entries(res.classify_1).length === 0 && Object.entries(res.classify_2).length === 0) {
+                    res.classify_n = 0;
                 } else {
                     res.classify_n = 1;
                 }
