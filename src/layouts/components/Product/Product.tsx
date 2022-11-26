@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { useAppDispatch } from '~/app/hooks';
 import { HeartEmptyIcon } from '~/components/Icons';
 import Image from '~/components/Image';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80dddcbfac459d395675ce824eafc4e6e4deac52
 import { getProducts } from '~/features/product/productSlice';
 import Rate from '../Rate';
 import './Product.scss';
