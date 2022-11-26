@@ -1,13 +1,11 @@
+import { useToast } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '~/app/hooks';
 import { AddToCartIcon, HeartEmptyIcon } from '~/components/Icons';
 import Image from '~/components/Image';
-import Rate from '../Rate';
-import { insertSize, insertColor, product_parent } from '~/features/cart/cartSlice';
 import { getProducts } from '~/features/product/productSlice';
+import Rate from '../Rate';
 import './Product.scss';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { useToast } from '@chakra-ui/react';
 interface ProductProps {
     idProduct: number;
     name?: string;
@@ -170,29 +168,30 @@ function Product({ idProduct, name, slug, color, size, images, type = 0 }: Produ
                             className="product-size-hover absolute p-4 -left-[1px] -right-[1px] transition-all z-30"
                         >
                             {/* size */}
-                            <div className="flex justify-around items-center text-sm mb-[10px]">
-                                {sizeArray?.map(([key, value]: any, index: any) => (
-                                    <div key={index}>
-                                        <input
-                                            className="size w-px h-px appearance-none"
-                                            type="radio"
-                                            name="size"
-                                            id={`${idProduct}_${value}`}
-                                        />
-                                        <label
-                                            onClick={() => {
-                                                dispatch(insertSize({ value, idProduct }));
-                                                dispatch(product_parent(idProduct));
-                                            }}
-                                            className="size-label bg-white w-10 h-10 text-center 
-                                            leading-10 inline-block border border-slate-200 rounded-lg"
-                                            htmlFor={`${idProduct}_${value}`}
-                                        >
-                                            {key}
-                                        </label>
-                                    </div>
-                                ))}
-                            </div>
+                            {sizeArray.length > 0 ? (
+                                <div className="flex justify-around items-center text-sm mb-[10px]">
+                                    {sizeArray?.map(([key, value]: any, index: any) => (
+                                        <div key={index}>
+                                            <input
+                                                className="size w-px h-px appearance-none"
+                                                type="radio"
+                                                value={value}
+                                                name="size"
+                                                id={`${idProduct}_${value}`}
+                                            />
+                                            <label
+                                                className="size-label bg-white w-8 h-8 text-center 
+                                                leading-8 inline-block border border-slate-200 rounded-lg"
+                                                htmlFor={`${idProduct}_${value}`}
+                                            >
+                                                {key}
+                                            </label>
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <></>
+                            )}
                             {/* add to cart */}
                             {/* <div
                                 
@@ -206,32 +205,35 @@ function Product({ idProduct, name, slug, color, size, images, type = 0 }: Produ
                         </div>
                     </div>
                     {/* color */}
-                    <div className="flex space-x-4 items-center text-sm h-10 mt-4">
-                        {colorArray?.map(([key, value]: any, index: any) => (
-                            <div key={index}>
-                                <input
-                                    className="color w-px h-px appearance-none"
-                                    type="radio"
-                                    name="color"
-                                    id={`${idProduct}_${value}`}
-                                />
-                                <label
-                                    onClick={() => {
-                                        handleChangeImage(idProduct, index);
-                                        dispatch(insertColor({ value, idProduct }));
-                                        dispatch(product_parent(+idProduct));
-                                    }}
-                                    className="color-label bg-white relative inline-block w-10 h-10 border border-slate-200 rounded-full"
-                                    htmlFor={`${idProduct}_${value}`}
-                                >
-                                    <span
-                                        style={{ backgroundColor: `${key}` }}
-                                        className={`absolute inset-1 rounded-full`}
-                                    ></span>
-                                </label>
-                            </div>
-                        ))}
-                    </div>
+                    {colorArray.length > 0 ? (
+                        <div className="flex space-x-4 items-center text-sm h-10 mt-4">
+                            {colorArray?.map(([key, value]: any, index: any) => (
+                                <div key={index}>
+                                    <input
+                                        className="color w-px h-px appearance-none"
+                                        type="radio"
+                                        name="color"
+                                        id={`${idProduct}_${value}`}
+                                        value={value}
+                                    />
+                                    <label
+                                        onClick={() => {
+                                            handleChangeImage(idProduct, index);
+                                        }}
+                                        className="color-label bg-white relative inline-block w-8 h-8 border border-slate-200 rounded-full"
+                                        htmlFor={`${idProduct}_${value}`}
+                                    >
+                                        <span
+                                            style={{ backgroundColor: `${key}` }}
+                                            className={`absolute inset-1 rounded-full`}
+                                        ></span>
+                                    </label>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <></>
+                    )}
                     <div className="mt-4">
                         <span className="block mb-2 text-sm font-medium text-[#7d879c]">Thể thao</span>
                         <Link className="block text-base font-semibold text-[#373f50]" to={`/product/${slug}`}>
