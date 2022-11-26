@@ -7,7 +7,9 @@ import {
     Box,
     ChakraProvider,
 } from '@chakra-ui/react';
+
 import { BsCalendar4, BsChatLeft, BsFillReplyFill, BsHandThumbsUp, BsPerson, BsSearch } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function BlogDetail() {
     return (
@@ -47,20 +49,20 @@ function BlogDetail() {
                                         <div>
                                             <div className="min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[110px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="/">
                                                         <img
                                                             className="w-full h-full"
                                                             src="https://lzd-img-global.slatic.net/g/p/3173dccba40c40aa43599a742f678efd.png_200x200q80.png_.webp"
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px] w-full">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h5 className="text-[16px] font-[600]">
                                                             Áo khoác Davies nam nữ DSW Reflect Track Jacket
                                                         </h5>
-                                                    </a>
+                                                    </Link>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                         <span>25 Jan, 2022</span>
                                                         <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -70,20 +72,20 @@ function BlogDetail() {
 
                                             <div className="min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[110px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="#">
                                                         <img
                                                             className="w-full h-full"
                                                             src="https://lzd-img-global.slatic.net/g/p/377dcd238e2eb9b4dc6d6255b1db6dc2.png_720x720q80.jpg_.webp"
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px] w-full">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h5 className="text-[16px] font-[600]">
                                                             Áo bomber bóng chày nam nữ Davies brand
                                                         </h5>
-                                                    </a>
+                                                    </Link>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                         <span>25 Jan, 2022</span>
                                                         <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -93,20 +95,20 @@ function BlogDetail() {
 
                                             <div className="min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[110px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="/">
                                                         <img
                                                             className="w-full h-full"
                                                             src="https://lzd-img-global.slatic.net/g/p/db1f9e51eae19240195a7c5035335d5b.jpg_720x720q80.jpg_.webp"
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px] w-full">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h5 className="text-[16px] font-[600]">
                                                             Áo phông nam nữ form rộng tay lỡ
                                                         </h5>
-                                                    </a>
+                                                    </Link>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                         <span>25 Jan, 2022</span>
                                                         <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -116,21 +118,21 @@ function BlogDetail() {
 
                                             <div className="min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[110px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="/">
                                                         <img
                                                             className="w-full h-full"
                                                             src="https://lzd-img-global.slatic.net/g/p/7589333ae1832ef3741a593fc4e52980.jpg_720x720q80.jpg_.webp
                                                             "
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px] w-full">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h5 className="text-[16px] font-[600]">
                                                             Hoodie zip local brand áo khoác nỉ form rộng
                                                         </h5>
-                                                    </a>
+                                                    </Link>
                                                     <h6 className="mt-[8px] text-[13px] flex justify-between">
                                                         <span>25 Jan, 2022</span>
                                                         <BsHandThumbsUp className="w-[18px] h-[18px]" />
@@ -160,7 +162,7 @@ function BlogDetail() {
                                     <AccordionPanel>
                                         <ul>
                                             <li className="my-4">
-                                                <a href="#">
+                                                <Link to="/">
                                                     <div className="flex justify-between">
                                                         <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                             Latest Recipes
@@ -169,10 +171,10 @@ function BlogDetail() {
                                                             10
                                                         </span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="my-4">
-                                                <a href="#">
+                                                <Link to="/">
                                                     <div className="flex justify-between">
                                                         <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                             Latest Recipes
@@ -181,10 +183,10 @@ function BlogDetail() {
                                                             10
                                                         </span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="my-4">
-                                                <a href="#">
+                                                <Link to="/">
                                                     <div className="flex justify-between">
                                                         <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                             Latest Recipes
@@ -193,10 +195,10 @@ function BlogDetail() {
                                                             10
                                                         </span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="my-4">
-                                                <a href="#">
+                                                <Link to="/">
                                                     <div className="flex justify-between">
                                                         <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                             Latest Recipes
@@ -205,10 +207,10 @@ function BlogDetail() {
                                                             12
                                                         </span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="my-4">
-                                                <a href="#">
+                                                <Link to="/">
                                                     <div className="flex justify-between">
                                                         <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                             Latest Recipes
@@ -217,10 +219,10 @@ function BlogDetail() {
                                                             8
                                                         </span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="my-4">
-                                                <a href="#">
+                                                <Link to="/">
                                                     <div className="flex justify-between">
                                                         <h5 className="text-[15px] text-[#4a5568] font-[600]">
                                                             Latest Recipes
@@ -229,7 +231,7 @@ function BlogDetail() {
                                                             6
                                                         </span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </AccordionPanel>
@@ -254,44 +256,28 @@ function BlogDetail() {
                                     <AccordionPanel>
                                         <ul className="mt-2 flex flex-wrap gap-[10px]">
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Fruit Cutting
-                                                </a>
+                                                <Link to="/">Fruit Cutting</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Meat
-                                                </a>
+                                                <Link to="/">Meat</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Orange
-                                                </a>
+                                                <Link to="/">Orange</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Cake
-                                                </a>
+                                                <Link to="/">Cake</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Pick Fruit
-                                                </a>
+                                                <Link to="/">Pick Fruit</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Bakery
-                                                </a>
+                                                <Link to="/">Bakery</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Organix Food
-                                                </a>
+                                                <Link to="/">Organix Food</Link>
                                             </li>
                                             <li className="px-[9px] py-[4px] inline-block bg-[#fff] rounded-[3px]">
-                                                <a href="#" className="text-[13px] text-[#4a5568] block">
-                                                    Most Expensive Fruit
-                                                </a>
+                                                <Link to="/">Most Expensive Fruit</Link>
                                             </li>
                                         </ul>
                                     </AccordionPanel>
@@ -317,16 +303,16 @@ function BlogDetail() {
                                         <div>
                                             <div className="py-4 min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[84px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="/">
                                                         <img
                                                             className="w-[70px] h-[70px]"
                                                             src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/23.png"
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px] w-full">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h6 className="text-[13px] font-[600]">
                                                             Meatigo Premium Goat Curry
                                                         </h6>
@@ -334,22 +320,22 @@ function BlogDetail() {
                                                         <h6 className="mt-[6px] text-[13px] text-[#0da487] font-[600]">
                                                             $ 70.00
                                                         </h6>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
 
                                             <div className="py-4 min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[84px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="#">
                                                         <img
                                                             className="w-[70px] h-[70px]"
                                                             src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/23.png"
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px]">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h6 className="text-[13px] font-[600]">
                                                             Meatigo Premium Goat Curry
                                                         </h6>
@@ -357,22 +343,22 @@ function BlogDetail() {
                                                         <h6 className="mt-[6px] text-[13px] text-[#0da487] font-[600]">
                                                             $ 70.00
                                                         </h6>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
 
                                             <div className="py-4 min-h-[74px] pt-[16px] flex items-center">
                                                 <div className="w-[84px]">
-                                                    <a className="w-full h-full" href="#">
+                                                    <Link className="w-full h-full" to="/">
                                                         <img
                                                             className="w-[70px] h-[70px]"
                                                             src="https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/23.png"
                                                             alt=""
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div className="pl-[15px]">
-                                                    <a href="#">
+                                                    <Link to="/">
                                                         <h6 className="text-[13px] font-[600]">
                                                             Meatigo Premium Goat Curry
                                                         </h6>
@@ -380,7 +366,7 @@ function BlogDetail() {
                                                         <h6 className="mt-[6px] text-[13px] text-[#0da487] font-[600]">
                                                             $ 70.00
                                                         </h6>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
