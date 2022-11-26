@@ -1,9 +1,11 @@
+import { useToast } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '~/app/hooks';
 import { HeartEmptyIcon } from '~/components/Icons';
 import Image from '~/components/Image';
+
+import { getProducts } from '~/features/product/productSlice';
 import Rate from '../Rate';
-import { insertSize, insertColor, product_parent } from '~/features/cart/cartSlice';
 import './Product.scss';
 interface ProductProps {
     idProduct: number;
