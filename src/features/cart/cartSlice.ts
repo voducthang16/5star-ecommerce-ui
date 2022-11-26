@@ -36,6 +36,11 @@ export const cartSlice = createSlice({
 
         insertSize: (state, action: any) => {
             const { value, idProduct } = action.payload;
+            console.log('idProduct SIZE: ', idProduct);
+            console.log('state Product SIZE', state.product);
+            if (idProduct === state.product) {
+                state.stock.idTemp = idProduct;
+            }
             if (idProduct !== state.product) {
                 state.stock.size = null;
                 state.stock.color = null;
@@ -48,6 +53,8 @@ export const cartSlice = createSlice({
 
         insertColor: (state, action: any) => {
             const { value, idProduct } = action.payload;
+            console.log('idProduct COLOR ', idProduct);
+            console.log('state Product COLOR', state.product);
             if (idProduct !== state.product) {
                 state.stock.color = null;
                 state.stock.size = null;
