@@ -1,11 +1,13 @@
 import { useToast } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { useAppDispatch } from '~/app/hooks';
-import { HeartEmptyIcon } from '~/components/Icons';
+import { useAppDispatch, useAppSelector } from '~/app/hooks';
+import { AddToCartIcon, HeartEmptyIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Rate from '../Rate';
 import { insertSize, insertColor, product_parent } from '~/features/cart/cartSlice';
 import './Product.scss';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { useToast } from '@chakra-ui/react';
 interface ProductProps {
     idProduct: number;
     name?: string;
@@ -33,11 +35,124 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
             }
         });
     };
+
+    const toast = useToast();
+
+    const handleAddToCart = (e: any, idProduct: number, type: number) => {
+        e.preventDefault();
+        const idProductParent = idProduct;
+        const productParent = document.querySelector(`#product_${idProductParent}`);
+        let idColor: number | undefined;
+        let idSize: number | undefined;
+        let idAttr: number | undefined;
+        if (productParent?.querySelectorAll('.color')) {
+            const colorArray = productParent?.querySelectorAll('.color');
+            colorArray.forEach((item: any) => {
+                if (item.checked === true) {
+                    idColor = +item.value;
+                }
+            });
+        }
+        if (productParent?.querySelectorAll('.size')) {
+            const sizeArray = productParent?.querySelectorAll('.size');
+            sizeArray.forEach((item: any) => {
+                if (item.checked === true) {
+                    idSize = +item.value;
+                }
+            });
+        }
+        if (type === 0) {
+            toast({
+                title: 'Thông báo',
+                description: 'Thêm vào giỏ hàng',
+                status: 'success',
+                position: 'top-right',
+                duration: 3000,
+                isClosable: true,
+            });
+        } else if (type === 1) {
+            if (idColor) {
+                toast({
+                    title: 'Thông báo',
+                    description: 'Thêm vào giỏ hàng',
+                    status: 'success',
+                    position: 'top-right',
+                    duration: 3000,
+                    isClosable: true,
+                });
+                const find_product = products.find((item: any) => item.id === idProduct) as any;
+                idAttr = find_product.stocks.find((item: any) => item.id_classify_1 === idColor).id;
+            } else {
+                toast({
+                    title: 'Thông báo',
+                    description: 'Vui lòng chọn màu',
+                    status: 'warning',
+                    position: 'top-right',
+                    duration: 3000,
+                    isClosable: true,
+                });
+            }
+        } else if (type === 2) {
+            if (idColor && idSize) {
+                toast({
+                    title: 'Thông báo',
+                    description: 'Thêm vào giỏ hàng',
+                    status: 'success',
+                    position: 'top-right',
+                    duration: 3000,
+                    isClosable: true,
+                });
+                const find_product = products.find((item: any) => item.id === idProduct) as any;
+                idAttr = find_product.stocks.find(
+                    (item: any) => item.id_classify_1 === idColor && item.id_classify_2 === idSize,
+                ).id;
+            } else if (idSize) {
+                toast({
+                    title: 'Thông báo',
+                    description: 'Vui lòng chọn màu',
+                    status: 'warning',
+                    position: 'top-right',
+                    duration: 3000,
+                    isClosable: true,
+                });
+            } else if (idColor) {
+                toast({
+                    title: 'Thông báo',
+                    description: 'Vui lòng chọn size',
+                    status: 'warning',
+                    position: 'top-right',
+                    duration: 3000,
+                    isClosable: true,
+                });
+            } else {
+                toast({
+                    title: 'Thông báo',
+                    description: 'Vui lòng chọn thuộc tính',
+                    status: 'warning',
+                    position: 'top-right',
+                    duration: 3000,
+                    isClosable: true,
+                });
+            }
+        }
+    };
     return (
         <div id={`product_${idProduct}`} className="group product-hover">
             <div className="relative">
-                <div className="absolute z-[21] p-2 top-2 right-2 cursor-pointer bg-[#ffffff] rounded-full">
+                <div className="wishlist-wrapper absolute z-[21] p-2 top-2 left-2 cursor-pointer bg-[#ffffff] rounded-full">
                     <HeartEmptyIcon width={16} height={16} />
+                    <span className="wishlist-text absolute -top-8 block p-1 bg-[#f5deb3] rounded-lg text-sm w-[66px]">
+                        Yêu thích
+                    </span>
+                </div>
+                <div
+                    onClick={(e) => handleAddToCart(e, idProduct, type)}
+                    className="wishlist-wrapper absolute z-[21] p-2 top-2 right-2 cursor-pointer bg-[#ffffff] rounded-full"
+                >
+                    <AddToCartIcon width={16} height={16} />
+                    <span className="wishlist-text absolute -top-8 block p-1 bg-[#f5deb3] rounded-lg text-sm w-[114px]">
+                        Thêm sản phẩm
+                    </span>
                 </div>
                 <div className="relative">
                     <div className="relative w-full p-[50%] rounded-3xl">
@@ -50,9 +165,41 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                             />
                         ))}
                         <div
-                            style={{ top: 'calc(100% - 50px)' }}
-                            className="product-size-hover absolute px-4 -left-[1px] -right-[1px] transition-all z-30"
+                            style={{ top: 'calc(100% - 56px)' }}
+                            className="product-size-hover absolute p-4 -left-[1px] -right-[1px] transition-all z-30"
                         >
+                            {/* color */}
+                            {colorArray.length > 0 ? (
+                                <div className="flex space-x-4 items-center text-sm h-10 mt-4">
+                                    {colorArray?.map(([key, value]: any, index: any) => (
+                                        <div key={index}>
+                                            <input
+                                                className="color w-px h-px appearance-none"
+                                                type="radio"
+                                                name="color"
+                                                id={`${idProduct}_${value}`}
+                                                value={value}
+                                            />
+                                            <label
+                                                onClick={() => {
+                                                    handleChangeImage(idProduct, index);
+                                                    dispatch(product_parent(+idProduct));
+                                                    dispatch(insertColor({ value, idProduct }));
+                                                }}
+                                                className="color-label bg-white relative inline-block w-10 h-10 border border-slate-200 rounded-full"
+                                                htmlFor={`${idProduct}_${value}`}
+                                            >
+                                                <span
+                                                    style={{ backgroundColor: `${key}` }}
+                                                    className={`absolute inset-1 rounded-full`}
+                                                ></span>
+                                            </label>
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <></>
+                            )}
                             {/* size */}
                             {sizeArray.length > 0 ? (
                                 <div className="flex justify-around items-center text-sm mb-[10px]">
@@ -61,13 +208,16 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                                             <input
                                                 className="size w-px h-px appearance-none"
                                                 type="radio"
-                                                value={value}
                                                 name="size"
                                                 id={`${idProduct}_${value}`}
                                             />
                                             <label
-                                                className="size-label bg-white w-8 h-8 text-center 
-                                                leading-8 inline-block border border-slate-200 rounded-lg"
+                                                onClick={() => {
+                                                    dispatch(product_parent(idProduct));
+                                                    dispatch(insertSize({ value, idProduct }));
+                                                }}
+                                                className="size-label bg-white w-10 h-10 text-center 
+                                            leading-10 inline-block border border-slate-200 rounded-lg"
                                                 htmlFor={`${idProduct}_${value}`}
                                             >
                                                 {key}
@@ -78,45 +228,46 @@ function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
                             ) : (
                                 <></>
                             )}
+
                             {/* add to cart */}
-                            {/* <div className="flex justify-around items-center text-sm py-3 text-white bg-[#fe696a] rounded-lg">
+                            {/* <div
+                                
+                                className="flex justify-around items-center text-sm py-3 text-white bg-[#fe696a] rounded-lg"
+                            >
                                 <button className="flex justify-around items-center">
                                     <AiOutlineShoppingCart className="mr-2" />
                                     Them vao gio hang
                                 </button>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                     {/* color */}
-                    {colorArray.length > 0 ? (
-                        <div className="flex space-x-4 items-center text-sm h-10 mt-4">
-                            {colorArray?.map(([key, value]: any, index: any) => (
-                                <div key={index}>
-                                    <input
-                                        className="color w-px h-px appearance-none"
-                                        type="radio"
-                                        name="color"
-                                        id={`${idProduct}_${value}`}
-                                        value={value}
-                                    />
-                                    <label
-                                        onClick={() => {
-                                            handleChangeImage(idProduct, index);
-                                        }}
-                                        className="color-label bg-white relative inline-block w-8 h-8 border border-slate-200 rounded-full"
-                                        htmlFor={`${idProduct}_${value}`}
-                                    >
-                                        <span
-                                            style={{ backgroundColor: `${key}` }}
-                                            className={`absolute inset-1 rounded-full`}
-                                        ></span>
-                                    </label>
-                                </div>
-                            ))}
-                        </div>
-                    ) : (
-                        <></>
-                    )}
+                    {/* <div className="flex space-x-4 items-center text-sm h-10 mt-4">
+                        {colorArray?.map(([key, value]: any, index: any) => (
+                            <div key={index}>
+                                <input
+                                    className="color w-px h-px appearance-none"
+                                    type="radio"
+                                    name="color"
+                                    id={`${idProduct}_${value}`}
+                                />
+                                <label
+                                    onClick={() => {
+                                        handleChangeImage(idProduct, index);
+                                        dispatch(product_parent(+idProduct));
+                                        dispatch(insertColor({ value, idProduct }));
+                                    }}
+                                    className="color-label bg-white relative inline-block w-10 h-10 border border-slate-200 rounded-full"
+                                    htmlFor={`${idProduct}_${value}`}
+                                >
+                                    <span
+                                        style={{ backgroundColor: `${key}` }}
+                                        className={`absolute inset-1 rounded-full`}
+                                    ></span>
+                                </label>
+                            </div>
+                        ))}
+                    </div> */}
                     <div className="mt-4">
                         <span className="block mb-2 text-sm font-medium text-[#7d879c]">Thể thao</span>
                         <Link className="block text-base font-semibold text-[#373f50]" to={`/product/${slug}`}>
