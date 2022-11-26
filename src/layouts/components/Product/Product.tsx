@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '~/app/hooks';
-import { AddToCartIcon, HeartEmptyIcon } from '~/components/Icons';
+import { useAppDispatch } from '~/app/hooks';
+import { HeartEmptyIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Rate from '../Rate';
 import { insertSize, insertColor, product_parent } from '~/features/cart/cartSlice';
-import { getProducts } from '~/features/product/productSlice';
 import './Product.scss';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { useToast } from '@chakra-ui/react';
 interface ProductProps {
     idProduct: number;
     name?: string;
@@ -15,12 +12,11 @@ interface ProductProps {
     color?: any;
     size?: any;
     images?: any;
-    type?: number;
 }
 
-function Product({ idProduct, name, slug, color, size, images, type = 0 }: ProductProps) {
+function Product({ idProduct, name, slug, color, size, images }: ProductProps) {
     const dispatch = useAppDispatch();
-    const products = useAppSelector(getProducts);
+
     const colorArray: any = color ? Object?.entries(color) : '';
     const sizeArray: any = size ? Object?.entries(size) : '';
     const handleChangeImage = (id: number, index: any) => {
@@ -36,124 +32,11 @@ function Product({ idProduct, name, slug, color, size, images, type = 0 }: Produ
             }
         });
     };
-
-    const toast = useToast();
-
-    const handleAddToCart = (e: any, idProduct: number, type: number) => {
-        e.preventDefault();
-        const idProductParent = idProduct;
-        const productParent = document.querySelector(`#product_${idProductParent}`);
-        let idColor: number | undefined;
-        let idSize: number | undefined;
-        let idAttr: number | undefined;
-        if (productParent?.querySelectorAll('.color')) {
-            const colorArray = productParent?.querySelectorAll('.color');
-            colorArray.forEach((item: any) => {
-                if (item.checked === true) {
-                    idColor = +item.value;
-                }
-            });
-        }
-        if (productParent?.querySelectorAll('.size')) {
-            const sizeArray = productParent?.querySelectorAll('.size');
-            sizeArray.forEach((item: any) => {
-                if (item.checked === true) {
-                    idSize = +item.value;
-                }
-            });
-        }
-        if (type === 0) {
-            toast({
-                title: 'Thông báo',
-                description: 'Thêm vào giỏ hàng',
-                status: 'success',
-                position: 'top-right',
-                duration: 3000,
-                isClosable: true,
-            });
-        } else if (type === 1) {
-            if (idColor) {
-                toast({
-                    title: 'Thông báo',
-                    description: 'Thêm vào giỏ hàng',
-                    status: 'success',
-                    position: 'top-right',
-                    duration: 3000,
-                    isClosable: true,
-                });
-                const find_product = products.find((item: any) => item.id === idProduct) as any;
-                idAttr = find_product.stocks.find((item: any) => item.id_classify_1 === idColor).id;
-            } else {
-                toast({
-                    title: 'Thông báo',
-                    description: 'Vui lòng chọn màu',
-                    status: 'warning',
-                    position: 'top-right',
-                    duration: 3000,
-                    isClosable: true,
-                });
-            }
-        } else if (type === 2) {
-            if (idColor && idSize) {
-                toast({
-                    title: 'Thông báo',
-                    description: 'Thêm vào giỏ hàng',
-                    status: 'success',
-                    position: 'top-right',
-                    duration: 3000,
-                    isClosable: true,
-                });
-                const find_product = products.find((item: any) => item.id === idProduct) as any;
-                idAttr = find_product.stocks.find(
-                    (item: any) => item.id_classify_1 === idColor && item.id_classify_2 === idSize,
-                ).id;
-            } else if (idSize) {
-                toast({
-                    title: 'Thông báo',
-                    description: 'Vui lòng chọn màu',
-                    status: 'warning',
-                    position: 'top-right',
-                    duration: 3000,
-                    isClosable: true,
-                });
-            } else if (idColor) {
-                toast({
-                    title: 'Thông báo',
-                    description: 'Vui lòng chọn size',
-                    status: 'warning',
-                    position: 'top-right',
-                    duration: 3000,
-                    isClosable: true,
-                });
-            } else {
-                toast({
-                    title: 'Thông báo',
-                    description: 'Vui lòng chọn thuộc tính',
-                    status: 'warning',
-                    position: 'top-right',
-                    duration: 3000,
-                    isClosable: true,
-                });
-            }
-        }
-    };
     return (
         <div id={`product_${idProduct}`} className="group product-hover">
             <div className="relative">
-                <div className="wishlist-wrapper absolute z-[21] p-2 top-2 left-2 cursor-pointer bg-[#ffffff] rounded-full">
+                <div className="absolute z-[21] p-2 top-2 right-2 cursor-pointer bg-[#ffffff] rounded-full">
                     <HeartEmptyIcon width={16} height={16} />
-                    <span className="wishlist-text absolute -top-8 block p-1 bg-[#f5deb3] rounded-lg text-sm w-[66px]">
-                        Yêu thích
-                    </span>
-                </div>
-                <div
-                    onClick={(e) => handleAddToCart(e, idProduct, type)}
-                    className="wishlist-wrapper absolute z-[21] p-2 top-2 right-2 cursor-pointer bg-[#ffffff] rounded-full"
-                >
-                    <AddToCartIcon width={16} height={16} />
-                    <span className="wishlist-text absolute -top-8 block p-1 bg-[#f5deb3] rounded-lg text-sm w-[114px]">
-                        Thêm sản phẩm
-                    </span>
                 </div>
                 <div className="relative">
                     <div className="relative w-full p-[50%] rounded-3xl">
@@ -166,8 +49,8 @@ function Product({ idProduct, name, slug, color, size, images, type = 0 }: Produ
                             />
                         ))}
                         <div
-                            style={{ top: 'calc(100% - 56px)' }}
-                            className="product-size-hover absolute p-4 -left-[1px] -right-[1px] transition-all z-30"
+                            style={{ top: 'calc(100% - 50px)' }}
+                            className="product-size-hover absolute px-4 -left-[1px] -right-[1px] transition-all z-30"
                         >
                             {/* size */}
                             {sizeArray.length > 0 ? (
@@ -195,10 +78,7 @@ function Product({ idProduct, name, slug, color, size, images, type = 0 }: Produ
                                 <></>
                             )}
                             {/* add to cart */}
-                            {/* <div
-                                
-                                className="flex justify-around items-center text-sm py-3 text-white bg-[#fe696a] rounded-lg"
-                            >
+                            {/* <div className="flex justify-around items-center text-sm py-3 text-white bg-[#fe696a] rounded-lg">
                                 <button className="flex justify-around items-center">
                                     <AiOutlineShoppingCart className="mr-2" />
                                     Them vao gio hang
