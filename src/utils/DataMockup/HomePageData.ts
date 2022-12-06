@@ -78,15 +78,15 @@ export const productFakeData = [
 export const configSlide = [
     {
         logo: `${images.hero1}`,
-        title: 'Sản phẩm độc đáo',
+        title: 'Siêu sale hấp dẫn',
     },
     {
         logo: `${images.hero2}`,
-        title: 'Nhiều ưu đãi hấp dẫn',
+        title: 'Giảm sốc 50%',
     },
     {
         logo: `${images.hero3}`,
-        title: 'Ưu đãi lớn chưa từng có',
+        title: 'Vận chuyển 0 đồng',
     },
 ];
 
